@@ -1811,452 +1811,271 @@ body.lightbox-bloqueado {
         padding: 12px;
     }
 }
+
+/* ================================================================
+   LIGHTBOX SIN JAVASCRIPT - COMPATIBLE CON WHATSAPP / iPHONE
+   ================================================================ */
+
+.css-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.css-lightbox:target {
+    display: flex;
+}
+
+.css-lightbox-fondo {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 20, 30, 0.90);
+    backdrop-filter: blur(3px);
+}
+
+.css-lightbox-panel {
+    position: relative;
+    z-index: 2;
+    width: min(96vw, 1100px);
+    max-height: 94vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 48px 14px 16px;
+    box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    text-align: center;
+}
+
+.css-lightbox-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 76vh;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.css-lightbox-x {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #0a2a3a;
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 1.7rem;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.css-lightbox-btn {
+    display: inline-block;
+    margin-top: 14px;
+    border-radius: 999px;
+    padding: 10px 24px;
+    background: #2a9dab;
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .css-lightbox {
+        padding: 7px;
+    }
+
+    .css-lightbox-panel {
+        width: 100%;
+        max-height: 96vh;
+        padding: 45px 7px 12px;
+        border-radius: 12px;
+    }
+
+    .css-lightbox-panel img {
+        max-height: 78vh;
+    }
+
+    .css-lightbox-x {
+        top: 7px;
+        right: 8px;
+    }
+
+    .css-lightbox-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* ================================================================
+   PAGO E INSCRIPCIÓN
+   ================================================================ */
+.pago-box {
+    background: #f7fbfc;
+    border: 1px solid #d7e9ed;
+    border-left: 5px solid #2a9dab;
+    border-radius: 14px;
+    padding: 18px;
+    margin: 14px 0 20px;
+}
+
+.pago-titulo {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0a2a3a;
+    margin-bottom: 8px;
+}
+
+.pago-intro,
+.pago-nota {
+    margin: 0;
+    color: #344b5a;
+    line-height: 1.55;
+}
+
+.pago-datos {
+    margin: 14px 0;
+    padding: 14px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2ecef;
+    line-height: 1.65;
+}
+
+.clabe-linea {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: baseline;
+}
+
+.clabe-numero {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 800;
+    letter-spacing: .03em;
+    color: #0a2a3a;
+    word-break: break-all;
+}
+
+.pago-pasos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.pago-paso {
+    background: #ffffff;
+    border: 1px solid #e2ecef;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+}
+
+.pago-paso span {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    border-radius: 50%;
+    background: #2a9dab;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.pago-paso p {
+    margin: 2px 0 0;
+    line-height: 1.4;
+    font-size: .9rem;
+}
+
+.pago-nota {
+    font-weight: 700;
+    color: #0a2a3a;
+}
+
+/* ================================================================
+   LIGHTBOX - AJUSTE DE ALTURA REAL EN MÓVIL
+   ================================================================ */
+.css-lightbox {
+    overflow-y: auto !important;
+    align-items: flex-start !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.css-lightbox-panel {
+    width: min(96vw, 1100px) !important;
+    max-height: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 44px 10px 12px !important;
+    margin: auto !important;
+}
+
+.css-lightbox-panel img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 82vh !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 768px) {
+    .pago-pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .pago-box {
+        padding: 14px;
+    }
+
+    .css-lightbox {
+        padding: 6px !important;
+        align-items: center !important;
+    }
+
+    .css-lightbox-panel {
+        width: auto !important;
+        max-width: 96vw !important;
+        max-height: 96vh !important;
+        overflow-y: auto !important;
+        padding: 42px 6px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .css-lightbox-panel img {
+        display: block !important;
+        width: auto !important;
+        max-width: 92vw !important;
+        height: auto !important;
+        max-height: 78vh !important;
+        object-fit: contain !important;
+    }
+
+    .css-lightbox-btn {
+        margin-top: 10px !important;
+    }
+}
 </style>
 </head>
 <body>
-<div class="container">
-<!-- ================================================================
-           📌 1. PORTADA
-           ================================================================ -->
-<div class="portada">
-<div class="logos">
-<img alt="Club Etocane K-9" src="logo-etokane.png"/>
-<img alt="Cinología México Internacional" src="logo-cinologia-mexico.png"/>
-</div>
-<div class="afiliacion">
-                CLUB AFILIADO A <strong>CINOLOGÍA MÉXICO</strong>
-</div>
-<div class="numero-concurso">1<small>er</small></div>
-<h1>COMPETENCIA DE OBEDIENCIA</h1>
-<p class="subtitulo">— CANINA —</p>
-<div class="valores">
-<span>SEGURIDAD</span>
-<span>LEALTAD</span>
-<span>PROTECCIÓN</span>
-</div>
-<div class="fecha-lugar">
-<div>📅 FECHA: <strong>29 DE NOVIEMBRE</strong></div>
-<div>⏰ HORARIO: <strong>07:00 AM</strong></div>
-<div>📍 LUGAR: <strong>DEPORTIVO EL PIOJILLO</strong></div>
-</div>
-<p class="frase">"Entrenamos hoy, para ser mejores compañeros mañana."</p>
-</div>
-<!-- ================================================================
-           📌 2. BIENVENIDA
-           ================================================================ -->
-<div class="card-bienvenida" id="bienvenida">
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:8px;">
-<span style="font-size:2.5rem;">🐾</span>
-<h2 class="sin-borde" style="margin:0;border-left:none;padding-left:0;font-size:1.8rem;">Bienvenidos a la familia Etocane K-9</h2>
-<span class="badge" style="background:#f18f01;font-size:0.7rem;">AFILIADO A CINOLOGÍA MÉXICO</span>
-<div class="social-icons">
-<a aria-label="Facebook de Etocane K-9" class="fb" href="https://www.facebook.com/profile.php?id=100089148847165" onclick="compartirFacebook(event)" rel="noopener noreferrer" target="_blank" title="Compartir en Facebook"><span aria-hidden="true">f</span></a>
-<a aria-label="WhatsApp de Etocane K-9" class="wa" href="https://wa.me/526122327421?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20competencia%20de%20obediencia%20canina%20Etocane%20K-9%20del%2029%20de%20noviembre." onclick="compartirWhatsApp(event)" rel="noopener noreferrer" target="_blank" title="Contactar por WhatsApp"><span aria-hidden="true">WA</span></a>
-<a aria-label="Instagram de Etocane K-9" class="ig" href="https://www.instagram.com/etocanek9.bcs/" onclick="alert('📸 Copia el enlace y comparte en Instagram')" rel="noopener noreferrer" target="_blank" title="Compartir en Instagram"><span aria-hidden="true">◎</span></a>
-<a class="copy" href="#" onclick="copiarEnlace()" title="Copiar enlace"><span aria-hidden="true">⧉</span></a>
-</div>
-</div>
-<div class="bienvenida-texto">
-<p>
-                    Nos alegra compartir este espacio con personas que, al igual que nosotros, creen en el <strong>entrenamiento basado en el respeto, la comunicación y el bienestar animal</strong>. Como club recientemente afiliado a <strong>Cinología México Internacional (CMI)</strong>, reafirmamos nuestro compromiso con el desarrollo responsable de la obediencia deportiva, promoviendo competencias organizadas bajo lineamientos y reglamentos oficialmente reconocidos.
-                </p>
-<p style="margin-top:15px;">
-                    En <strong>Etocane K-9</strong> valoramos el esfuerzo, la dedicación y el compromiso que cada equipo invierte en su proceso de entrenamiento. Sabemos que detrás de cada ejercicio existen horas de práctica, aprendizaje y construcción de confianza entre el perro y su manejador. Este evento representa una oportunidad para compartir experiencias, continuar creciendo y disfrutar de una actividad que fortalece la comunicación, el trabajo en equipo y el vínculo que nos une a nuestros perros.
-                </p>
-<p style="margin-top:15px;">
-                    Agradecemos su participación y el formar parte de una comunidad que promueve el <strong>bienestar animal, el respeto, la responsabilidad y el compañerismo</strong>, contribuyendo al crecimiento de la obediencia deportiva en Baja California Sur.
-                </p>
-<div style="background:#0a2a3a;color:white;border-radius:16px;padding:20px;margin-top:20px;text-align:center;">
-<p style="font-size:1.1rem;margin:0;opacity:0.95;">
-                        "La obediencia no es control, es <strong style="color:#f5c842;">comunicación, confianza y respeto</strong>."
-                    </p>
-</div>
-</div>
-<!-- ===== PILARES ===== -->
-<h3 style="margin-top:25px;text-align:center;">Nuestros Pilares</h3>
-<div class="bienvenida-pilares">
-<div class="pilar">
-<a class="lightbox-link" href="pilar-1.png"><img alt="Buen Espíritu Deportivo" loading="lazy" src="pilar-1.png"/></a>
-<h4>Buen Espíritu Deportivo</h4>
-<p>Dentro y fuera de la pista, el respeto y la camaradería son nuestra prioridad.</p>
-</div>
-<div class="pilar">
-<a class="lightbox-link" href="pilar-2.png"><img alt="El Perro como Compañero" loading="lazy" src="pilar-2.png"/></a>
-<h4>El Perro como Compañero</h4>
-<p>Demostramos la utilidad del perro en el hogar, en público y junto a otros perros.</p>
-</div>
-<div class="pilar">
-<a class="lightbox-link" href="pilar-3.png"><img alt="Trabajo en Equipo" loading="lazy" src="pilar-3.png"/></a>
-<h4>Trabajo en Equipo</h4>
-<p>La conexión entre manejador y perro es la base de cada ejercicio.</p>
-</div>
-</div>
-<div style="height:40px;"></div>
-<!-- ===== OBJETIVO ===== -->
-<div class="card-objetivo" id="objetivo">
-<div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:25px;">
-<div style="font-size:1.8rem;">🎯</div>
-<div style="flex:1; min-width:200px;">
-<p style="font-size:1.1rem;font-weight:700;margin:0;color:#ffffff;">OBJETIVO</p>
-<p style="font-size:1rem;margin:5px 0 0;opacity:0.95;color:#ffffff;">
-                            Promover el trabajo en equipo entre perros y manejadores mediante una competencia basada en la disciplina, el respeto, la conexión y el bienestar animal, fortaleciendo la cultura de la obediencia deportiva en Baja California Sur.
-                        </p>
-<p style="font-size:0.85rem;margin-top:15px;border-top:1px solid rgba(255,255,255,0.2);padding-top:12px;opacity:0.85;color:#ffffff;">
-<strong>NOTA:</strong> Las normas, criterios de evaluación y lineamientos presentados en las siguientes secciones corresponden al <strong>Reglamento Oficial de Obediencia de Cinología México Internacional (CMI)</strong>. El Club Etocane K-9 adopta y aplica dicho reglamento en sus eventos y competencias oficiales. El contenido reglamentario incluido en este documento se reproduce con fines informativos para orientar a los participantes sobre las disposiciones vigentes de esta disciplina. 🐾🐾
-                        </p>
-</div>
-</div>
-</div>
-</div>
-<!-- ================================================================
-           📌 4. CONTENIDO (ÍNDICE)
-           ================================================================ -->
-<div class="card" id="contenido">
-<h2>📑 CONTENIDO</h2>
-<div class="indice">
-<a class="indice-item" href="#categorias"><span class="indice-icono">🐕</span><span class="indice-texto"><span class="num">1.</span><span class="indice-label">Categorías de participación</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="#reglamento"><span class="indice-icono">📋</span><span class="indice-texto"><span class="num">2.</span><span class="indice-label">Reglamento</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="#premiacion"><span class="indice-icono">🏆</span><span class="indice-texto"><span class="num">3.</span><span class="indice-label">Premiación</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="https://forms.gle/q926AqAwTcrvV2Yu9"><span class="indice-icono">📝</span><span class="indice-texto"><span class="num">4.</span><span class="indice-label">Inscripciones</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="#informes"><span class="indice-icono">💬</span><span class="indice-texto"><span class="num">5.</span><span class="indice-label">Mayores informes</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-</div>
-<div style="text-align:center;margin-top:15px;font-style:italic;color:#4a5f6e;">
-                "La obediencia no es control, es comunicación, confianza y respeto."
-            </div>
-</div>
-<!-- ================================================================
-           📌 5. CATEGORÍAS DE PARTICIPACIÓN
-           ================================================================ -->
-<div class="card" id="categorias">
-<h2>🏅 CATEGORÍAS DE PARTICIPACIÓN</h2>
-<p style="font-size:1.05rem;color:#1e2b3a;margin-bottom:15px;">
-                La competencia cuenta con <strong>tres categorías</strong> para que puedas elegir
-                la que mejor se adapte al nivel de entrenamiento de tu binomio.
-            </p>
-<div class="categoria-grid">
-<!-- CATEGORÍA 1: PRE-BÁSICO -->
-<div class="categoria-card" id="cat-prebásico">
-<span class="nivel-badge">NIVEL 1</span>
-<h3>🐾🦮 PRE-BÁSICO</h3>
-<p class="descripcion">Ideal para equipos que se inician en el deporte de la obediencia. Perros a partir de 6 meses.</p>
-<ul class="lista-ejercicios"><li><a class="lightbox-link" href="./pre-1.png" title="Ver imagen del ejercicio 1">Caminado junto con correa en “U” y figura de ocho</a></li><li><a class="lightbox-link" href="./pre-2.png" title="Ver imagen del ejercicio 2">Parado para examen</a></li><li><a class="lightbox-link" href="./pre-3.png" title="Ver imagen del ejercicio 3">Sentarse o echarse y quedarse quieto 2 minutos con correa</a></li><li><a class="lightbox-link" href="./pre-4.png" title="Ver imagen del ejercicio 4">Acudir al llamado a 5 m (sin correa)</a></li><li><a class="lightbox-link" href="./pre-5.png" title="Ver imagen del ejercicio 5">Prueba de habilidades sociales</a></li><li><a class="lightbox-link" href="./pre-6.png" title="Ver imagen del ejercicio 6">Impresión General</a></li><li><a class="lightbox-link" href="./pre-7.png" title="Ver imagen del ejercicio 7">Manejo</a></li></ul>
-<span class="puntos-max">🏆 Puntuación máxima: 100 puntos</span>
-<details class="ejercicios-details reglas-details"><summary class="summary-reglas">📖 Ver ejercicios completos</summary><div class="reglamento-contenido-nativo">
-<div class="regla-item"><strong>📌 Edad mínima:</strong> 6 meses.</div>
-<div class="regla-item"><strong>🦮 Correa:</strong> 1.80 m de tela plana o cuero. Collar fijo. Prohibido: arnés, collares de picos, eslingas o electrónicos.</div>
-<div class="regla-item"><strong>🚶‍♂️ Caminado con correa y figura de ocho:</strong> El perro camina a la izquierda con correa floja. El juez indica "Adelante", "Derecha", "Izquierda", "Media vuelta", "Paso lento/rápido". En cada "Alto" el perro se sienta automáticamente. La figura de ocho requiere mínimo 2 altos.</div>
-<div class="regla-item"><strong>🐩 Parado para examen:</strong> El manejador coloca al perro, da orden de parado y quieto, después se aleja 1.80 m. El juez examina. El manejador regresa rodeando por detrás.</div>
-<div class="regla-item"><strong>⏱️ Permanencia 2 min:</strong> Sentado o echado. El manejador se aleja 1.80 m. Máximo 10 perros en ring.</div>
-<div class="regla-item"><strong>🏃 Acudir al llamado 5 m:</strong> El perro se queda quieto, el manejador camina 5 m y lo llama. El perro debe sentarse frente al manejador. Pausa de 2 segundos entre nombre y orden.</div>
-<div class="regla-item"><strong>🐕🤝 Habilidades sociales:</strong> Dos binomios caminan uno hacia el otro, se saludan y dialogan 10-15 segundos. Se evalúa que no haya miedo o agresión.</div>
-<div class="regla-item"><strong>⭐ Impresión General y Manejo:</strong> 5 puntos cada uno. Se evalúa limpieza, coordinación, lenguaje natural del perro y manejo claro del manejador.</div>
-</div></details>
-</div>
-<!-- CATEGORÍA 2: BÁSICO -->
-<div class="categoria-card nivel-2" id="cat-básico">
-<span class="nivel-badge naranja">NIVEL 2</span>
-<h3>🐕 BÁSICO</h3>
-<p class="descripcion">Para equipos con experiencia básica. Se incrementa la distancia y se introduce el trabajo sin correa. Edad mínima: 6 meses.</p>
-<ul class="lista-ejercicios"><li><a class="lightbox-link" href="./nov-1.png" title="Ver imagen del ejercicio 1">Caminado junto con correa y figura de ocho</a></li><li><a class="lightbox-link" href="./nov-2.png" title="Ver imagen del ejercicio 2">Parado para examen</a></li><li><a class="lightbox-link" href="./nov-3.png" title="Ver imagen del ejercicio 3">Caminado sin correa</a></li><li><a class="lightbox-link" href="./nov-4.png" title="Ver imagen del ejercicio 4">Acudir al llamado a 10 m (sin correa)</a></li><li><a class="lightbox-link" href="./nov-5.png" title="Ver imagen del ejercicio 5">Quieto en posición de sentado a 10 m por 2 min</a></li><li><a class="lightbox-link" href="./nov-6.png" title="Ver imagen del ejercicio 6">Quieto en posición de echado a 10 m por 3 min</a></li><li><a class="lightbox-link" href="./nov-7.png" title="Ver imagen del ejercicio 7">Impresión General</a></li><li><a class="lightbox-link" href="./nov-8.png" title="Ver imagen del ejercicio 8">Manejo</a></li></ul>
-<span class="puntos-max">🏆 Puntuación máxima: 100 puntos</span>
-<details class="ejercicios-details reglas-details"><summary class="summary-reglas">📖 Ver ejercicios completos</summary><div class="reglamento-contenido-nativo">
-<div class="regla-item"><strong>📌 Edad mínima:</strong> 6 meses.</div>
-<div class="regla-item"><strong>🦮 Correa:</strong> 1.80 m de tela plana o cuero. Collar fijo. Prohibido: arnés, collares de picos, eslingas o electrónicos.</div>
-<div class="regla-item"><strong>🚶‍♂️ Caminado con correa y figura de ocho:</strong> Mismo procedimiento que Pre-Básico pero con mínimo 3 altos en figura de ocho.</div>
-<div class="regla-item"><strong>🧍 Parado para examen:</strong> Sin correa a 2 m. El juez toca la cabeza, cuello y cruz. El perro debe permanecer de pie.</div>
-<div class="regla-item"><strong>🚶‍♂️ Caminado sin correa:</strong> Brazos y manos en posición natural. Mismos criterios de calificación que caminado con correa.</div>
-<div class="regla-item"><strong>🏃 Acudir al llamado 10 m:</strong> Mismo procedimiento que Pre-Básico pero a 10 metros. Pausa de 2 segundos entre nombre y orden.</div>
-<div class="regla-item"><strong>⏱️ Permanencia sentado y echado 10 m:</strong> Sentado 2 min, echado 3 min. Máximo 10 perros en ring.</div>
-</div></details>
-</div>
-<!-- CATEGORÍA 3: PRE-AVANZADO -->
-<div class="categoria-card nivel-3" id="cat-preavanzado">
-<span class="nivel-badge dorado">NIVEL 3</span>
-<h3>⭐ PRE-AVANZADO</h3>
-<p class="descripcion">Para equipos con experiencia intermedia. Ejercicios de mayor precisión y control a distancia.</p>
-<ul class="lista-ejercicios"><li><a class="lightbox-link" href="./avan-1.png" title="Ver imagen del ejercicio 1">Caminado sin correa y figura de ocho</a></li><li><a class="lightbox-link" href="./avan-2.png" title="Ver imagen del ejercicio 2">Parado para examen a 5 m</a></li><li><a class="lightbox-link" href="./avan-3.png" title="Ver imagen del ejercicio 3">Cambio de posiciones: sentado, echado, sentado</a></li><li><a class="lightbox-link" href="./avan-4.png" title="Ver imagen del ejercicio 4">Acudir al llamado con echado intermedio a 10 m</a></li><li><a class="lightbox-link" href="./avan-5.png" title="Ver imagen del ejercicio 5">Encuentro con el manejador en posición de sentado a 5 m</a></li><li><a class="lightbox-link" href="./avan-6.png" title="Ver imagen del ejercicio 6">Quieto en posición sentado o echado por 3 min</a></li><li><a class="lightbox-link" href="./avan-7.png" title="Ver imagen del ejercicio 7">Impresión General</a></li><li><a class="lightbox-link" href="./avan-8.png" title="Ver imagen del ejercicio 8">Manejo</a></li></ul>
-<span class="puntos-max">🏆 Puntuación máxima: 100 puntos</span>
-<details class="ejercicios-details reglas-details"><summary class="summary-reglas">📖 Ver ejercicios completos</summary><div class="reglamento-contenido-nativo">
-<div class="regla-item"><strong>📌 Requisito:</strong> Haber completado 4 calificaciones aprobatorias en Básico.</div>
-<div class="regla-item"><strong>🦮 Correa:</strong> 1.80 m de tela plana o cuero. Collar fijo. Prohibido: arnés, collares de picos, eslingas o electrónicos.</div>
-<div class="regla-item"><strong>🚶‍♂️ Caminado sin correa y figura de ocho:</strong> Sin correa. Brazos en posición natural. Mismos criterios de calificación.</div>
-<div class="regla-item"><strong>🧍 Parado para examen a 5 m:</strong> El juez toca cabeza, cuello y espalda. El perro debe permanecer de pie.</div>
-<div class="regla-item"><strong>🔄 Cambio de posiciones a 5 m:</strong> El perro realiza sentado, echado, parado, sentado.</div>
-<div class="regla-item"><strong>🏃 Acudir al llamado con echado intermedio:</strong> El perro acude, se echa a mitad del recorrido y luego es llamado.</div>
-<div class="regla-item"><strong>🤝 Encuentro con el manejador:</strong> El perro alcanza al manejador en movimiento y se sienta a 5 m.</div>
-<div class="regla-item"><strong>⏱️ Permanencia 3 min:</strong> Sentado o echado a 10 m durante 3 minutos. Máximo 10 perros en ring.</div>
-</div></details>
-</div>
-</div>
-<div class="aviso" style="margin-top:20px;">
-<strong>📌 Recomendación:</strong> Elige la categoría que mejor se ajuste al
-                nivel de entrenamiento de tu perro. ¡Lo importante es participar y disfrutar
-                el trabajo en equipo!
-            </div>
-<!-- ===== PUNTUACIÓN Y CALIFICACIÓN ===== -->
-<div style="margin-top:35px;padding-top:25px;border-top:2px solid #e0f4f7;">
-<h3 style="margin-top:0;">📊 Puntuación y Calificación</h3>
-<p style="color:#4a5f6e;margin-bottom:15px;">
-                    El sistema de calificación aplica para todas las categorías:
-                </p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
-<div style="background:#e8f5e9;border-radius:12px;padding:12px;border-left:4px solid #4caf50;">
-<strong style="color:#2e7d32;">📉 Deducciones Mínimas</strong>
-<ul style="font-size:0.85rem;color:#2d4456;margin-top:6px;padding-left:18px;">
-<li>Sentados deficientes o lentos</li>
-<li>Perro no se sienta</li>
-<li>Adelantarse, abrirse o atrasarse</li>
-<li>Contacto con el manejador</li>
-</ul>
-</div>
-<div style="background:#fff3e0;border-radius:12px;padding:12px;border-left:4px solid #ff9800;">
-<strong style="color:#e65100;">📈 Deducciones Mayores</strong>
-<ul style="font-size:0.85rem;color:#2d4456;margin-top:6px;padding-left:18px;">
-<li>Órdenes o señales adicionales</li>
-<li>Guiar o jalar al perro</li>
-<li>No cambiar de velocidad</li>
-<li>Cambiar de mano la correa</li>
-<li>Llevar el brazo en pecho/estómago</li>
-</ul>
-</div>
-<div style="background:#fce4ec;border-radius:12px;padding:12px;border-left:4px solid #f44336;">
-<strong style="color:#b71c1c;">❌ Calificación 0 (No Aprobado)</strong>
-<ul style="font-size:0.85rem;color:#2d4456;margin-top:6px;padding-left:18px;">
-<li>Perro no controlable</li>
-<li>Miedo, timidez o agresión</li>
-<li>No acudir al llamado</li>
-<li>Anticipar la orden</li>
-<li>Moverse más de un cuerpo</li>
-</ul>
-</div>
-</div>
-<div style="background:#f0f4f8;border-radius:12px;padding:15px;margin-top:15px;text-align:center;">
-<p style="margin:0;font-weight:600;color:#0a2a3a;">
-                        Puntaje mínimo aprobatorio: <strong style="color:#2a9dab;">70 puntos</strong>
-</p>
-<p style="margin:4px 0 0;font-size:0.9rem;color:#4a5f6e;">
-                        🏅 E (Excelente): 90-100 pts · ⭐ MB (Muy Bueno): 80-89 pts · ✅ B (Bueno): 70-79 pts
-                    </p>
-</div>
-</div>
-</div>
-<!-- ================================================================
-           📌 MODALES - DETALLE DE EJERCICIOS
-           ================================================================ -->
-<!-- MODAL PRE-BÁSICO -->
-<!-- MODAL BÁSICO -->
-<!-- MODAL PRE-AVANZADO -->
-<!-- ================================================================
-           📌 6. REGLAMENTO
-           ================================================================ -->
-<div class="card" id="reglamento">
-<h2>📋 REGLAMENTO</h2>
-<div style="background:#e0f4f7;border-radius:12px;padding:18px 20px;margin-bottom:20px;border-left:6px solid #2a9dab;">
-<p style="font-size:1rem;color:#0a2a3a;margin:0;line-height:1.7;">
-<strong>Bienvenida al reglamento</strong><br/>
-                    La prueba de obediencia canina tiene como finalidad que los perros y sus manejadores demuestren, dentro de un ring y ante un juez designado, el trabajo de preparación, entrenamiento y comunicación que han desarrollado como equipo.
-                </p>
-<p style="font-size:0.95rem;color:#1e2b3a;margin-top:8px;line-height:1.7;">
-                    Más que competir contra otros participantes, esta prueba permite recibir una <strong>evaluación objetiva</strong> sobre el nivel de desempeño alcanzado, de acuerdo con la clase o categoría en la que se participa.
-                </p>
-<p style="font-size:0.95rem;color:#1e2b3a;margin-top:8px;line-height:1.7;">
-<strong>Cinología México Internacional</strong> promueve que esta disciplina se practique cuidando en todo momento el <strong>bienestar físico y conductual del perro</strong>, privilegiando el buen trato, el manejo responsable y el respeto durante su participación.
-                </p>
-</div>
-<!-- SUB SECCIÓN 1: REGLAS -->
-<h3 style="margin-top:25px;color:#2a9dab;">📌 1. Reglas que debes conocer y respetar durante tu participación</h3>
-<div class="reglas-grid">
-<div class="regla-card"><div class="icono-regla">🧹</div><p><strong>Responsabilidad:</strong> Recoge las heces de tu perro y deposítalas en bolsas cerradas.</p></div>
-<div class="regla-card"><div class="icono-regla">🩺</div><p><strong>Operaciones recientes:</strong> Perros con saturación de operación reciente no podrán participar.</p></div>
-<div class="regla-card"><div class="icono-regla">🚽</div><p><strong>Ensuciar la pista:</strong> Si el perro va a ensuciar y el juez lo manda fuera, se restan <strong>2 puntos</strong>.</p></div>
-<div class="regla-card"><div class="icono-regla">⚖️</div><p><strong>Decisiones del juez:</strong> Las decisiones del juez sobre puntuación y trabajo son <strong>inapelables</strong>.</p></div>
-<div class="regla-card"><div class="icono-regla">🔄</div><p><strong>Repetición de ejercicio:</strong> El perro que falle un ejercicio <strong>no será juzgado de nuevo</strong>, excepto si el juez considera condición especial.</p></div>
-<div class="regla-card"><div class="icono-regla">⚖️</div><p><strong>Empate:</strong> En caso de empate, se realizará el ejercicio de caminar con correa. Si el perro no se presenta en <strong>5 minutos</strong>, pierde.</p></div>
-<div class="regla-card"><div class="icono-regla">📢</div><p><strong>Calificaciones:</strong> El juez no está obligado a dar calificaciones parciales. Anunciará a los <strong>3 ganadores</strong> en la premiación.</p></div>
-<div class="regla-card"><div class="icono-regla">🗣️</div><p><strong>Una sola orden:</strong> El manejador debe dar <strong>una sola orden</strong> por ejercicio. Órdenes adicionales serán penalizadas.</p></div>
-<div class="regla-card"><div class="icono-regla">⏱️</div><p><strong>Tardanza:</strong> La tardanza en cumplir una instrucción del juez será penalizada.</p></div>
-<div class="regla-card"><div class="icono-regla">✋</div><p><strong>No tocar al perro:</strong> El manejador no debe tocar al perro durante el ejercicio. Ruidos o movimientos anormales serán penalizados.</p></div>
-<div class="regla-card"><div class="icono-regla">🔕</div><p><strong>Silbato:</strong> Queda <strong>prohibido</strong> silbar o usar silbato.</p></div>
-<div class="regla-card"><div class="icono-regla">📋</div><p><strong>Responsabilidad del propietario:</strong> El propietario inscribe a su perro <strong>bajo su propio riesgo</strong> y se compromete a cumplir el reglamento.</p></div>
-</div>
-<!-- SUB SECCIÓN 2: CONSEJOS -->
-<h3 style="margin-top:25px;color:#f18f01;">💡 2. Consejos para competir</h3>
-<div class="consejos-grid">
-<div class="regla-card success"><div class="icono-regla">🐶</div><p><strong>Edad mínima:</strong> Perros a partir de <strong>6 meses</strong> pueden participar.</p></div>
-<div class="regla-card success"><div class="icono-regla">🦮</div><p><strong>Equipo correcto:</strong> Correa de <strong>1.80 m</strong> (tela o cuero) y <strong>collar fijo</strong>.</p></div>
-<div class="regla-card success"><div class="icono-regla">👕</div><p><strong>Vestimenta:</strong> El manejador puede usar emblemas comerciales, pero el perro <strong>no</strong> lleva adornos.</p></div>
-<div class="regla-card success"><div class="icono-regla">♿</div><p><strong>Inclusión:</strong> Competidores con discapacidad son bienvenidos.</p></div>
-<div class="regla-card success"><div class="icono-regla">🔥</div><p><strong>Calentamiento:</strong> Permitido <strong>fuera de la pista</strong>. No uses obstáculos dentro del área.</p></div>
-<div class="regla-card success"><div class="icono-regla">📛</div><p><strong>Nombre del perro:</strong> Puedes usarlo <strong>una vez</strong> antes de la orden. Deja <strong>2 segundos</strong> de pausa.</p></div>
-<div class="regla-card success"><div class="icono-regla">❤️</div><p><strong>Felicita a tu perro:</strong> Puedes acariciarlo al término de cada ejercicio. ¡El refuerzo positivo es importante!</p></div>
-<div class="regla-card success"><div class="icono-regla">🔊</div><p><strong>Orden clara:</strong> Da la orden en <strong>voz clara</strong> y tono normal. No es necesario gritar.</p></div>
-<div class="regla-card success"><div class="icono-regla">📋</div><p><strong>Conoce el reglamento:</strong> Familiarízate con las reglas. ¡Esto te dará confianza!</p></div>
-</div>
-<!-- SUB SECCIÓN 3: ADVERTENCIAS Y DESCALIFICACIONES -->
-<h3 style="margin-top:25px;color:#d32f2f;">🚫 3. Advertencias y descalificaciones</h3>
-<p style="color:#4a5f6e;margin-bottom:15px;">
-                Estas son las causales por las que un binomio puede ser descalificado o recibir una penalización grave:
-            </p>
-<div class="advertencias-grid">
-<div class="regla-card danger"><div class="icono-regla">🏥</div><p><strong>Perro enfermo o en mal estado</strong> → retirado por el juez.</p></div>
-<div class="regla-card danger"><div class="icono-regla">⚡</div><p><strong>Perro agresivo</strong> que intente atacar a personas u otros perros → <strong>descalificado</strong>.</p></div>
-<div class="regla-card danger"><div class="icono-regla">⚠️</div><p><strong>Manejador sin control</strong> sobre su perro → retirado.</p></div>
-<div class="regla-card danger"><div class="icono-regla">🚫</div><p><strong>Maltrato</strong> al perro → <strong>expulsión inmediata</strong>.</p></div>
-<div class="regla-card danger"><div class="icono-regla">❌</div><p><strong>Uso de arnés</strong> en la pista → <strong>descalificación</strong>.</p></div>
-<div class="regla-card danger"><div class="icono-regla">⛓️</div><p><strong>Collares de picos, eslingas o electrónicos</strong> → <strong>descalificación</strong>.</p></div>
-<div class="regla-card danger"><div class="icono-regla">🌸</div><p><strong>Hembras en celo</strong> → <strong>NO pueden competir</strong>.</p></div>
-<div class="regla-card warning"><div class="icono-regla">🎾</div><p><strong>Equipo prohibido:</strong> Pelotas, juguetes, comida, intercomunicadores → <strong>descalificación</strong>.</p></div>
-<div class="regla-card warning"><div class="icono-regla">🔇</div><p><strong>Señales de corrección:</strong> Están <strong>prohibidas</strong>.</p></div>
-<div class="regla-card warning"><div class="icono-regla">📢</div><p><strong>Órdenes adicionales:</strong> Dar más de una orden será penalizado.</p></div>
-<div class="regla-card warning"><div class="icono-regla">👀</div><p><strong>Anticipar la orden:</strong> El perro nunca debe anticiparse a las órdenes.</p></div>
-<div class="regla-card warning"><div class="icono-regla">📢</div><p><strong>Gritos:</strong> Las órdenes excesivamente fuertes serán penalizadas.</p></div>
-<div class="regla-card warning"><div class="icono-regla">🔄</div><p><strong>Movimientos anormales:</strong> Cualquier ruido o movimiento anormal será penalizado.</p></div>
-</div>
-<div class="aviso" style="margin-top:15px;">
-<strong>⚠️ IMPORTANTE:</strong> La decisión del juez es <strong>inapelable</strong>. Respeta su autoridad y su criterio.
-            </div>
-</div>
-<!-- ================================================================
-           📌 7. PREMIACIÓN
-           ================================================================ -->
-<div class="card-premiacion" id="premiacion">
-<h2 class="centrado" style="border-left:none;padding-left:0;color:#ffffff;">🎖️ PREMIACIÓN</h2>
-<p style="color:rgba(255,255,255,0.9);margin-bottom:20px;">
-                ¡Los ganadores de cada categoría recibirán los siguientes premios!
-            </p>
-<div class="premios-grid">
-<div class="premio-card"><h3>🐾 PRE-BÁSICO</h3><div class="lugar">🥇 1er Lugar</div><div class="monto">$1,000 MXN</div><div class="lugar" style="margin-top:8px;">🥈 2do Lugar</div><div class="monto">$500 MXN</div><div class="lugar" style="margin-top:8px;">🥉 3er Lugar</div><div class="monto">$250 MXN</div></div>
-<div class="premio-card"><h3>🐕 BÁSICO</h3><div class="lugar">🥇 1er Lugar</div><div class="monto">$2,000 MXN</div><div class="lugar" style="margin-top:8px;">🥈 2do Lugar</div><div class="monto">$1,000 MXN</div><div class="lugar" style="margin-top:8px;">🥉 3er Lugar</div><div class="monto">$500 MXN</div></div>
-<div class="premio-card"><h3>⭐ PRE-AVANZADO</h3><div class="lugar">🥇 1er Lugar</div><div class="monto">$3,000 MXN</div><div class="lugar" style="margin-top:8px;">🥈 2do Lugar</div><div class="monto">$1,500 MXN</div><div class="lugar" style="margin-top:8px;">🥉 3er Lugar</div><div class="monto">$750 MXN</div></div>
-</div>
-<p style="color:rgba(255,255,255,0.8);margin-top:20px;font-size:0.9rem;">
-                🏅 <strong>¡Demuestra el mejor equipo!</strong> Disciplina, conexión y lealtad.
-            </p>
-</div>
-<!-- ================================================================
-           📌 8. INSCRIPCIONES
-           ================================================================ -->
-<div class="card" id="inscripcion">
-<h2>📝 INSCRIPCIONES</h2>
-<p style="color:#4a5f6e;margin-bottom:15px;font-size:1.05rem;">
-                ¿Listos para el reto? Haz que todo ese esfuerzo, dedicación y trabajo en equipo se refleje en el campo de competencia. ¡Da clic e inscríbete! 🐾
-            </p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0;">
-<div style="background:#e0f4f7;border-radius:12px;padding:14px 18px;text-align:center;border:2px solid #2a9dab;">
-<div style="font-size:2rem;">🐾</div>
-<div style="font-weight:700;color:#0a2a3a;">Pre-Básico</div>
-<div style="font-size:1.3rem;font-weight:800;color:#2a9dab;">$200</div>
-<div style="font-size:0.8rem;color:#4a5f6e;">Nivel 1</div>
-</div>
-<div style="background:#fff3e0;border-radius:12px;padding:14px 18px;text-align:center;border:2px solid #f18f01;">
-<div style="font-size:2rem;">🐕</div>
-<div style="font-weight:700;color:#0a2a3a;">Básico</div>
-<div style="font-size:1.3rem;font-weight:800;color:#f18f01;">$250</div>
-<div style="font-size:0.8rem;color:#4a5f6e;">Nivel 2</div>
-</div>
-<div style="background:#fff8e1;border-radius:12px;padding:14px 18px;text-align:center;border:2px solid #f5c842;">
-<div style="font-size:2rem;">⭐</div>
-<div style="font-weight:700;color:#0a2a3a;">Pre-Avanzado</div>
-<div style="font-size:1.3rem;font-weight:800;color:#f5c842;">$350</div>
-<div style="font-size:0.8rem;color:#4a5f6e;">Nivel 3</div>
-</div>
-</div>
-<div class="formulario-google">
-<a class="btn-abrir-form" href="https://forms.gle/q926AqAwTcrvV2Yu9">
-<span aria-hidden="true">🐾</span> INSCRÍBETE
-                </a>
-<p style="color:#4a5f6e;margin:10px 0;font-size:0.9rem;">
-                    ⬆️ Haz clic en el botón para abrir el formulario en Google Forms
-                </p>
-<div class="aviso" style="margin-top:15px;">
-<strong>📌 IMPORTANTE:</strong> Al enviar el formulario, aceptas que tu información sea utilizada
-                    para el registro del evento y te comprometes a cumplir con el <strong>Reglamento Oficial</strong>.
-                </div>
-</div>
-</div>
-<!-- ================================================================
-           📌 9. MAYORES INFORMES
-           ================================================================ -->
-<div class="card-informes" id="informes">
-<h2 style="border-left:none;padding-left:0;">📞 MAYORES INFORMES</h2>
-<p style="font-size:1.2rem;color:#0a2a3a;">
-<strong>📱 Teléfono:</strong> <span style="font-size:1.5rem;color:#2a9dab;">612 23 2 7421</span>
-</p>
-<p style="color:#4a5f6e;margin-top:5px;">📧 <strong>Correo:</strong> [correo@etocane.com]</p>
-<p style="color:#4a5f6e;margin-top:5px;">🌐 <strong>Sitio web:</strong> [www.etocane.com]</p>
-<div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(0,0,0,0.08);">
-<p style="font-weight:600;color:#0a2a3a;font-size:1rem;">¡Gracias por tu inscripción! 🐾</p>
-<p style="color:#4a5f6e;font-size:0.95rem;margin-bottom:10px;">
-                    Ayúdanos a crecer. Tu opinión nos permitirá diseñar mejores competencias, talleres y actividades para la comunidad canina de Baja California Sur.
-                </p>
-<a class="btn-opinion" href="https://forms.gle/KC6o8UVfqoz4xPNH9">
-<span aria-hidden="true">💬</span> Compartir mi opinión
-                </a>
-</div>
-<div style="margin-top:15px;font-size:1.2rem;">🐾 Disciplina, conexión y lealtad 🏠</div>
-</div>
-<!-- ================================================================
-           📌 10. PATROCINADORES
-           ================================================================ -->
-<div class="card" style="text-align:center;background:white;border:2px solid #2a9dab;border-radius:20px;padding:30px;">
-<h2 style="border-left:none;padding-left:0;text-align:center;">🙏 AGRADECIMIENTOS</h2>
-<p style="color:#4a5f6e;font-size:1.05rem;margin-bottom:20px;">
-                El Club Etocane K-9 agradece profundamente a nuestros patrocinadores por su invaluable apoyo.
-                ¡Gracias por creer en el deporte y el bienestar animal!
-            </p>
-<div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:30px;padding:15px 0;">
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-<div style="background:#f7f9fc;border-radius:16px;padding:15px 25px;border:1px solid #e9edf2;min-width:120px;display:flex;justify-content:center;align-items:center;">
-<img alt="Patrocinador 1" src="URL-DEL-LOGO-1.png" style="max-height:80px;width:auto;object-fit:contain;"/>
-</div>
-<span style="font-size:0.8rem;color:#4a5f6e;">Patrocinador 1</span>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-<div style="background:#f7f9fc;border-radius:16px;padding:15px 25px;border:1px solid #e9edf2;min-width:120px;display:flex;justify-content:center;align-items:center;">
-<img alt="Patrocinador 2" src="URL-DEL-LOGO-2.png" style="max-height:80px;width:auto;object-fit:contain;"/>
-</div>
-<span style="font-size:0.8rem;color:#4a5f6e;">Patrocinador 2</span>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-<div style="background:#f7f9fc;border-radius:16px;padding:15px 25px;border:1px solid #e9edf2;min-width:120px;display:flex;justify-content:center;align-items:center;">
-<img alt="Patrocinador 3" src="URL-DEL-LOGO-3.png" style="max-height:80px;width:auto;object-fit:contain;"/>
-</div>
-<span style="font-size:0.8rem;color:#4a5f6e;">Patrocinador 3</span>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-<div style="background:#f7f9fc;border-radius:16px;padding:15px 25px;border:1px solid #e9edf2;min-width:120px;display:flex;justify-content:center;align-items:center;">
-<img alt="Patrocinador 4" src="URL-DEL-LOGO-4.png" style="max-height:80px;width:auto;object-fit:contain;"/>
-</div>
-<span style="font-size:0.8rem;color:#4a5f6e;">Patrocinador 4</span>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-<div style="background:#f7f9fc;border-radius:16px;padding:15px 25px;border:1px solid #e9edf2;min-width:120px;display:flex;justify-content:center;align-items:center;">
-<img alt="Patrocinador 5" src="URL-DEL-LOGO-5.png" style="max-height:80px;width:auto;object-fit:contain;"/>
-</div>
-<span style="font-size:0.8rem;color:#4a5f6e;">Patrocinador 5</span>
-</div>
-</div>
-<div style="margin-top:20px;padding-top:15px;border-top:1px solid #e9edf2;">
-<p style="font-size:0.9rem;color:#4a5f6e;">
-                    🐾 <strong>¿Quieres patrocinar este evento?</strong> Contáctanos en <strong>612 23 2 7421</strong>
-</p>
-</div>
-</div>
-<!-- ================================================================
-           📌 PIE DE PÁGINA
-           ================================================================ -->
-<div class="footer">
-<p>
-<strong>🐾 Club Etocane K-9</strong> · Escuela Afiliada a <strong>Cinología México Internacional</strong><br/>
-<span style="font-size:0.8rem;opacity:0.7;">
-                    Este reglamento es el documento oficial de la competencia.
-                </span>
-</p>
-<p style="margin-top:8px;font-size:0.75rem;opacity:0.5;">
-                © 2026 Esther Jiménez/Etocane K-9 · v3.0
-            </p>
-</div>
-</div>
+
 <!-- ================================================================
        📌 JAVASCRIPT
        ================================================================ -->
@@ -2341,56 +2160,5 @@ body.lightbox-bloqueado {
             alert('✅ ¡Enlace copiado al portapapeles!');
         }
     </script>
-
-<div aria-hidden="true" class="lightbox-etocane" id="lightbox-etocane">
-<div aria-label="Imagen del ejercicio" aria-modal="true" class="lightbox-etocane-contenido" role="dialog">
-<button aria-label="Cerrar imagen" class="lightbox-cerrar-x" type="button">×</button>
-<img alt="Ejercicio de obediencia canina" id="lightbox-etocane-img" src=""/>
-<button class="lightbox-cerrar-btn" type="button">Cerrar</button>
-</div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const lightbox = document.getElementById('lightbox-etocane');
-    const lightboxImg = document.getElementById('lightbox-etocane-img');
-    const closeX = lightbox.querySelector('.lightbox-cerrar-x');
-    const closeBtn = lightbox.querySelector('.lightbox-cerrar-btn');
-
-    function abrirLightbox(src, alt) {
-        lightboxImg.src = src;
-        lightboxImg.alt = alt || 'Imagen de ejercicio de obediencia canina';
-        lightbox.classList.add('abierto');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('lightbox-bloqueado');
-    }
-
-    function cerrarLightbox() {
-        lightbox.classList.remove('abierto');
-        lightbox.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('lightbox-bloqueado');
-        lightboxImg.src = '';
-    }
-
-    document.querySelectorAll('a.lightbox-link').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const img = link.querySelector('img');
-            abrirLightbox(link.getAttribute('href'), img ? img.alt : link.textContent.trim());
-        });
-    });
-
-    closeX.addEventListener('click', cerrarLightbox);
-    closeBtn.addEventListener('click', cerrarLightbox);
-
-    lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) cerrarLightbox();
-    });
-
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && lightbox.classList.contains('abierto')) {
-            cerrarLightbox();
-        }
-    });
-});
-</script></body>
+<div class="css-lightbox" id="lb-pilar-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div></body>
 </html>
