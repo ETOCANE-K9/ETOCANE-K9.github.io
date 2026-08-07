@@ -1706,6 +1706,111 @@
         font-size: .84rem;
     }
 }
+
+/* ================================================================
+   LIGHTBOX DE IMÁGENES - ETOCANE K-9
+   ================================================================ */
+.lightbox-link {
+    cursor: zoom-in;
+}
+
+.lightbox-etocane {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(0, 20, 30, 0.88);
+    backdrop-filter: blur(3px);
+}
+
+.lightbox-etocane.abierto {
+    display: flex;
+}
+
+.lightbox-etocane-contenido {
+    position: relative;
+    width: min(96vw, 1100px);
+    max-height: 94vh;
+    overflow: auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 48px 14px 16px;
+    box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    text-align: center;
+}
+
+.lightbox-etocane img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 76vh;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.lightbox-cerrar-x {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: #0a2a3a;
+    color: #ffffff;
+    font-size: 1.7rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-cerrar-btn {
+    margin-top: 14px;
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 24px;
+    background: #2a9dab;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+body.lightbox-bloqueado {
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .lightbox-etocane {
+        padding: 8px;
+    }
+
+    .lightbox-etocane-contenido {
+        width: 100%;
+        max-height: 96vh;
+        padding: 46px 8px 12px;
+        border-radius: 12px;
+    }
+
+    .lightbox-etocane img {
+        max-height: 78vh;
+    }
+
+    .lightbox-cerrar-x {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+        z-index: 100001;
+    }
+
+    .lightbox-cerrar-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
 </style>
 </head>
 <body>
@@ -1771,17 +1876,17 @@
 <h3 style="margin-top:25px;text-align:center;">Nuestros Pilares</h3>
 <div class="bienvenida-pilares">
 <div class="pilar">
-<a href="pilar-1.png" rel="noopener noreferrer" target="_blank"><img alt="Buen Espíritu Deportivo" loading="lazy" src="pilar-1.png"/></a>
+<a class="lightbox-link" href="pilar-1.png"><img alt="Buen Espíritu Deportivo" loading="lazy" src="pilar-1.png"/></a>
 <h4>Buen Espíritu Deportivo</h4>
 <p>Dentro y fuera de la pista, el respeto y la camaradería son nuestra prioridad.</p>
 </div>
 <div class="pilar">
-<a href="pilar-2.png" rel="noopener noreferrer" target="_blank"><img alt="El Perro como Compañero" loading="lazy" src="pilar-2.png"/></a>
+<a class="lightbox-link" href="pilar-2.png"><img alt="El Perro como Compañero" loading="lazy" src="pilar-2.png"/></a>
 <h4>El Perro como Compañero</h4>
 <p>Demostramos la utilidad del perro en el hogar, en público y junto a otros perros.</p>
 </div>
 <div class="pilar">
-<a href="pilar-3.png" rel="noopener noreferrer" target="_blank"><img alt="Trabajo en Equipo" loading="lazy" src="pilar-3.png"/></a>
+<a class="lightbox-link" href="pilar-3.png"><img alt="Trabajo en Equipo" loading="lazy" src="pilar-3.png"/></a>
 <h4>Trabajo en Equipo</h4>
 <p>La conexión entre manejador y perro es la base de cada ejercicio.</p>
 </div>
@@ -1812,7 +1917,7 @@
 <a class="indice-item" href="#categorias"><span class="indice-icono">🐕</span><span class="indice-texto"><span class="num">1.</span><span class="indice-label">Categorías de participación</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
 <a class="indice-item" href="#reglamento"><span class="indice-icono">📋</span><span class="indice-texto"><span class="num">2.</span><span class="indice-label">Reglamento</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
 <a class="indice-item" href="#premiacion"><span class="indice-icono">🏆</span><span class="indice-texto"><span class="num">3.</span><span class="indice-label">Premiación</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="https://forms.gle/q926AqAwTcrvV2Yu9" rel="noopener noreferrer" target="_blank"><span class="indice-icono">📝</span><span class="indice-texto"><span class="num">4.</span><span class="indice-label">Inscripciones</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
+<a class="indice-item" href="https://forms.gle/q926AqAwTcrvV2Yu9"><span class="indice-icono">📝</span><span class="indice-texto"><span class="num">4.</span><span class="indice-label">Inscripciones</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
 <a class="indice-item" href="#informes"><span class="indice-icono">💬</span><span class="indice-texto"><span class="num">5.</span><span class="indice-label">Mayores informes</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
 </div>
 <div style="text-align:center;margin-top:15px;font-style:italic;color:#4a5f6e;">
@@ -1834,7 +1939,7 @@
 <span class="nivel-badge">NIVEL 1</span>
 <h3>🐾🦮 PRE-BÁSICO</h3>
 <p class="descripcion">Ideal para equipos que se inician en el deporte de la obediencia. Perros a partir de 6 meses.</p>
-<ul class="lista-ejercicios"><li><a href="./pre-1.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 1">Caminado junto con correa en “U” y figura de ocho</a></li><li><a href="./pre-2.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 2">Parado para examen</a></li><li><a href="./pre-3.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 3">Sentarse o echarse y quedarse quieto 2 minutos con correa</a></li><li><a href="./pre-4.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 4">Acudir al llamado a 5 m (sin correa)</a></li><li><a href="./pre-5.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 5">Prueba de habilidades sociales</a></li><li><a href="./pre-6.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 6">Impresión General</a></li><li><a href="./pre-7.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 7">Manejo</a></li></ul>
+<ul class="lista-ejercicios"><li><a class="lightbox-link" href="./pre-1.png" title="Ver imagen del ejercicio 1">Caminado junto con correa en “U” y figura de ocho</a></li><li><a class="lightbox-link" href="./pre-2.png" title="Ver imagen del ejercicio 2">Parado para examen</a></li><li><a class="lightbox-link" href="./pre-3.png" title="Ver imagen del ejercicio 3">Sentarse o echarse y quedarse quieto 2 minutos con correa</a></li><li><a class="lightbox-link" href="./pre-4.png" title="Ver imagen del ejercicio 4">Acudir al llamado a 5 m (sin correa)</a></li><li><a class="lightbox-link" href="./pre-5.png" title="Ver imagen del ejercicio 5">Prueba de habilidades sociales</a></li><li><a class="lightbox-link" href="./pre-6.png" title="Ver imagen del ejercicio 6">Impresión General</a></li><li><a class="lightbox-link" href="./pre-7.png" title="Ver imagen del ejercicio 7">Manejo</a></li></ul>
 <span class="puntos-max">🏆 Puntuación máxima: 100 puntos</span>
 <details class="ejercicios-details reglas-details"><summary class="summary-reglas">📖 Ver ejercicios completos</summary><div class="reglamento-contenido-nativo">
 <div class="regla-item"><strong>📌 Edad mínima:</strong> 6 meses.</div>
@@ -1852,7 +1957,7 @@
 <span class="nivel-badge naranja">NIVEL 2</span>
 <h3>🐕 BÁSICO</h3>
 <p class="descripcion">Para equipos con experiencia básica. Se incrementa la distancia y se introduce el trabajo sin correa. Edad mínima: 6 meses.</p>
-<ul class="lista-ejercicios"><li><a href="./nov-1.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 1">Caminado junto con correa y figura de ocho</a></li><li><a href="./nov-2.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 2">Parado para examen</a></li><li><a href="./nov-3.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 3">Caminado sin correa</a></li><li><a href="./nov-4.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 4">Acudir al llamado a 10 m (sin correa)</a></li><li><a href="./nov-5.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 5">Quieto en posición de sentado a 10 m por 2 min</a></li><li><a href="./nov-6.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 6">Quieto en posición de echado a 10 m por 3 min</a></li><li><a href="./nov-7.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 7">Impresión General</a></li><li><a href="./nov-8.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 8">Manejo</a></li></ul>
+<ul class="lista-ejercicios"><li><a class="lightbox-link" href="./nov-1.png" title="Ver imagen del ejercicio 1">Caminado junto con correa y figura de ocho</a></li><li><a class="lightbox-link" href="./nov-2.png" title="Ver imagen del ejercicio 2">Parado para examen</a></li><li><a class="lightbox-link" href="./nov-3.png" title="Ver imagen del ejercicio 3">Caminado sin correa</a></li><li><a class="lightbox-link" href="./nov-4.png" title="Ver imagen del ejercicio 4">Acudir al llamado a 10 m (sin correa)</a></li><li><a class="lightbox-link" href="./nov-5.png" title="Ver imagen del ejercicio 5">Quieto en posición de sentado a 10 m por 2 min</a></li><li><a class="lightbox-link" href="./nov-6.png" title="Ver imagen del ejercicio 6">Quieto en posición de echado a 10 m por 3 min</a></li><li><a class="lightbox-link" href="./nov-7.png" title="Ver imagen del ejercicio 7">Impresión General</a></li><li><a class="lightbox-link" href="./nov-8.png" title="Ver imagen del ejercicio 8">Manejo</a></li></ul>
 <span class="puntos-max">🏆 Puntuación máxima: 100 puntos</span>
 <details class="ejercicios-details reglas-details"><summary class="summary-reglas">📖 Ver ejercicios completos</summary><div class="reglamento-contenido-nativo">
 <div class="regla-item"><strong>📌 Edad mínima:</strong> 6 meses.</div>
@@ -1869,7 +1974,7 @@
 <span class="nivel-badge dorado">NIVEL 3</span>
 <h3>⭐ PRE-AVANZADO</h3>
 <p class="descripcion">Para equipos con experiencia intermedia. Ejercicios de mayor precisión y control a distancia.</p>
-<ul class="lista-ejercicios"><li><a href="./avan-1.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 1">Caminado sin correa y figura de ocho</a></li><li><a href="./avan-2.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 2">Parado para examen a 5 m</a></li><li><a href="./avan-3.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 3">Cambio de posiciones: sentado, echado, sentado</a></li><li><a href="./avan-4.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 4">Acudir al llamado con echado intermedio a 10 m</a></li><li><a href="./avan-5.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 5">Encuentro con el manejador en posición de sentado a 5 m</a></li><li><a href="./avan-6.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 6">Quieto en posición sentado o echado por 3 min</a></li><li><a href="./avan-7.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 7">Impresión General</a></li><li><a href="./avan-8.png" rel="noopener noreferrer" target="_blank" title="Ver imagen del ejercicio 8">Manejo</a></li></ul>
+<ul class="lista-ejercicios"><li><a class="lightbox-link" href="./avan-1.png" title="Ver imagen del ejercicio 1">Caminado sin correa y figura de ocho</a></li><li><a class="lightbox-link" href="./avan-2.png" title="Ver imagen del ejercicio 2">Parado para examen a 5 m</a></li><li><a class="lightbox-link" href="./avan-3.png" title="Ver imagen del ejercicio 3">Cambio de posiciones: sentado, echado, sentado</a></li><li><a class="lightbox-link" href="./avan-4.png" title="Ver imagen del ejercicio 4">Acudir al llamado con echado intermedio a 10 m</a></li><li><a class="lightbox-link" href="./avan-5.png" title="Ver imagen del ejercicio 5">Encuentro con el manejador en posición de sentado a 5 m</a></li><li><a class="lightbox-link" href="./avan-6.png" title="Ver imagen del ejercicio 6">Quieto en posición sentado o echado por 3 min</a></li><li><a class="lightbox-link" href="./avan-7.png" title="Ver imagen del ejercicio 7">Impresión General</a></li><li><a class="lightbox-link" href="./avan-8.png" title="Ver imagen del ejercicio 8">Manejo</a></li></ul>
 <span class="puntos-max">🏆 Puntuación máxima: 100 puntos</span>
 <details class="ejercicios-details reglas-details"><summary class="summary-reglas">📖 Ver ejercicios completos</summary><div class="reglamento-contenido-nativo">
 <div class="regla-item"><strong>📌 Requisito:</strong> Haber completado 4 calificaciones aprobatorias en Básico.</div>
@@ -2057,7 +2162,7 @@
 </div>
 </div>
 <div class="formulario-google">
-<a class="btn-abrir-form" href="https://forms.gle/q926AqAwTcrvV2Yu9" rel="noopener noreferrer" target="_blank">
+<a class="btn-abrir-form" href="https://forms.gle/q926AqAwTcrvV2Yu9">
 <span aria-hidden="true">🐾</span> INSCRÍBETE
                 </a>
 <p style="color:#4a5f6e;margin:10px 0;font-size:0.9rem;">
@@ -2084,7 +2189,7 @@
 <p style="color:#4a5f6e;font-size:0.95rem;margin-bottom:10px;">
                     Ayúdanos a crecer. Tu opinión nos permitirá diseñar mejores competencias, talleres y actividades para la comunidad canina de Baja California Sur.
                 </p>
-<a class="btn-opinion" href="https://forms.gle/KC6o8UVfqoz4xPNH9" rel="noopener noreferrer" target="_blank">
+<a class="btn-opinion" href="https://forms.gle/KC6o8UVfqoz4xPNH9">
 <span aria-hidden="true">💬</span> Compartir mi opinión
                 </a>
 </div>
@@ -2236,5 +2341,56 @@
             alert('✅ ¡Enlace copiado al portapapeles!');
         }
     </script>
-</body>
+
+<div aria-hidden="true" class="lightbox-etocane" id="lightbox-etocane">
+<div aria-label="Imagen del ejercicio" aria-modal="true" class="lightbox-etocane-contenido" role="dialog">
+<button aria-label="Cerrar imagen" class="lightbox-cerrar-x" type="button">×</button>
+<img alt="Ejercicio de obediencia canina" id="lightbox-etocane-img" src=""/>
+<button class="lightbox-cerrar-btn" type="button">Cerrar</button>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = document.getElementById('lightbox-etocane');
+    const lightboxImg = document.getElementById('lightbox-etocane-img');
+    const closeX = lightbox.querySelector('.lightbox-cerrar-x');
+    const closeBtn = lightbox.querySelector('.lightbox-cerrar-btn');
+
+    function abrirLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || 'Imagen de ejercicio de obediencia canina';
+        lightbox.classList.add('abierto');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-bloqueado');
+    }
+
+    function cerrarLightbox() {
+        lightbox.classList.remove('abierto');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-bloqueado');
+        lightboxImg.src = '';
+    }
+
+    document.querySelectorAll('a.lightbox-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const img = link.querySelector('img');
+            abrirLightbox(link.getAttribute('href'), img ? img.alt : link.textContent.trim());
+        });
+    });
+
+    closeX.addEventListener('click', cerrarLightbox);
+    closeBtn.addEventListener('click', cerrarLightbox);
+
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) cerrarLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('abierto')) {
+            cerrarLightbox();
+        }
+    });
+});
+</script></body>
 </html>
