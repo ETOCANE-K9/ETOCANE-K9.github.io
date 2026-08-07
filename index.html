@@ -2022,35 +2022,986 @@ body.lightbox-bloqueado {
         margin:0 auto !important;
     }
 }
+
+/* ================================================================
+   REDISEÑO ETOCANE 2026 — MICROSITIO DE COMPETENCIA
+   ================================================================ */
+
+:root{
+    --navy:#07384a;
+    --navy-deep:#042a38;
+    --teal:#0f7f8e;
+    --teal-soft:#dff3f4;
+    --gold:#e7a52b;
+    --gold-soft:#f6d483;
+    --ink:#102c39;
+    --muted:#5d7380;
+    --paper:#f8faf9;
+    --white:#ffffff;
+}
+
+html { scroll-padding-top: 94px; }
+
+body{
+    background:
+      radial-gradient(circle at 12% 3%, rgba(15,127,142,.09), transparent 24%),
+      linear-gradient(180deg,#f6f9fa 0%,#ffffff 40%,#f5f8f9 100%) !important;
+    color:var(--ink);
+}
+
+.container{
+    max-width:1180px !important;
+    padding:22px !important;
+}
+
+/* NAV */
+.site-nav{
+    position:sticky;
+    top:0;
+    z-index:100000;
+    width:100%;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(7,56,74,.10);
+    box-shadow:0 4px 18px rgba(6,42,56,.06);
+}
+
+.site-nav-inner{
+    max-width:1220px;
+    margin:0 auto;
+    min-height:78px;
+    padding:10px 22px;
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.nav-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex:0 0 auto;
+    text-decoration:none;
+}
+.nav-brand img{
+    height:52px;
+    width:auto;
+    object-fit:contain;
+}
+.nav-brand .nav-cmi{height:46px;}
+.nav-divider{
+    width:1px;
+    height:42px;
+    background:#cad6db;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-left:auto;
+}
+.nav-links a{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:.86rem;
+    font-weight:700;
+    letter-spacing:.03em;
+    padding:10px 12px;
+    border-radius:999px;
+    transition:.2s ease;
+}
+.nav-links a:hover{
+    color:var(--teal);
+    background:#edf7f8;
+}
+.nav-links .nav-inscripcion{
+    color:#fff;
+    background:var(--gold);
+    box-shadow:0 5px 14px rgba(231,165,43,.25);
+}
+.nav-links .nav-inscripcion:hover{
+    background:#c98917;
+    color:#fff;
+}
+
+.nav-social{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding-left:6px;
+}
+.nav-social a{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#fff;
+    background:var(--navy);
+    font-weight:800;
+    font-size:.79rem;
+    transition:.2s ease;
+}
+.nav-social a:hover{
+    transform:translateY(-2px);
+    background:var(--teal);
+}
+.nav-toggle{
+    display:none;
+    background:var(--navy);
+    color:#fff;
+    border:0;
+    border-radius:10px;
+    width:42px;
+    height:42px;
+    font-size:1.25rem;
+    cursor:pointer;
+}
+
+/* HERO */
+.portada{
+    min-height:650px !important;
+    margin:0 0 44px !important;
+    border-radius:26px !important;
+    padding:58px 62px !important;
+    background-image:
+      linear-gradient(90deg,rgba(3,42,56,.94) 0%,rgba(3,42,56,.82) 35%,rgba(3,42,56,.28) 62%,rgba(3,42,56,0) 80%),
+      url('fondo.png') !important;
+    background-size:cover !important;
+    background-position:center right !important;
+    justify-content:center !important;
+    text-align:left !important;
+    overflow:hidden;
+    box-shadow:0 24px 55px rgba(5,42,56,.18);
+}
+.portada::before{display:none !important;}
+.portada > *{z-index:2;}
+
+.hero-content{
+    max-width:690px;
+    color:#fff;
+}
+.hero-kicker{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    color:rgba(255,255,255,.92);
+    letter-spacing:.28em;
+    font-weight:700;
+    font-size:1rem;
+}
+.hero-kicker span{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:4.2rem;
+    line-height:.9;
+    letter-spacing:0;
+    color:var(--gold-soft);
+}
+.hero-kicker sup{
+    font-size:1.4rem;
+    text-transform:lowercase;
+}
+.hero-content h1{
+    font-family:'Arial Narrow','Segoe UI',sans-serif;
+    margin:10px 0 0 !important;
+    font-size:5.1rem !important;
+    line-height:.92 !important;
+    font-weight:900 !important;
+    letter-spacing:-.04em !important;
+    color:#fff !important;
+    text-shadow:0 4px 28px rgba(0,0,0,.22);
+}
+.hero-canina{
+    font-size:2.2rem;
+    font-weight:800;
+    letter-spacing:.45em;
+    color:var(--gold-soft);
+    margin:8px 0 24px;
+}
+
+.hero-values{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    padding:14px 0 18px;
+    border-top:1px solid rgba(255,255,255,.18);
+    border-bottom:1px solid rgba(255,255,255,.18);
+}
+.hero-values div{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    column-gap:8px;
+    align-items:center;
+}
+.hero-values .hero-icon{
+    grid-row:1/3;
+    font-size:1.45rem;
+    color:var(--gold-soft);
+}
+.hero-values strong{font-size:.78rem;letter-spacing:.08em;}
+.hero-values small{font-size:.68rem;color:rgba(255,255,255,.70);}
+
+.hero-event{
+    margin:20px 0 16px;
+    padding:14px 16px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    border:1px solid rgba(255,255,255,.20);
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(8px);
+}
+.hero-event div{
+    display:grid;
+    grid-template-columns:32px 1fr;
+    column-gap:7px;
+}
+.hero-event div > span{
+    grid-row:1/3;
+    font-size:1.2rem;
+}
+.hero-event small{
+    color:var(--gold-soft);
+    font-size:.67rem;
+    letter-spacing:.08em;
+}
+.hero-event strong{font-size:.84rem;color:#fff;}
+
+.hero-actions{
+    display:flex;
+    gap:10px;
+    margin-top:16px;
+    flex-wrap:wrap;
+}
+.hero-btn{
+    padding:12px 22px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:800;
+    letter-spacing:.06em;
+    font-size:.83rem;
+    transition:.2s ease;
+}
+.hero-btn-primary{
+    background:var(--gold);
+    color:#fff;
+    box-shadow:0 8px 20px rgba(231,165,43,.28);
+}
+.hero-btn-primary:hover{transform:translateY(-2px);background:#c98917;}
+.hero-btn-secondary{
+    border:1px solid rgba(255,255,255,.45);
+    color:#fff;
+    background:rgba(255,255,255,.08);
+}
+.hero-btn-secondary:hover{background:rgba(255,255,255,.16);}
+
+.hero-quote{
+    margin:18px 0 0;
+    color:rgba(255,255,255,.72);
+    font-family:Georgia,'Times New Roman',serif;
+    font-style:italic;
+    letter-spacing:.03em;
+}
+
+/* SECCIONES */
+.card,
+.card-bienvenida,
+.card-premiacion,
+.card-informes{
+    border-radius:24px !important;
+    box-shadow:0 12px 34px rgba(6,42,56,.08) !important;
+    border:1px solid rgba(7,56,74,.08);
+}
+.card{
+    background:rgba(255,255,255,.96) !important;
+}
+.card-bienvenida{
+    background:#fff !important;
+    border-left:none !important;
+    text-align:center;
+    padding:46px 52px !important;
+}
+.welcome-title{
+    border-left:none !important;
+    padding-left:0 !important;
+    text-align:center;
+    font-family:Georgia,'Times New Roman',serif;
+    font-weight:600 !important;
+    font-size:2rem !important;
+    color:var(--navy) !important;
+    margin-bottom:18px !important;
+}
+.bienvenida-texto{
+    max-width:900px;
+    margin:0 auto;
+}
+.bienvenida-texto p{
+    color:#405965 !important;
+}
+
+/* PILARES menos "tarjeta infantil", más editorial */
+.bienvenida-pilares{
+    grid-template-columns:repeat(3,1fr) !important;
+    max-width:980px !important;
+    gap:18px !important;
+}
+.bienvenida-pilares .pilar{
+    padding:14px !important;
+    border-top:0 !important;
+    background:#f8faf9 !important;
+    border:1px solid #e5edef;
+}
+.bienvenida-pilares .pilar img{
+    border-radius:14px !important;
+}
+
+/* TÍTULOS */
+h2{
+    font-family:Georgia,'Times New Roman',serif !important;
+    font-weight:600 !important;
+    letter-spacing:-.015em;
+    color:var(--navy) !important;
+    border-left:0 !important;
+    padding-left:0 !important;
+}
+h2::after{
+    content:"";
+    display:block;
+    width:54px;
+    height:3px;
+    border-radius:999px;
+    background:var(--gold);
+    margin-top:10px;
+}
+
+/* CATEGORÍAS */
+.categoria-grid{
+    gap:20px !important;
+}
+.categoria-card{
+    border-top:0 !important;
+    border:1px solid #e3ebee !important;
+    box-shadow:0 12px 28px rgba(6,42,56,.07) !important;
+    overflow:hidden;
+}
+.categoria-card::before{
+    content:"";
+    display:block;
+    height:5px;
+    background:linear-gradient(90deg,var(--teal),var(--gold));
+    margin:-25px -25px 20px;
+}
+.categoria-card:hover{
+    transform:translateY(-5px) !important;
+    box-shadow:0 20px 38px rgba(6,42,56,.12) !important;
+}
+.nivel-badge,
+.nivel-badge.naranja,
+.nivel-badge.dorado{
+    background:var(--navy) !important;
+    color:#fff !important;
+}
+.puntos-max{
+    background:var(--gold) !important;
+}
+.summary-reglas{
+    background:#eef7f8 !important;
+}
+
+/* REGLAMENTO */
+.regla-card{
+    border-left:0 !important;
+    border-top:3px solid var(--teal);
+    background:#f8faf9 !important;
+}
+.regla-card.success{border-top-color:#5f9f76 !important;}
+.regla-card.warning{border-top-color:var(--gold) !important;}
+.regla-card.danger{border-top-color:#b95555 !important;}
+
+/* PREMIACIÓN */
+.card-premiacion{
+    background:
+      radial-gradient(circle at 80% 10%,rgba(246,212,131,.22),transparent 30%),
+      linear-gradient(135deg,var(--navy-deep),#0c5664) !important;
+    border:0 !important;
+}
+.card-premiacion h2{color:#fff !important;}
+.card-premiacion h2::after{
+    margin-left:auto;
+    margin-right:auto;
+}
+.premio-card{
+    background:rgba(255,255,255,.08) !important;
+    border:1px solid rgba(255,255,255,.15) !important;
+}
+
+/* INSCRIPCIÓN */
+#inscripcion{
+    border-top:5px solid var(--gold);
+}
+.pago-box{
+    border-left:0 !important;
+    border:1px solid #e4ecef !important;
+    background:#f9fbfb !important;
+}
+.pago-paso span{background:var(--teal) !important;}
+.formulario-google{
+    background:linear-gradient(135deg,#f6fafb,#eef7f8) !important;
+}
+.formulario-google .btn-abrir-form{
+    background:var(--gold) !important;
+}
+.formulario-google .btn-abrir-form:hover{background:var(--navy) !important;}
+
+/* INFORMES */
+.card-informes{
+    background:#f2f8f9 !important;
+    border:1px solid #dcebed !important;
+}
+.card-informes h2::after{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:55px !important;
+    padding:30px 10px !important;
+    color:#6e828b !important;
+    border-top:1px solid #dfe8ea !important;
+}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+    .nav-social{display:none;}
+    .nav-links{gap:2px;}
+    .nav-links a{font-size:.78rem;padding:9px 8px;}
+    .portada{padding:46px 38px !important;}
+    .hero-content{max-width:620px;}
+    .hero-content h1{font-size:4.2rem !important;}
+}
+
+@media (max-width:768px){
+    html{scroll-padding-top:72px;}
+    .site-nav-inner{
+        min-height:66px;
+        padding:8px 14px;
+    }
+    .nav-brand img{height:42px;}
+    .nav-brand .nav-cmi{height:36px;}
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:66px;
+        left:10px;
+        right:10px;
+        padding:12px;
+        background:#fff;
+        border-radius:14px;
+        box-shadow:0 14px 34px rgba(6,42,56,.16);
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .nav-links.abierto{display:flex;}
+    .nav-links a{
+        text-align:center;
+        padding:11px 14px;
+    }
+    .nav-toggle{
+        display:block;
+        margin-left:auto;
+    }
+    .portada{
+        min-height:620px !important;
+        padding:34px 22px !important;
+        background-position:64% center !important;
+        background-image:
+          linear-gradient(90deg,rgba(3,42,56,.96) 0%,rgba(3,42,56,.88) 55%,rgba(3,42,56,.38) 100%),
+          url('fondo.png') !important;
+    }
+    .hero-content{max-width:100%;}
+    .hero-kicker{font-size:.78rem;letter-spacing:.18em;}
+    .hero-kicker span{font-size:3rem;}
+    .hero-content h1{font-size:3.2rem !important;}
+    .hero-canina{font-size:1.5rem;letter-spacing:.32em;}
+    .hero-values,
+    .hero-event{grid-template-columns:1fr;}
+    .hero-values div{
+        grid-template-columns:30px 1fr;
+    }
+    .hero-event{gap:8px;}
+    .hero-actions{display:grid;grid-template-columns:1fr 1fr;}
+    .hero-btn{text-align:center;padding:11px 10px;}
+    .card-bienvenida{padding:30px 22px !important;}
+    .bienvenida-pilares{grid-template-columns:1fr !important;}
+}
+
+@media (max-width:480px){
+    .container{padding:10px !important;}
+    .portada{
+        border-radius:18px !important;
+        margin-top:8px !important;
+        min-height:610px !important;
+        padding:26px 18px !important;
+    }
+    .hero-content h1{font-size:2.65rem !important;}
+    .hero-canina{font-size:1.25rem;}
+    .hero-kicker span{font-size:2.5rem;}
+    .hero-actions{grid-template-columns:1fr;}
+    .nav-brand .nav-cmi,.nav-divider{display:none;}
+}
+
+/* ================================================================
+   PORTADA FINAL — ETOCANE 2026
+   ================================================================ */
+
+.portada{
+    min-height: 690px !important;
+    border-radius: 24px !important;
+    margin: 14px 0 42px !important;
+    padding: 118px 58px 58px !important;
+    background-image:
+      linear-gradient(90deg,
+        rgba(2,34,48,.96) 0%,
+        rgba(2,34,48,.91) 26%,
+        rgba(2,34,48,.70) 48%,
+        rgba(2,34,48,.20) 69%,
+        rgba(2,34,48,0) 82%),
+      url('portada_sin_texto.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    overflow: hidden !important;
+    box-shadow: 0 22px 55px rgba(3,37,50,.20) !important;
+}
+.portada::before{display:none !important;}
+.portada > *{position:relative;z-index:2;}
+
+.hero-ref{
+    width:min(690px, 58%);
+    color:#fff;
+}
+
+.hero-first{
+    display:flex;
+    align-items:flex-end;
+    height:80px;
+    margin-bottom:6px;
+    color:#f0b54a;
+}
+.hero-number{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:6.2rem;
+    line-height:.72;
+    font-weight:700;
+    font-style:italic;
+    text-shadow:0 4px 20px rgba(0,0,0,.18);
+}
+.hero-er{
+    font-family:'Arial Narrow','Segoe UI',sans-serif;
+    font-size:2.35rem;
+    line-height:1;
+    font-weight:800;
+    margin:0 0 4px 7px;
+    letter-spacing:.03em;
+}
+.hero-er::after{
+    content:"";
+    display:block;
+    width:72px;
+    height:2px;
+    background:#f0b54a;
+    margin-top:6px;
+}
+
+.hero-kicker-ref{
+    margin-top:12px;
+    font-family:'Arial Narrow','Segoe UI',sans-serif;
+    font-size:1.55rem;
+    font-weight:700;
+    letter-spacing:.40em;
+    color:#fff;
+}
+
+.hero-title-ref{
+    margin:5px 0 0 !important;
+    font-family:'Arial Narrow','Roboto Condensed','Segoe UI',sans-serif !important;
+    font-size:6.25rem !important;
+    line-height:.82 !important;
+    font-weight:900 !important;
+    letter-spacing:-.055em !important;
+    transform:scaleX(.88);
+    transform-origin:left center;
+    color:#fff !important;
+    text-shadow:0 3px 22px rgba(0,0,0,.22) !important;
+    white-space:nowrap;
+}
+
+.hero-canina-ref{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    width:100%;
+    margin:8px 0 18px;
+    font-family:'Arial Narrow','Segoe UI',sans-serif;
+    font-size:2.35rem;
+    font-weight:800;
+    letter-spacing:.42em;
+    color:#efb34b;
+}
+.hero-canina-ref span{
+    height:2px;
+    flex:1;
+    background:#efb34b;
+    opacity:.95;
+}
+.hero-canina-ref span:last-child{max-width:170px;}
+
+.hero-values-ref{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    margin-top:12px;
+}
+.hero-values-ref > div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:6px 16px 6px 0;
+    border-right:1px solid rgba(255,255,255,.24);
+}
+.hero-values-ref > div:last-child{border-right:0;}
+.hero-value-icon{
+    font-size:1.7rem;
+    color:#efb34b;
+}
+.hero-values-ref strong,
+.hero-values-ref small{
+    display:block;
+}
+.hero-values-ref strong{
+    font-size:.9rem;
+    letter-spacing:.03em;
+}
+.hero-values-ref small{
+    margin-top:2px;
+    font-size:.72rem;
+    color:rgba(255,255,255,.78);
+}
+
+.hero-event-ref{
+    margin:18px 0 0;
+    padding:12px 16px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    border:1px solid rgba(255,255,255,.26);
+    border-radius:24px;
+    background:rgba(2,49,63,.40);
+    backdrop-filter:blur(9px);
+    box-shadow:inset 0 0 30px rgba(255,255,255,.03);
+}
+.hero-event-ref > div{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    padding:0 12px;
+    border-right:1px solid rgba(255,255,255,.22);
+}
+.hero-event-ref > div:first-child{padding-left:0;}
+.hero-event-ref > div:last-child{border-right:0;padding-right:0;}
+.event-icon{font-size:1.55rem;}
+.hero-event-ref small,
+.hero-event-ref strong{display:block;}
+.hero-event-ref small{
+    font-size:.67rem;
+    letter-spacing:.06em;
+    color:#d5e7eb;
+}
+.hero-event-ref strong{
+    font-size:.82rem;
+    color:#fff;
+    margin-top:2px;
+}
+
+.hero-experience{
+    display:inline-flex;
+    align-items:center;
+    margin-top:22px;
+    padding:11px 20px;
+    border:1px solid #e8a72f;
+    background:rgba(2,34,48,.58);
+    color:#f2b54a !important;
+    text-decoration:none;
+    font-size:.82rem;
+    font-weight:800;
+    letter-spacing:.04em;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.2s ease;
+}
+.hero-experience:hover{
+    background:#e8a72f;
+    color:#062c3b !important;
+    transform:translateY(-2px);
+}
+
+.hero-quote-ref{
+    margin:18px 0 0;
+    max-width:500px;
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:.96rem;
+    line-height:1.5;
+    font-style:italic;
+    color:rgba(255,255,255,.88);
+}
+
+/* Menú visual integrado con la portada */
+.site-nav{
+    background:rgba(3,35,48,.94) !important;
+    border-bottom:1px solid rgba(255,255,255,.10) !important;
+    box-shadow:none !important;
+}
+.nav-links a{
+    color:#fff !important;
+    border-radius:0 !important;
+    padding:10px 13px !important;
+    position:relative;
+    background:transparent !important;
+}
+.nav-links a:hover{
+    color:#f2b54a !important;
+}
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:13px;
+    right:13px;
+    bottom:3px;
+    height:2px;
+    background:#f2b54a;
+    transform:scaleX(0);
+    transition:.2s ease;
+}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-links .nav-inscripcion{
+    color:#f2b54a !important;
+    box-shadow:none !important;
+}
+.nav-social a{
+    border:1px solid rgba(255,255,255,.68) !important;
+    background:transparent !important;
+    color:#fff !important;
+}
+.nav-social a:hover{
+    background:#f2b54a !important;
+    color:#052c3a !important;
+    border-color:#f2b54a !important;
+}
+.nav-divider{background:rgba(255,255,255,.30) !important;}
+
+/* Responsive */
+@media (max-width:980px){
+    .portada{
+        min-height:650px !important;
+        padding:100px 38px 42px !important;
+        background-position:61% center !important;
+    }
+    .hero-ref{width:64%;max-width:620px;}
+    .hero-title-ref{font-size:5rem !important;}
+    .hero-kicker-ref{font-size:1.25rem;}
+}
+
+@media (max-width:768px){
+    .portada{
+        min-height:680px !important;
+        padding:82px 22px 34px !important;
+        background-position:67% center !important;
+        background-image:
+          linear-gradient(90deg,
+            rgba(2,34,48,.98) 0%,
+            rgba(2,34,48,.94) 55%,
+            rgba(2,34,48,.60) 78%,
+            rgba(2,34,48,.20) 100%),
+          url('portada_sin_texto.png') !important;
+    }
+    .hero-ref{width:100%;max-width:100%;}
+    .hero-first{height:58px;}
+    .hero-number{font-size:4.4rem;}
+    .hero-er{font-size:1.7rem;}
+    .hero-kicker-ref{
+        font-size:.95rem;
+        letter-spacing:.28em;
+    }
+    .hero-title-ref{
+        font-size:3.65rem !important;
+        transform:none;
+        white-space:normal;
+    }
+    .hero-canina-ref{
+        font-size:1.55rem;
+        letter-spacing:.30em;
+        gap:12px;
+    }
+    .hero-values-ref{
+        grid-template-columns:1fr;
+        gap:5px;
+    }
+    .hero-values-ref > div{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.14);
+        padding:7px 0;
+    }
+    .hero-event-ref{
+        grid-template-columns:1fr;
+        gap:8px;
+        border-radius:16px;
+    }
+    .hero-event-ref > div{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.12);
+        padding:5px 0;
+    }
+    .hero-event-ref > div:last-child{border-bottom:0;}
+}
+
+@media (max-width:480px){
+    .portada{
+        min-height:660px !important;
+        padding:74px 18px 28px !important;
+        border-radius:18px !important;
+        background-position:70% center !important;
+    }
+    .hero-number{font-size:3.7rem;}
+    .hero-er{font-size:1.45rem;}
+    .hero-kicker-ref{font-size:.76rem;letter-spacing:.20em;}
+    .hero-title-ref{font-size:2.85rem !important;}
+    .hero-canina-ref{font-size:1.25rem;letter-spacing:.22em;}
+    .hero-experience{width:100%;justify-content:center;}
+    .hero-quote-ref{font-size:.86rem;}
+}
+
+/* ========================= PATROCINADORES ========================= */
+.sponsors-section{
+  margin:58px 0 34px;
+  padding:52px 42px 46px;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(234,169,55,.13), transparent 28%),
+    linear-gradient(135deg,#062f40 0%,#0b4558 100%);
+  box-shadow:0 18px 45px rgba(5,42,56,.16);
+  overflow:hidden;
+}
+.sponsors-head{text-align:center;max-width:720px;margin:0 auto 32px;}
+.sponsors-eyebrow{
+  display:block;color:#efb34b;font-size:.72rem;font-weight:800;
+  letter-spacing:.28em;margin-bottom:7px;
+}
+.sponsors-head h2{
+  margin:0;color:#fff;font-size:2.15rem;letter-spacing:.02em;
+}
+.sponsors-head p{
+  margin:9px 0 0;color:rgba(255,255,255,.73);font-size:.93rem;
+}
+.sponsors-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.sponsor-card{
+  min-height:150px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:18px;
+  background:#fff;
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  padding:20px;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.sponsor-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 32px rgba(0,0,0,.18);
+}
+.sponsor-active img{
+  display:block;
+  width:100%;
+  height:110px;
+  object-fit:contain;
+}
+.sponsor-placeholder{
+  background:rgba(255,255,255,.055);
+  border:1px dashed rgba(239,179,75,.45);
+  box-shadow:none;
+}
+.sponsor-placeholder span{
+  color:rgba(255,255,255,.40);
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.20em;
+}
+@media(max-width:780px){
+  .sponsors-section{padding:38px 20px 34px;}
+  .sponsors-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .sponsor-card{min-height:125px;padding:14px;}
+  .sponsor-active img{height:90px;}
+}
+@media(max-width:440px){
+  .sponsors-grid{grid-template-columns:1fr 1fr;}
+  .sponsor-card{min-height:105px;}
+  .sponsor-active img{height:75px;}
+}
 </style>
 </head>
-<body>
+<body><header class="site-nav">
+<div class="site-nav-inner">
+<a aria-label="Inicio" class="nav-brand" href="#inicio">
+<img alt="Club Etocane K-9" src="logo-etokane.png"/>
+<span class="nav-divider"></span>
+<img alt="Cinología México Internacional" class="nav-cmi" src="logo-cinologia-mexico.png"/>
+</a>
+<nav aria-label="Navegación principal" class="nav-links"><a href="#categorias">Categorías</a><a href="#reglamento">Reglamento</a><a href="#premiacion">Premiación</a><a class="nav-inscripcion" href="#inscripcion">Inscripción</a><a href="#informes">Informes</a></nav>
+<div aria-label="Redes sociales" class="nav-social"><a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=100089148847165" rel="noopener noreferrer" target="_blank" title="Facebook">f</a><a aria-label="Instagram" href="https://www.instagram.com/etocanek9.bcs/" rel="noopener noreferrer" target="_blank" title="Instagram">◎</a><a aria-label="WhatsApp" href="https://wa.me/526122327421?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20competencia%20de%20obediencia%20canina%20Etocane%20K-9." rel="noopener noreferrer" target="_blank" title="WhatsApp">WA</a><a aria-label="Correo" href="mailto:etocanek9.lpz@gmail.com" title="Correo">✉</a></div>
+<button aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" type="button">☰</button>
+</div>
+</header>
 <div class="container">
 <!-- ================================================================
            📌 1. PORTADA
            ================================================================ -->
-<div class="portada">
-<div class="logos">
-<img alt="Club Etocane K-9" src="logo-etokane.png"/>
-<img alt="Cinología México Internacional" src="logo-cinologia-mexico.png"/>
+<div class="portada" id="inicio">
+<div class="hero-content hero-ref">
+<div class="hero-first"><span class="hero-number">1</span><span class="hero-er">ER</span></div>
+<div class="hero-kicker-ref">COMPETENCIA DE</div>
+<h1 class="hero-title-ref">OBEDIENCIA</h1>
+<div class="hero-canina-ref"><span></span>CANINA<span></span></div>
+<div class="hero-values-ref">
+<div>
+<span class="hero-value-icon">◈</span>
+<span><strong>SEGURIDAD</strong><small>Bienestar ante todo</small></span>
 </div>
-<div class="afiliacion">
-                CLUB AFILIADO A <strong>CINOLOGÍA MÉXICO</strong>
+<div>
+<span class="hero-value-icon">◇</span>
+<span><strong>LEALTAD</strong><small>Vínculo que se construye</small></span>
 </div>
-<div class="numero-concurso">1<small>er</small></div>
-<h1>COMPETENCIA DE OBEDIENCIA</h1>
-<p class="subtitulo">— CANINA —</p>
-<div class="valores">
-<span>SEGURIDAD</span>
-<span>LEALTAD</span>
-<span>PROTECCIÓN</span>
+<div>
+<span class="hero-value-icon">◉</span>
+<span><strong>PROTECCIÓN</strong><small>Confianza mutua</small></span>
 </div>
-<div class="fecha-lugar">
-<div>📅 FECHA: <strong>29 DE NOVIEMBRE</strong></div>
-<div>⏰ HORARIO: <strong>07:00 AM</strong></div>
-<div>📍 LUGAR: <strong>DEPORTIVO EL PIOJILLO</strong></div>
 </div>
-<p class="frase">"Entrenamos hoy, para ser mejores compañeros mañana."</p>
+<div class="hero-event-ref">
+<div><span class="event-icon">📅</span><span><small>FECHA</small><strong>29 DE NOVIEMBRE</strong></span></div>
+<div><span class="event-icon">⏰</span><span><small>HORARIO</small><strong>07:00 AM</strong></span></div>
+<div><span class="event-icon">📍</span><span><small>LUGAR</small><strong>DEPORTIVO EL PIOJILLO</strong></span></div>
+</div>
+<a class="hero-experience" href="#inscripcion">🏆 SÉ PARTE DE LA EXPERIENCIA</a>
+<p class="hero-quote-ref">“Entrenamos hoy, para ser mejores compañeros mañana.”</p>
+</div>
 </div>
 <!-- ================================================================
            📌 2. BIENVENIDA
@@ -2058,14 +3009,7 @@ body.lightbox-bloqueado {
 <div class="card-bienvenida" id="bienvenida">
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:8px;">
 <span style="font-size:2.5rem;">🐾</span>
-<h2 class="sin-borde" style="margin:0;border-left:none;padding-left:0;font-size:1.8rem;">Bienvenidos a la familia Etocane K-9</h2>
-<span class="badge" style="background:#f18f01;font-size:0.7rem;">AFILIADO A CINOLOGÍA MÉXICO</span>
-<div class="social-icons">
-<a aria-label="Facebook de Etocane K-9" class="fb" href="https://www.facebook.com/profile.php?id=100089148847165" onclick="compartirFacebook(event)" rel="noopener noreferrer" target="_blank" title="Compartir en Facebook"><span aria-hidden="true">f</span></a>
-<a aria-label="WhatsApp de Etocane K-9" class="wa" href="https://wa.me/526122327421?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20competencia%20de%20obediencia%20canina%20Etocane%20K-9%20del%2029%20de%20noviembre." onclick="compartirWhatsApp(event)" rel="noopener noreferrer" target="_blank" title="Contactar por WhatsApp"><span aria-hidden="true">WA</span></a>
-<a aria-label="Instagram de Etocane K-9" class="ig" href="https://www.instagram.com/etocanek9.bcs/" onclick="alert('📸 Copia el enlace y comparte en Instagram')" rel="noopener noreferrer" target="_blank" title="Compartir en Instagram"><span aria-hidden="true">◎</span></a>
-<a class="copy" href="#" onclick="copiarEnlace()" title="Copiar enlace"><span aria-hidden="true">⧉</span></a>
-</div>
+<h2 class="welcome-title">Una competencia para celebrar el trabajo en equipo</h2>
 </div>
 <div class="bienvenida-texto">
 <p>
@@ -2122,19 +3066,6 @@ body.lightbox-bloqueado {
 <!-- ================================================================
            📌 4. CONTENIDO (ÍNDICE)
            ================================================================ -->
-<div class="card" id="contenido">
-<h2>📑 CONTENIDO</h2>
-<div class="indice">
-<a class="indice-item" href="#categorias"><span class="indice-icono">🐕</span><span class="indice-texto"><span class="num">1.</span><span class="indice-label">Categorías de participación</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="#reglamento"><span class="indice-icono">📋</span><span class="indice-texto"><span class="num">2.</span><span class="indice-label">Reglamento</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="#premiacion"><span class="indice-icono">🏆</span><span class="indice-texto"><span class="num">3.</span><span class="indice-label">Premiación</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="https://forms.gle/q926AqAwTcrvV2Yu9"><span class="indice-icono">📝</span><span class="indice-texto"><span class="num">4.</span><span class="indice-label">Inscripciones</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-<a class="indice-item" href="#informes"><span class="indice-icono">💬</span><span class="indice-texto"><span class="num">5.</span><span class="indice-label">Mayores informes</span></span><span aria-hidden="true" class="indice-flecha">→</span></a>
-</div>
-<div style="text-align:center;margin-top:15px;font-style:italic;color:#4a5f6e;">
-                "La obediencia no es control, es comunicación, confianza y respeto."
-            </div>
-</div>
 <!-- ================================================================
            📌 5. CATEGORÍAS DE PARTICIPACIÓN
            ================================================================ -->
@@ -2407,13 +3338,40 @@ body.lightbox-bloqueado {
 <!-- ================================================================
            📌 9. MAYORES INFORMES
            ================================================================ -->
+
+<section class="sponsors-section" id="patrocinadores">
+<div class="sponsors-head">
+<span class="sponsors-eyebrow">ALIADOS DEL EVENTO</span>
+<h2>Patrocinadores</h2>
+<p>Gracias a las marcas y organizaciones que hacen posible esta experiencia.</p>
+</div>
+<div class="sponsors-grid">
+<div class="sponsor-card sponsor-active">
+<img alt="Patrocinador 1" loading="lazy" src="P-1.png"/>
+</div>
+<div aria-label="Espacio disponible para patrocinador 2" class="sponsor-card sponsor-placeholder">
+<span>PRÓXIMAMENTE</span>
+</div>
+<div aria-label="Espacio disponible para patrocinador 3" class="sponsor-card sponsor-placeholder">
+<span>PRÓXIMAMENTE</span>
+</div>
+<div aria-label="Espacio disponible para patrocinador 4" class="sponsor-card sponsor-placeholder">
+<span>PRÓXIMAMENTE</span>
+</div>
+<div aria-label="Espacio disponible para patrocinador 5" class="sponsor-card sponsor-placeholder">
+<span>PRÓXIMAMENTE</span>
+</div>
+<div aria-label="Espacio disponible para patrocinador 6" class="sponsor-card sponsor-placeholder">
+<span>PRÓXIMAMENTE</span>
+</div>
+</div>
+</section>
 <div class="card-informes" id="informes">
 <h2 style="border-left:none;padding-left:0;">📞 MAYORES INFORMES</h2>
 <p style="font-size:1.2rem;color:#0a2a3a;">
 <strong>📱 Teléfono:</strong> <span style="font-size:1.5rem;color:#2a9dab;">612 23 2 7421</span>
 </p>
 <p style="color:#4a5f6e;margin-top:5px;">📧 <strong>Correo:</strong> <a href="mailto:etocanek9.lpz@gmail.com" style="color:#2a9dab;text-decoration:none;font-weight:600;">etocanek9.lpz@gmail.com</a></p>
-
 <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(0,0,0,0.08);">
 <p style="font-weight:600;color:#0a2a3a;font-size:1rem;">¡Gracias por tu inscripción! 🐾</p>
 <p style="color:#4a5f6e;font-size:0.95rem;margin-bottom:10px;">
@@ -2570,6 +3528,23 @@ body.lightbox-bloqueado {
             document.body.removeChild(input);
             alert('✅ ¡Enlace copiado al portapapeles!');
         }
-    </script>
+    
+document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (toggle && links) {
+        toggle.addEventListener('click', function () {
+            var abierto = links.classList.toggle('abierto');
+            toggle.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+        });
+        links.querySelectorAll('a').forEach(function(a){
+            a.addEventListener('click', function(){
+                links.classList.remove('abierto');
+                toggle.setAttribute('aria-expanded','false');
+            });
+        });
+    }
+});
+</script>
 <div class="css-lightbox" id="lb-pilar-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div></body>
 </html>
