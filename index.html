@@ -1,4 +1,4 @@
-<!-- ETOCANE MOBILE FIX: HERO LOGOS HIDDEN + INFO STACK LOWERED TO DOG LEGS --><!-- ETOCANE: HERO INFO STACK DESKTOP SIN SUPERPOSICIONES --><!-- ETOCANE VERSION 2026-08-08: MOBILE INFO AT DOG LEGS / HERO LOGOS HIDDEN --><!-- ETOCANE VERSION: 2026-08-08 DESKTOP-AQUA-UP86 --><!-- VERSION ETOCANE 2026-08-07 17:40 - colores reforzados --><!DOCTYPE html>
+<!-- FIX: QUOTE REMOVED FROM EVENT CARD OVERLAP --><!-- ETOCANE RESET DESKTOP: BASE MOVIL ESTABLE + AJUSTE SUAVE --><!-- VERSION ETOCANE 2026-08-07 17:40 - colores reforzados --><!DOCTYPE html>
 
 <html lang="es-MX">
 <head>
@@ -4163,575 +4163,81 @@ h2::after{
 }
 
 /* ================================================================
-   AJUSTE ESCRITORIO FINAL
-   - Mantener móvil sin cambios
-   - Menú aqua en laptop
-   - Subir más la información del hero para liberar la franja de perros
+   ETOCANE — REINICIO LIMPIO DE PORTADA EN ESCRITORIO
+   Base: versión estable donde móvil ya funcionaba.
    ================================================================ */
 
 @media (min-width:769px){
 
-  /* Barra de menú aqua/gris azulado también en laptop */
-  .site-nav{
-    background:
-      linear-gradient(90deg,
-        #5f939c 0%,
-        #71a2aa 55%,
-        #82b0b6 100%) !important;
-    border-bottom:1px solid rgba(255,255,255,.30) !important;
-    box-shadow:0 5px 18px rgba(33,77,85,.14) !important;
-  }
-
-  .nav-links a{
-    color:#ffffff !important;
-    text-shadow:0 1px 2px rgba(0,0,0,.10) !important;
-  }
-
-  .nav-links a:hover{
-    color:#fff0c8 !important;
-  }
-
-  .nav-links .nav-inscripcion{
-    color:#ffe29b !important;
-  }
-
-  .nav-social a{
-    background:rgba(255,255,255,.10) !important;
-    border:1px solid rgba(255,255,255,.75) !important;
-    color:#ffffff !important;
-  }
-
-  .nav-social a:hover{
-    background:#ffffff !important;
-    color:#4f8089 !important;
-  }
-
-  /* Subir el bloque completo de contenido */
-  .hero-ref,
-  .hero-content{
-    transform:translateY(-54px) !important;
-  }
-
-  /* Subir todavía un poco más las dos filas inferiores */
-  .hero-values-ref{
-    top:-48px !important;
-  }
-
-  .hero-event-ref{
-    top:-56px !important;
-  }
-
-  .hero-quote-ref,
-  .hero-quote{
-    top:-50px !important;
-  }
-
-  /* Mantener el botón en la esquina azul inferior derecha */
-  .hero-experience{
-    right:30px !important;
-    bottom:24px !important;
-  }
-}
-
-/* ===== PRESERVAR AJUSTE MÓVIL ===== */
-@media (max-width:768px){
-  .site-nav{
-    background:linear-gradient(90deg,#5f939c 0%,#73a4ac 55%,#82b0b6 100%) !important;
-  }
-  .hero-ref,
-  .hero-content{
-    transform:none !important;
-  }
-  .hero-values-ref{
-    top:-28px !important;
-  }
-  .hero-event-ref{
-    top:-30px !important;
-  }
-  .hero-quote-ref,
-  .hero-quote{
-    top:-24px !important;
-  }
-}
-
-/* ================================================================
-   CORRECCIÓN MÓVIL FINAL
-   No modifica escritorio ni fondo.png
-   ================================================================ */
-@media (max-width:768px){
-
-  /* HERO sin hueco azul inferior */
-  .portada{
-    min-height:0 !important;
-    height:auto !important;
-    padding:24px 18px 28px !important;
-    display:block !important;
-    background-image:url('fondo.png') !important;
-    background-size:cover !important;
-    background-repeat:no-repeat !important;
-
-    /* menor porcentaje = la imagen se desplaza a la derecha */
-    background-position:66% center !important;
-
-    background-color:#063746 !important;
-    overflow:hidden !important;
-  }
-
-  /* Anular desplazamientos forzados de escritorio */
-  .hero-ref,
-  .hero-content{
-    width:100% !important;
-    max-width:100% !important;
-    transform:none !important;
-    position:relative !important;
-  }
-
-  /* Logos arriba, sin tapar la cara */
-  .hero-logos{
-    display:flex !important;
-    align-items:center !important;
-    gap:10px !important;
-    width:max-content !important;
-    margin:0 0 28px 0 !important;
-    padding:0 !important;
-    position:relative !important;
-    z-index:5 !important;
-  }
-  .hero-logos img{
-    height:56px !important;
-    width:auto !important;
-    object-fit:contain !important;
-  }
-  .hero-logo-divider{
-    height:44px !important;
-  }
-
-  /* Título */
-  .hero-first{
-    margin-top:0 !important;
-    height:62px !important;
-  }
-  .hero-number{
-    font-size:4.4rem !important;
-  }
-  .hero-er{
-    font-size:1.7rem !important;
-  }
-  .hero-kicker-ref{
-    width:70% !important;
-    max-width:70% !important;
-    font-size:.86rem !important;
-    letter-spacing:.24em !important;
-    margin-top:8px !important;
-  }
-  .hero-title-ref{
-    width:78% !important;
-    max-width:78% !important;
-    font-size:3.25rem !important;
-    line-height:.92 !important;
-    white-space:normal !important;
-    transform:none !important;
-  }
-  .hero-canina-ref{
-    width:72% !important;
-    max-width:72% !important;
-    margin:8px 0 16px !important;
-    font-size:1.45rem !important;
-    letter-spacing:.26em !important;
-  }
-
-  /* Seguridad / Lealtad / Protección */
-  .hero-values-ref{
-    position:relative !important;
-    top:0 !important;
-    transform:none !important;
-    margin:0 0 10px !important;
-    display:grid !important;
-    grid-template-columns:repeat(3,1fr) !important;
-    gap:0 !important;
-    width:100% !important;
-  }
-  .hero-values-ref > div{
-    min-height:48px !important;
-    display:grid !important;
-    grid-template-columns:24px 1fr !important;
-    align-items:center !important;
-    gap:4px !important;
-    padding:4px 5px !important;
-    border-right:1px solid rgba(255,255,255,.24) !important;
-    border-bottom:0 !important;
-  }
-  .hero-values-ref > div:last-child{
-    border-right:0 !important;
-  }
-  .hero-value-icon{
-    font-size:1.05rem !important;
-  }
-  .hero-values-ref strong{
-    font-size:.56rem !important;
-    color:#fff !important;
-  }
-  .hero-values-ref small{
-    font-size:.44rem !important;
-    line-height:1.15 !important;
-    color:rgba(255,255,255,.94) !important;
-  }
-
-  /* Fecha / Horario / Lugar */
-  .hero-event-ref{
-    position:relative !important;
-    top:0 !important;
-    transform:none !important;
-    margin:0 0 12px !important;
-    min-height:58px !important;
-    padding:7px 8px !important;
-    display:grid !important;
-    grid-template-columns:repeat(3,1fr) !important;
-    border-radius:16px !important;
-    background:rgba(4,53,65,.86) !important;
-  }
-  .hero-event-ref > div{
-    display:grid !important;
-    grid-template-columns:22px 1fr !important;
-    align-items:center !important;
-    gap:4px !important;
-    padding:2px 6px !important;
-    border-right:1px solid rgba(255,255,255,.22) !important;
-    border-bottom:0 !important;
-  }
-  .hero-event-ref > div:last-child{
-    border-right:0 !important;
-  }
-  .event-icon{
-    font-size:.88rem !important;
-  }
-  .hero-event-ref small{
-    font-size:.42rem !important;
-  }
-  .hero-event-ref strong{
-    font-size:.51rem !important;
-    line-height:1.12 !important;
-  }
-
-  /* Frase */
-  .hero-quote-ref,
-  .hero-quote{
-    position:relative !important;
-    top:0 !important;
-    transform:none !important;
-    margin:8px 0 14px !important;
-    max-width:74% !important;
-    font-size:.72rem !important;
-    line-height:1.45 !important;
-    color:#fff !important;
-  }
-
-  /* CTA debajo de la frase: no más hueco azul */
-  .hero-experience{
-    position:relative !important;
-    right:auto !important;
-    left:auto !important;
-    bottom:auto !important;
-    top:auto !important;
-    display:flex !important;
-    width:max-content !important;
-    max-width:100% !important;
-    margin:8px 0 0 auto !important;
-    padding:10px 14px !important;
-    font-size:.66rem !important;
-    justify-content:center !important;
-  }
-}
-
-/* iPhone angosto */
-@media (max-width:430px){
-  .portada{
-    background-position:63% center !important;
-    padding:22px 16px 26px !important;
-  }
-  .hero-logos img{
-    height:50px !important;
-  }
-  .hero-kicker-ref{
-    width:74% !important;
-    max-width:74% !important;
-  }
-  .hero-title-ref{
-    width:82% !important;
-    max-width:82% !important;
-    font-size:2.85rem !important;
-  }
-  .hero-canina-ref{
-    width:76% !important;
-    max-width:76% !important;
-  }
-}
-
-/* ================================================================
-   CORRECCIÓN ESCRITORIO — ESTRUCTURA LIMPIA
-   Móvil (<=768px) queda intacto.
-   ================================================================ */
-@media (min-width:769px){
-
-  /* Menú aqua, no azul petróleo */
+  /* Menú aqua */
   .site-nav{
     background:linear-gradient(90deg,#6f9ea6 0%,#82afb6 55%,#90bac0 100%) !important;
-    border-bottom:1px solid rgba(255,255,255,.32) !important;
+    border-bottom:1px solid rgba(255,255,255,.30) !important;
     box-shadow:0 5px 18px rgba(34,78,85,.14) !important;
   }
 
-  /* IMPORTANTE: cancelar los translate/top acumulados anteriores */
+  /* Cancelar cualquier desplazamiento previo del hero */
   .hero-ref,
   .hero-content{
-    transform:none !important;
     position:relative !important;
     top:auto !important;
+    bottom:auto !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
   }
 
-  /* Compactar ligeramente título para ganar espacio SIN superponer */
+  /* Título en su posición original */
   .hero-first{
-    margin-bottom:2px !important;
+    margin-bottom:4px !important;
   }
+
   .hero-kicker-ref{
-    margin-top:2px !important;
-    margin-bottom:5px !important;
+    margin-top:4px !important;
+    margin-bottom:4px !important;
   }
+
   .hero-title-ref{
     margin-top:0 !important;
     margin-bottom:0 !important;
     line-height:.90 !important;
   }
+
   .hero-canina-ref{
-    margin-top:3px !important;
+    margin-top:4px !important;
     margin-bottom:8px !important;
   }
 
   /* Seguridad / Lealtad / Protección:
-     flujo normal inmediatamente DEBAJO de CANINA */
+     solamente un pequeño ajuste hacia arriba */
   .hero-values-ref{
     position:relative !important;
     top:auto !important;
-    transform:none !important;
-    margin:0 0 7px !important;
-    min-height:48px !important;
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    align-items:center !important;
-  }
-  .hero-values-ref > div{
-    min-height:46px !important;
-    padding:3px 12px !important;
-    grid-template-columns:32px 1fr !important;
-  }
-  .hero-value-icon{
-    font-size:1.35rem !important;
-  }
-  .hero-values-ref strong{
-    font-size:.72rem !important;
-  }
-  .hero-values-ref small{
-    font-size:.57rem !important;
-  }
-
-  /* Fecha / Horario / Lugar:
-     flujo normal debajo de los valores */
-  .hero-event-ref{
-    position:relative !important;
-    top:auto !important;
-    transform:none !important;
-    margin:0 0 7px !important;
-    min-height:60px !important;
-    padding:7px 12px !important;
-    border-radius:18px !important;
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  }
-  .hero-event-ref > div{
-    min-height:44px !important;
-    grid-template-columns:28px 1fr !important;
-    padding:1px 10px !important;
-  }
-  .event-icon{
-    font-size:1.05rem !important;
-  }
-  .hero-event-ref small{
-    font-size:.52rem !important;
-  }
-  .hero-event-ref strong{
-    font-size:.64rem !important;
-  }
-
-  /* Frase en flujo normal y antes de la franja de perros */
-  .hero-quote-ref,
-  .hero-quote{
-    position:relative !important;
-    top:auto !important;
-    transform:none !important;
-    margin:4px 0 0 !important;
-    line-height:1.2 !important;
-    color:#fff !important;
-  }
-
-  /* No tocar CTA inferior */
-  .hero-experience{
-    transform:none !important;
-  }
-}
-
-/* Leyenda centrada debajo de los tres perros */
-@media (min-width:769px){
-  .hero-quote-ref,
-  .hero-quote{
-    position:absolute !important;
-    top:auto !important;
-    left:50% !important;
-    right:auto !important;
-    bottom:18px !important;
-    transform:translateX(-50%) !important;
-    width:max-content !important;
-    max-width:70% !important;
-    margin:0 !important;
-    text-align:center !important;
-    color:#ffffff !important;
-    white-space:nowrap !important;
-    z-index:8 !important;
-  }
-}
-
-/* Mantener la colocación móvil existente */
-@media (max-width:768px){
-  .hero-quote-ref,
-  .hero-quote{
-    position:relative !important;
+    bottom:auto !important;
     left:auto !important;
     right:auto !important;
-    bottom:auto !important;
     transform:none !important;
-    white-space:normal !important;
-  }
-}
 
-/* ================================================================
-   PORTADA LIMPIA — POSICIONES SEPARADAS PARA ESCRITORIO Y MÓVIL
-   ================================================================ */
+    margin:-5px 0 6px !important;
 
-/* ---------- ESCRITORIO ---------- */
-@media (min-width:769px){
-
-  .hero-ref,
-  .hero-content{
-    position:relative !important;
-    transform:none !important;
-  }
-
-  .hero-values-ref{
-    position:relative !important;
-    top:auto !important;
-    transform:none !important;
-    margin:0 0 8px !important;
-  }
-
-  .hero-event-ref{
-    position:relative !important;
-    top:auto !important;
-    transform:none !important;
-    margin:0 0 8px !important;
-  }
-
-  /* Leyenda centrada debajo de los tres perros */
-  .hero-quote-ref,
-  .hero-quote{
-    position:absolute !important;
-    left:50% !important;
-    right:auto !important;
-    bottom:18px !important;
-    top:auto !important;
-    transform:translateX(-50%) !important;
-    margin:0 !important;
-    width:max-content !important;
-    max-width:72% !important;
-    text-align:center !important;
-    white-space:nowrap !important;
-    color:#fff !important;
-    z-index:8 !important;
-  }
-}
-
-/* ---------- CELULAR ---------- */
-@media (max-width:768px){
-
-  /* Mantener la misma portada, con la manejadora y el perro visibles */
-  .portada{
-    min-height:900px !important;
-    height:auto !important;
-    padding:26px 18px 28px !important;
-    background-image:url('fondo.png') !important;
-    background-size:cover !important;
-    background-repeat:no-repeat !important;
-    background-position:66% center !important;
-    background-color:#063746 !important;
-    overflow:hidden !important;
-  }
-
-  .hero-ref,
-  .hero-content{
-    width:100% !important;
-    max-width:100% !important;
-    position:relative !important;
-    transform:none !important;
-  }
-
-  /* En celular los logos internos de la portada desaparecen.
-     El logo del menú superior permanece visible. */
-  .hero-logos{
-    display:none !important;
-  }
-
-  /* Título se mantiene arriba */
-  .hero-first{
-    margin-top:20px !important;
-  }
-
-  .hero-kicker-ref{
-    width:76% !important;
-    max-width:76% !important;
-  }
-
-  .hero-title-ref{
-    width:82% !important;
-    max-width:82% !important;
-    white-space:normal !important;
-    transform:none !important;
-  }
-
-  .hero-canina-ref{
-    width:76% !important;
-    max-width:76% !important;
-    margin-bottom:0 !important;
-  }
-
-  /* TODO lo que está debajo de CANINA baja hasta la zona
-     de las patas del perro. */
-  .hero-values-ref{
-    position:relative !important;
-    top:auto !important;
-    transform:none !important;
-    margin-top:245px !important;
-    margin-bottom:8px !important;
     display:grid !important;
-    grid-template-columns:repeat(3,1fr) !important;
-    width:100% !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    align-items:center !important;
+    min-height:48px !important;
   }
 
   .hero-values-ref > div{
-    min-height:46px !important;
+    min-height:44px !important;
     display:grid !important;
-    grid-template-columns:24px 1fr !important;
+    grid-template-columns:30px 1fr !important;
+    gap:7px !important;
     align-items:center !important;
-    gap:4px !important;
-    padding:4px 5px !important;
+    padding:2px 12px !important;
     border-right:1px solid rgba(255,255,255,.24) !important;
-    border-bottom:0 !important;
+  }
+
+  .hero-values-ref > div:first-child{
+    padding-left:0 !important;
   }
 
   .hero-values-ref > div:last-child{
@@ -4739,41 +4245,58 @@ h2::after{
   }
 
   .hero-value-icon{
-    font-size:1.05rem !important;
+    font-size:1.25rem !important;
   }
 
   .hero-values-ref strong{
-    font-size:.56rem !important;
+    display:block !important;
     color:#fff !important;
+    font-size:.72rem !important;
+    line-height:1.1 !important;
   }
 
   .hero-values-ref small{
-    font-size:.44rem !important;
-    line-height:1.15 !important;
-    color:rgba(255,255,255,.94) !important;
+    display:block !important;
+    margin-top:2px !important;
+    color:rgba(255,255,255,.92) !important;
+    font-size:.56rem !important;
+    line-height:1.1 !important;
   }
 
+  /* Fecha / Horario / Lugar:
+     inmediatamente debajo, sin invadir la franja de perros */
   .hero-event-ref{
     position:relative !important;
     top:auto !important;
+    bottom:auto !important;
+    left:auto !important;
+    right:auto !important;
     transform:none !important;
-    margin:0 0 10px !important;
-    min-height:58px !important;
-    padding:7px 8px !important;
+
+    margin:0 0 6px !important;
+    min-height:62px !important;
+    padding:7px 12px !important;
+
     display:grid !important;
-    grid-template-columns:repeat(3,1fr) !important;
-    border-radius:16px !important;
-    background:rgba(4,53,65,.88) !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+
+    border-radius:18px !important;
+    background:rgba(4,52,65,.88) !important;
+    border:1px solid rgba(214,232,234,.42) !important;
   }
 
   .hero-event-ref > div{
+    min-height:46px !important;
     display:grid !important;
-    grid-template-columns:22px 1fr !important;
+    grid-template-columns:28px 1fr !important;
+    gap:7px !important;
     align-items:center !important;
-    gap:4px !important;
-    padding:2px 6px !important;
+    padding:2px 10px !important;
     border-right:1px solid rgba(255,255,255,.22) !important;
-    border-bottom:0 !important;
+  }
+
+  .hero-event-ref > div:first-child{
+    padding-left:0 !important;
   }
 
   .hero-event-ref > div:last-child{
@@ -4781,481 +4304,185 @@ h2::after{
   }
 
   .event-icon{
-    font-size:.88rem !important;
+    font-size:1.05rem !important;
   }
 
   .hero-event-ref small{
-    font-size:.42rem !important;
+    display:block !important;
+    color:#dce9eb !important;
+    font-size:.51rem !important;
+    line-height:1.05 !important;
   }
 
   .hero-event-ref strong{
-    font-size:.51rem !important;
-    line-height:1.12 !important;
-  }
-
-  .hero-quote-ref,
-  .hero-quote{
-    position:relative !important;
-    left:auto !important;
-    right:auto !important;
-    top:auto !important;
-    bottom:auto !important;
-    transform:none !important;
-    margin:6px 0 12px !important;
-    max-width:76% !important;
-    text-align:left !important;
-    white-space:normal !important;
-    color:#fff !important;
-    font-size:.72rem !important;
-    line-height:1.45 !important;
-  }
-
-  /* Botón inmediatamente después de la información */
-  .hero-experience{
-    position:relative !important;
-    left:auto !important;
-    right:auto !important;
-    bottom:auto !important;
-    top:auto !important;
-    width:max-content !important;
-    max-width:100% !important;
-    margin:8px 0 0 auto !important;
-  }
-}
-
-@media (max-width:430px){
-  .portada{
-    min-height:880px !important;
-    background-position:64% center !important;
-  }
-
-  .hero-values-ref{
-    margin-top:225px !important;
-  }
-}
-
-/* ================================================================
-   HERO DESKTOP — BLOQUE DE INFORMACIÓN SIN SUPERPOSICIONES
-   ================================================================ */
-
-@media (min-width:769px){
-
-  .portada{
-    position:relative !important;
-    min-height:690px !important;
-    overflow:hidden !important;
-  }
-
-  /* Título permanece en su zona natural */
-  .hero-ref,
-  .hero-content{
-    position:relative !important;
-    transform:none !important;
-    top:auto !important;
-  }
-
-  .hero-canina-ref{
-    margin-bottom:18px !important;
-  }
-
-  /* Bloque independiente: nunca se cruza con CANINA ni con los perros */
-  .hero-info-stack{
-    position:absolute !important;
-    left:58px !important;
-    bottom:178px !important;
-    width:700px !important;
-    max-width:58% !important;
-    z-index:8 !important;
-  }
-
-  /* Fila 1 */
-  .hero-info-stack .hero-values-ref{
-    position:static !important;
-    top:auto !important;
-    transform:none !important;
-    margin:0 0 10px !important;
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    min-height:50px !important;
-    align-items:center !important;
-    background:rgba(3,48,61,.22) !important;
-    border-radius:14px !important;
-    padding:6px 10px !important;
-  }
-
-  .hero-info-stack .hero-values-ref > div{
-    display:grid !important;
-    grid-template-columns:32px 1fr !important;
-    align-items:center !important;
-    gap:7px !important;
-    min-height:42px !important;
-    padding:2px 12px !important;
-    border-right:1px solid rgba(255,255,255,.22) !important;
-  }
-
-  .hero-info-stack .hero-values-ref > div:first-child{
-    padding-left:2px !important;
-  }
-
-  .hero-info-stack .hero-values-ref > div:last-child{
-    border-right:0 !important;
-  }
-
-  .hero-info-stack .hero-value-icon{
-    font-size:1.35rem !important;
-    line-height:1 !important;
-  }
-
-  .hero-info-stack .hero-values-ref strong{
-    display:block !important;
-    color:#fff !important;
-    font-size:.75rem !important;
-    font-weight:900 !important;
-    line-height:1.15 !important;
-  }
-
-  .hero-info-stack .hero-values-ref small{
-    display:block !important;
-    margin-top:2px !important;
-    color:rgba(255,255,255,.9) !important;
-    font-size:.58rem !important;
-    line-height:1.15 !important;
-  }
-
-  /* Fila 2 */
-  .hero-info-stack .hero-event-ref{
-    position:static !important;
-    top:auto !important;
-    transform:none !important;
-    margin:0 !important;
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    min-height:66px !important;
-    padding:8px 12px !important;
-    border-radius:18px !important;
-    background:rgba(4,52,65,.90) !important;
-    border:1px solid rgba(214,232,234,.44) !important;
-    box-shadow:0 8px 20px rgba(0,0,0,.12) !important;
-    backdrop-filter:blur(7px) !important;
-  }
-
-  .hero-info-stack .hero-event-ref > div{
-    display:grid !important;
-    grid-template-columns:30px 1fr !important;
-    align-items:center !important;
-    gap:7px !important;
-    min-height:46px !important;
-    padding:2px 12px !important;
-    border-right:1px solid rgba(255,255,255,.22) !important;
-  }
-
-  .hero-info-stack .hero-event-ref > div:first-child{
-    padding-left:2px !important;
-  }
-
-  .hero-info-stack .hero-event-ref > div:last-child{
-    border-right:0 !important;
-  }
-
-  .hero-info-stack .event-icon{
-    font-size:1.1rem !important;
-  }
-
-  .hero-info-stack .hero-event-ref small{
-    display:block !important;
-    color:#d9e8eb !important;
-    font-size:.53rem !important;
-    letter-spacing:.05em !important;
-  }
-
-  .hero-info-stack .hero-event-ref strong{
     display:block !important;
     margin-top:2px !important;
     color:#fff !important;
-    font-size:.66rem !important;
-    line-height:1.12 !important;
+    font-size:.63rem !important;
+    line-height:1.1 !important;
   }
 
-  /* Leyenda centrada en la zona azul inferior,
-     completamente separada de las dos filas */
+  /* Leyenda centrada en la zona azul inferior, debajo de los tres perros */
   .hero-quote-ref,
   .hero-quote{
     position:absolute !important;
     left:50% !important;
     right:auto !important;
-    bottom:22px !important;
     top:auto !important;
+    bottom:18px !important;
     transform:translateX(-50%) !important;
+
     margin:0 !important;
     width:max-content !important;
     max-width:72% !important;
+
     text-align:center !important;
     white-space:nowrap !important;
     color:#fff !important;
     z-index:9 !important;
   }
-}
 
-/* En móvil anulamos el wrapper absoluto para conservar la versión móvil */
-@media (max-width:768px){
-  .hero-info-stack{
-    position:static !important;
-    width:100% !important;
-    max-width:100% !important;
+  /* Botón conserva su posición inferior derecha */
+  .hero-experience{
+    transform:none !important;
   }
 }
 
 /* ================================================================
-   CORRECCIÓN MÓVIL REAL — 08 AGO 2026
-   Oculta logos de HERO y baja TODO hero-info-stack a las patas.
-   Escritorio no se modifica.
+   AJUSTE FINAL ESCRITORIO:
+   NO mover las dos filas; separar la leyenda de la tarjeta.
    ================================================================ */
+@media (min-width:769px){
 
-@media (max-width:768px){
-
-  /* 1. Los logos dentro de la FOTO desaparecen por completo.
-        El logo de la barra superior (.nav-brand) permanece. */
-  .portada .hero-logos,
-  .portada .solo-escritorio{
-      display:none !important;
-      visibility:hidden !important;
-      opacity:0 !important;
-      width:0 !important;
-      height:0 !important;
-      margin:0 !important;
-      padding:0 !important;
-      overflow:hidden !important;
+  /* Mantener las dos filas donde están, sin transformaciones */
+  .hero-values-ref{
+    position:relative !important;
+    transform:none !important;
+    top:auto !important;
+    bottom:auto !important;
+    margin:-5px 0 6px !important;
+    z-index:7 !important;
   }
 
-  /* 2. Mantener portada original y encuadrar mejor a manejadora + perro */
-  .portada{
-      min-height:930px !important;
-      height:auto !important;
-      padding:28px 18px 28px !important;
-      background-image:url('fondo.png') !important;
-      background-size:cover !important;
-      background-repeat:no-repeat !important;
-      background-position:64% center !important;
-      background-color:#063746 !important;
-      overflow:hidden !important;
+  .hero-event-ref{
+    position:relative !important;
+    transform:none !important;
+    top:auto !important;
+    bottom:auto !important;
+    margin:0 !important;
+    z-index:8 !important;
   }
 
-  .hero-ref,
-  .hero-content{
-      position:relative !important;
-      width:100% !important;
-      max-width:100% !important;
-      transform:none !important;
-      top:auto !important;
-  }
-
-  /* 3. Título permanece arriba; no lo bajamos */
-  .hero-first{
-      margin-top:8px !important;
-  }
-
-  .hero-kicker-ref{
-      width:76% !important;
-      max-width:76% !important;
-  }
-
-  .hero-title-ref{
-      width:84% !important;
-      max-width:84% !important;
-      transform:none !important;
-      white-space:normal !important;
-  }
-
-  .hero-canina-ref{
-      width:78% !important;
-      max-width:78% !important;
-      margin-bottom:0 !important;
-  }
-
-  /* 4. ESTE ES EL CAMBIO IMPORTANTE:
-        bajar el CONTENEDOR COMPLETO, no las filas por separado. */
-  .hero-info-stack{
-      position:relative !important;
-      left:auto !important;
-      right:auto !important;
-      bottom:auto !important;
-      top:auto !important;
-      transform:none !important;
-
-      width:100% !important;
-      max-width:100% !important;
-
-      /* Zona de las patas del perro */
-      margin-top:285px !important;
-      margin-bottom:0 !important;
-
-      z-index:8 !important;
-  }
-
-  /* 5. Primera fila compacta */
-  .hero-info-stack .hero-values-ref{
-      position:static !important;
-      top:auto !important;
-      transform:none !important;
-      margin:0 0 8px !important;
-
-      display:grid !important;
-      grid-template-columns:repeat(3,1fr) !important;
-      min-height:48px !important;
-      padding:5px 5px !important;
-
-      background:rgba(3,49,61,.30) !important;
-      border-radius:13px !important;
-  }
-
-  .hero-info-stack .hero-values-ref > div{
-      display:grid !important;
-      grid-template-columns:24px 1fr !important;
-      gap:4px !important;
-      align-items:center !important;
-
-      min-height:42px !important;
-      padding:3px 5px !important;
-      border-right:1px solid rgba(255,255,255,.23) !important;
-      border-bottom:0 !important;
-  }
-
-  .hero-info-stack .hero-values-ref > div:last-child{
-      border-right:0 !important;
-  }
-
-  .hero-info-stack .hero-value-icon{
-      font-size:1.05rem !important;
-  }
-
-  .hero-info-stack .hero-values-ref strong{
-      display:block !important;
-      color:#fff !important;
-      font-size:.56rem !important;
-      line-height:1.1 !important;
-  }
-
-  .hero-info-stack .hero-values-ref small{
-      display:block !important;
-      color:rgba(255,255,255,.92) !important;
-      font-size:.43rem !important;
-      line-height:1.12 !important;
-      margin-top:2px !important;
-  }
-
-  /* 6. Segunda fila compacta */
-  .hero-info-stack .hero-event-ref{
-      position:static !important;
-      top:auto !important;
-      transform:none !important;
-      margin:0 !important;
-
-      display:grid !important;
-      grid-template-columns:repeat(3,1fr) !important;
-      min-height:58px !important;
-      padding:7px 7px !important;
-
-      border-radius:16px !important;
-      background:rgba(4,53,65,.90) !important;
-      border:1px solid rgba(210,230,232,.40) !important;
-  }
-
-  .hero-info-stack .hero-event-ref > div{
-      display:grid !important;
-      grid-template-columns:22px 1fr !important;
-      gap:4px !important;
-      align-items:center !important;
-
-      min-height:44px !important;
-      padding:2px 6px !important;
-      border-right:1px solid rgba(255,255,255,.22) !important;
-      border-bottom:0 !important;
-  }
-
-  .hero-info-stack .hero-event-ref > div:last-child{
-      border-right:0 !important;
-  }
-
-  .hero-info-stack .event-icon{
-      font-size:.87rem !important;
-  }
-
-  .hero-info-stack .hero-event-ref small{
-      display:block !important;
-      color:#dbe9eb !important;
-      font-size:.41rem !important;
-      line-height:1.05 !important;
-  }
-
-  .hero-info-stack .hero-event-ref strong{
-      display:block !important;
-      color:#fff !important;
-      font-size:.50rem !important;
-      line-height:1.10 !important;
-      margin-top:2px !important;
-  }
-
-  /* 7. Frase debajo de esas filas */
+  /* La frase deja de pertenecer al bloque superior.
+     Se coloca centrada en la franja azul INFERIOR de la portada. */
   .hero-quote-ref,
   .hero-quote{
-      position:relative !important;
-      left:auto !important;
-      right:auto !important;
-      top:auto !important;
-      bottom:auto !important;
-      transform:none !important;
+    position:absolute !important;
+    top:auto !important;
+    left:50% !important;
+    right:auto !important;
+    bottom:12px !important;
+    transform:translateX(-50%) !important;
 
-      width:auto !important;
-      max-width:78% !important;
-      margin:10px 0 12px !important;
+    width:max-content !important;
+    max-width:62% !important;
+    margin:0 !important;
+    padding:0 !important;
 
-      text-align:left !important;
-      white-space:normal !important;
-      color:#fff !important;
-      font-size:.70rem !important;
-      line-height:1.42 !important;
-  }
-
-  /* 8. CTA inmediatamente después; no gran hueco azul */
-  .hero-experience{
-      position:relative !important;
-      left:auto !important;
-      right:auto !important;
-      top:auto !important;
-      bottom:auto !important;
-
-      display:flex !important;
-      width:max-content !important;
-      max-width:100% !important;
-      margin:10px 0 0 auto !important;
-
-      padding:10px 14px !important;
-      font-size:.65rem !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+    color:#ffffff !important;
+    font-size:.82rem !important;
+    line-height:1.15 !important;
+    z-index:20 !important;
+    pointer-events:none !important;
   }
 }
 
-@media (max-width:430px){
-  .portada{
-      min-height:900px !important;
-      background-position:62% center !important;
+/* No modificar la composición móvil de esta base */
+@media (max-width:768px){
+  .hero-quote-ref,
+  .hero-quote{
+    position:relative !important;
+    top:auto !important;
+    bottom:auto !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    white-space:normal !important;
+  }
+}
+
+/* AJUSTE FINO: compactar información sin invadir las fotos inferiores */
+@media (min-width:769px){
+  .hero-values-ref{
+    margin:-10px 0 2px !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    line-height:1.05 !important;
   }
 
-  .hero-info-stack{
-      margin-top:255px !important;
+  .hero-event-ref{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+    padding-top:8px !important;
+    padding-bottom:8px !important;
+  }
+
+  /* Reserva visual antes de la franja con los tres perros */
+  .hero-copy-ref,
+  .hero-content,
+  .hero-copy{
+    padding-bottom:112px !important;
+  }
+
+  /* La leyenda queda fuera de las imágenes y no empuja las filas */
+  .hero-quote-ref,
+  .hero-quote{
+    bottom:10px !important;
+  }
+}
+
+/* ================================================================
+   AJUSTE FINO DE ESCRITORIO
+   Sube TODO el contenido de la portada como una sola unidad.
+   Móvil queda intacto.
+   ================================================================ */
+@media (min-width:769px){
+
+  .hero-ref,
+  .hero-content{
+    transform:translateY(-34px) !important;
+  }
+
+  /* Mantener compactas las dos filas */
+  .hero-values-ref{
+    margin:-10px 0 2px !important;
+  }
+
+  .hero-event-ref{
+    margin:0 !important;
+  }
+
+  /* La leyenda sigue centrada abajo */
+  .hero-quote-ref,
+  .hero-quote{
+    transform:translateX(-50%) !important;
+    bottom:10px !important;
   }
 }
 </style>
 </head>
-<body><header class="site-nav" style="background:linear-gradient(90deg,#6f9ea6 0%,#82afb6 55%,#90bac0 100%) !important;border-bottom:1px solid rgba(255,255,255,.35) !important;box-shadow:0 5px 18px rgba(34,78,85,.14) !important;backdrop-filter:blur(12px) !important;">
+<body><header class="site-nav">
 <div class="site-nav-inner">
 <a aria-label="Inicio" class="nav-brand" href="#inicio">
 <img alt="Club Etocane K-9" src="logo-etokane.png"/>
 <span class="nav-divider"></span>
 <img alt="Cinología México Internacional" class="nav-cmi" src="logo-cinologia-mexico.png"/>
 </a>
-<nav aria-label="Navegación principal" class="nav-links"><a href="#categorias" style="color:#ffffff !important;background:transparent !important;text-shadow:0 1px 2px rgba(0,0,0,.12) !important;">Categorías</a><a href="#reglamento" style="color:#ffffff !important;background:transparent !important;text-shadow:0 1px 2px rgba(0,0,0,.12) !important;">Reglamento</a><a href="#premiacion" style="color:#ffffff !important;background:transparent !important;text-shadow:0 1px 2px rgba(0,0,0,.12) !important;">Premiación</a><a class="nav-inscripcion" href="#inscripcion" style="color:#ffffff !important;background:transparent !important;text-shadow:0 1px 2px rgba(0,0,0,.12) !important;color:#ffe1a0 !important;">Inscripción</a><a href="#informes" style="color:#ffffff !important;background:transparent !important;text-shadow:0 1px 2px rgba(0,0,0,.12) !important;">Informes</a></nav>
-<div aria-label="Redes sociales" class="nav-social"><a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=100089148847165" rel="noopener noreferrer" style="background:rgba(255,255,255,.12) !important;border:1px solid rgba(255,255,255,.8) !important;color:#ffffff !important;" target="_blank" title="Facebook">f</a><a aria-label="Instagram" href="https://www.instagram.com/etocanek9.bcs/" rel="noopener noreferrer" style="background:rgba(255,255,255,.12) !important;border:1px solid rgba(255,255,255,.8) !important;color:#ffffff !important;" target="_blank" title="Instagram">◎</a><a aria-label="WhatsApp" href="https://wa.me/526122327421?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20competencia%20de%20obediencia%20canina%20Etocane%20K-9." rel="noopener noreferrer" style="background:rgba(255,255,255,.12) !important;border:1px solid rgba(255,255,255,.8) !important;color:#ffffff !important;" target="_blank" title="WhatsApp">WA</a><a aria-label="Correo" href="mailto:etocanek9.lpz@gmail.com" style="background:rgba(255,255,255,.12) !important;border:1px solid rgba(255,255,255,.8) !important;color:#ffffff !important;" title="Correo">✉</a></div>
-<button aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" style="background:rgba(79,128,137,.78) !important;border:1px solid rgba(255,255,255,.28) !important;color:#fff !important;" type="button">☰</button>
+<nav aria-label="Navegación principal" class="nav-links"><a href="#categorias">Categorías</a><a href="#reglamento">Reglamento</a><a href="#premiacion">Premiación</a><a class="nav-inscripcion" href="#inscripcion">Inscripción</a><a href="#informes">Informes</a></nav>
+<div aria-label="Redes sociales" class="nav-social"><a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=100089148847165" rel="noopener noreferrer" target="_blank" title="Facebook">f</a><a aria-label="Instagram" href="https://www.instagram.com/etocanek9.bcs/" rel="noopener noreferrer" target="_blank" title="Instagram">◎</a><a aria-label="WhatsApp" href="https://wa.me/526122327421?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20competencia%20de%20obediencia%20canina%20Etocane%20K-9." rel="noopener noreferrer" target="_blank" title="WhatsApp">WA</a><a aria-label="Correo" href="mailto:etocanek9.lpz@gmail.com" title="Correo">✉</a></div>
+<button aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" type="button">☰</button>
 </div>
 </header>
 <div class="container">
@@ -5263,7 +4490,7 @@ h2::after{
            📌 1. PORTADA
            ================================================================ -->
 <div class="portada" id="inicio">
-<div class="hero-content hero-ref"><div class="hero-logos solo-escritorio">
+<div class="hero-content hero-ref"><div class="hero-logos">
 <img alt="Club Etocane K-9" src="logo-etokane.png"/>
 <span class="hero-logo-divider"></span>
 <img alt="Cinología México Internacional" src="logo-cinologia-mexico.png"/>
@@ -5272,7 +4499,7 @@ h2::after{
 <div class="hero-kicker-ref">COMPETENCIA DE</div>
 <h1 class="hero-title-ref">OBEDIENCIA</h1>
 <div class="hero-canina-ref"><span></span>CANINA<span></span></div>
-<div class="hero-info-stack"><div class="hero-values-ref">
+<div class="hero-values-ref">
 <div>
 <span aria-label="Seguridad" class="hero-value-icon">🛡️</span>
 <span><strong>SEGURIDAD</strong><small>Bienestar ante todo</small></span>
@@ -5285,11 +4512,12 @@ h2::after{
 <span aria-label="Protección" class="hero-value-icon">🐕</span>
 <span><strong>PROTECCIÓN</strong><small>Confianza mutua</small></span>
 </div>
-</div><div class="hero-event-ref">
+</div>
+<div class="hero-event-ref">
 <div><span class="event-icon">📅</span><span><small>FECHA</small><strong>29 DE NOVIEMBRE</strong></span></div>
 <div><span class="event-icon">⏰</span><span><small>HORARIO</small><strong>07:00 AM</strong></span></div>
 <div><span class="event-icon">📍</span><span><small>LUGAR</small><strong>DEPORTIVO EL PIOJILLO</strong></span></div>
-</div></div>
+</div>
 <p class="hero-quote-ref">“Entrenamos hoy, para ser mejores compañeros mañana.”</p>
 </div>
 <a class="hero-experience" href="#inscripcion">🏆 SÉ PARTE DE LA EXPERIENCIA</a></div>
@@ -5815,23 +5043,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 </script>
-<div class="css-lightbox" id="lb-pilar-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><script>
-(function(){
-  function ajustarHeroMovil(){
-    var movil = window.matchMedia('(max-width: 768px)').matches;
-    var logos = document.querySelector('.portada .hero-logos');
-    if (logos) {
-      if (movil) {
-        logos.style.setProperty('display','none','important');
-        logos.style.setProperty('visibility','hidden','important');
-      } else {
-        logos.style.removeProperty('display');
-        logos.style.removeProperty('visibility');
-      }
-    }
-  }
-  document.addEventListener('DOMContentLoaded', ajustarHeroMovil);
-  window.addEventListener('resize', ajustarHeroMovil);
-})();
-</script></body>
+<div class="css-lightbox" id="lb-pilar-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div></body>
 </html>
