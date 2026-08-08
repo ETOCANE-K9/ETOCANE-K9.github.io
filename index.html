@@ -3271,6 +3271,140 @@ h2::after{
     .hero-logos img{height:44px;}
     .hero-logo-divider{height:38px;}
 }
+
+/* ================================================================
+   AJUSTES VISUALES — PORTADA SIN VELO + PREMIACIÓN MÁS LIGERA
+   ================================================================ */
+
+/* Quitar completamente el velo: mostrar el fondo tal cual */
+.portada{
+    background-image:url('fondo.png') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+}
+
+/* Subir contenido del hero para dejar libre la franja inferior de perros */
+.hero-ref,
+.hero-content{
+    transform:translateY(-26px);
+}
+
+/* Subir especialmente el bloque de fecha / horario / lugar */
+.hero-event-ref,
+.hero-event{
+    margin-top:12px !important;
+    transform:translateY(-8px);
+}
+
+/* Subir frase para que tampoco invada la franja inferior */
+.hero-quote-ref,
+.hero-quote{
+    margin-top:8px !important;
+    transform:translateY(-6px);
+}
+
+/* CTA sigue abajo a la derecha */
+.hero-experience{
+    bottom:32px !important;
+}
+
+/* ========================= PREMIACIÓN ========================= */
+
+/* Convertir la sección en algo más luminoso y compacto */
+.card-premiacion{
+    background:
+      radial-gradient(circle at 85% 10%, rgba(236,174,64,.16), transparent 28%),
+      linear-gradient(135deg,#fffaf1 0%,#f6efe3 100%) !important;
+    color:#0b3343 !important;
+    border:1px solid #eadcc3 !important;
+    padding:30px 28px !important;
+    box-shadow:0 12px 32px rgba(85,66,31,.08) !important;
+}
+
+.card-premiacion h2{
+    color:#0b3343 !important;
+    margin-bottom:8px !important;
+}
+
+.card-premiacion h2::after{
+    background:#e3a83a !important;
+}
+
+.card-premiacion > p{
+    color:#6d6254 !important;
+    margin-bottom:16px !important;
+}
+
+/* Tres premios compactos */
+.premios-grid{
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:12px !important;
+}
+
+.premio-card{
+    background:#ffffff !important;
+    border:1px solid #eadfc9 !important;
+    color:#0b3343 !important;
+    padding:16px 14px !important;
+    border-radius:16px !important;
+    box-shadow:0 7px 18px rgba(85,66,31,.06) !important;
+}
+
+.premio-card h3{
+    color:#0b3343 !important;
+    margin:0 0 10px !important;
+    font-size:1.02rem !important;
+}
+
+.premio-card .lugar{
+    color:#7b6a4e !important;
+    font-size:.78rem !important;
+    margin-top:4px !important;
+}
+
+.premio-card .monto{
+    color:#c58a22 !important;
+    font-weight:900 !important;
+    font-size:1.04rem !important;
+}
+
+/* Compactar el texto final de premiación */
+.card-premiacion > p:last-child{
+    margin-top:14px !important;
+    color:#7b6a4e !important;
+    font-size:.82rem !important;
+}
+
+/* Responsive */
+@media(max-width:860px){
+    .hero-ref,
+    .hero-content{
+        transform:translateY(-14px);
+    }
+
+    .premios-grid{
+        grid-template-columns:1fr !important;
+    }
+}
+
+@media(max-width:520px){
+    .hero-ref,
+    .hero-content{
+        transform:none;
+    }
+
+    .hero-event-ref,
+    .hero-event,
+    .hero-quote-ref,
+    .hero-quote{
+        transform:none;
+    }
+
+    .card-premiacion{
+        padding:22px 16px !important;
+    }
+}
 </style>
 </head>
 <body><header class="site-nav">
@@ -3318,7 +3452,6 @@ h2::after{
 <div><span class="event-icon">⏰</span><span><small>HORARIO</small><strong>07:00 AM</strong></span></div>
 <div><span class="event-icon">📍</span><span><small>LUGAR</small><strong>DEPORTIVO EL PIOJILLO</strong></span></div>
 </div>
-
 <p class="hero-quote-ref">“Entrenamos hoy, para ser mejores compañeros mañana.”</p>
 </div>
 <a class="hero-experience" href="#inscripcion">🏆 SÉ PARTE DE LA EXPERIENCIA</a></div>
@@ -3645,7 +3778,6 @@ h2::after{
 </div>
 </div><div class="formulario-google">
 <a class="btn-abrir-form" href="https://forms.gle/q926AqAwTcrvV2Yu9">ABRIR FORMULARIO DE INSCRIPCIÓN</a>
-
 <div class="aviso" style="margin-top:15px;">
 <strong>📌 IMPORTANTE:</strong> Al enviar el formulario, aceptas que tu información sea utilizada
                     para el registro del evento y te comprometes a cumplir con el <strong>Reglamento Oficial</strong>.
