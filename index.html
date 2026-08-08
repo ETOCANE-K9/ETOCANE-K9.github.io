@@ -4161,6 +4161,77 @@ h2::after{
     top:-27px !important;
   }
 }
+
+/* ================================================================
+   AJUSTE ESCRITORIO FINAL
+   - Mantener móvil sin cambios
+   - Menú aqua en laptop
+   - Subir más la información del hero para liberar la franja de perros
+   ================================================================ */
+
+@media (min-width:769px){
+
+  /* Barra de menú aqua/gris azulado también en laptop */
+  .site-nav{
+    background:
+      linear-gradient(90deg,
+        #5f939c 0%,
+        #71a2aa 55%,
+        #82b0b6 100%) !important;
+    border-bottom:1px solid rgba(255,255,255,.30) !important;
+    box-shadow:0 5px 18px rgba(33,77,85,.14) !important;
+  }
+
+  .nav-links a{
+    color:#ffffff !important;
+    text-shadow:0 1px 2px rgba(0,0,0,.10) !important;
+  }
+
+  .nav-links a:hover{
+    color:#fff0c8 !important;
+  }
+
+  .nav-links .nav-inscripcion{
+    color:#ffe29b !important;
+  }
+
+  .nav-social a{
+    background:rgba(255,255,255,.10) !important;
+    border:1px solid rgba(255,255,255,.75) !important;
+    color:#ffffff !important;
+  }
+
+  .nav-social a:hover{
+    background:#ffffff !important;
+    color:#4f8089 !important;
+  }
+
+  /* Subir el bloque completo de contenido */
+  .hero-ref,
+  .hero-content{
+    transform:translateY(-54px) !important;
+  }
+
+  /* Subir todavía un poco más las dos filas inferiores */
+  .hero-values-ref{
+    top:-48px !important;
+  }
+
+  .hero-event-ref{
+    top:-56px !important;
+  }
+
+  .hero-quote-ref,
+  .hero-quote{
+    top:-50px !important;
+  }
+
+  /* Mantener el botón en la esquina azul inferior derecha */
+  .hero-experience{
+    right:30px !important;
+    bottom:24px !important;
+  }
+}
 </style>
 </head>
 <body><header class="site-nav">
