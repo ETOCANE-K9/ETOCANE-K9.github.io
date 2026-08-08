@@ -3060,6 +3060,217 @@ h2::after{
     width:100%;
   }
 }
+
+/* ================================================================
+   AJUSTES FINALES DE PORTADA E INSCRIPCIÓN
+   ================================================================ */
+
+/* Dejar visible la paleta y las líneas doradas del fondo original */
+.portada{
+    position:relative !important;
+    background-image:
+      linear-gradient(90deg,
+        rgba(2,34,48,.48) 0%,
+        rgba(2,34,48,.34) 27%,
+        rgba(2,34,48,.12) 48%,
+        rgba(2,34,48,0) 67%),
+      url('fondo.png') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+}
+
+/* Logos dentro de la portada */
+.hero-logos{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:22px;
+}
+.hero-logos img{
+    height:64px;
+    width:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 3px 10px rgba(0,0,0,.18));
+}
+.hero-logo-divider{
+    width:1px;
+    height:52px;
+    background:rgba(255,255,255,.38);
+}
+
+/* CTA a la esquina inferior derecha azul */
+.hero-experience{
+    position:absolute !important;
+    right:34px !important;
+    bottom:34px !important;
+    left:auto !important;
+    margin:0 !important;
+    z-index:4 !important;
+    padding:12px 20px !important;
+    border:1px solid #e8a72f !important;
+    background:rgba(4,43,57,.82) !important;
+    color:#f2b54a !important;
+    backdrop-filter:blur(6px);
+    box-shadow:0 10px 26px rgba(0,0,0,.18) !important;
+}
+.hero-experience:hover{
+    background:#e8a72f !important;
+    color:#062c3b !important;
+}
+
+/* Pago en un solo bloque */
+.pago-box{
+    background:transparent !important;
+    border:0 !important;
+    padding:0 !important;
+    margin:22px 0 14px !important;
+}
+.payment-unified{
+    display:grid;
+    grid-template-columns:1.35fr .95fr;
+    gap:0;
+    border:1px solid #dfe9ec;
+    border-radius:20px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 12px 30px rgba(6,42,56,.07);
+}
+.payment-main{
+    padding:26px 28px;
+}
+.payment-eyebrow{
+    display:block;
+    color:#e3a32f;
+    font-size:.70rem;
+    font-weight:800;
+    letter-spacing:.20em;
+    margin-bottom:6px;
+}
+.payment-main h3{
+    margin:0;
+    color:#07384a;
+    font-size:1.45rem;
+}
+.payment-main p{
+    margin:8px 0 18px;
+    color:#536a76;
+    line-height:1.55;
+}
+.payment-account{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+.payment-account div{
+    padding:12px 14px;
+    border-radius:12px;
+    background:#f6f9fa;
+    border:1px solid #e5edef;
+}
+.payment-account small,
+.payment-account strong{
+    display:block;
+}
+.payment-account small{
+    color:#71838c;
+    font-size:.62rem;
+    letter-spacing:.07em;
+}
+.payment-account strong{
+    margin-top:3px;
+    color:#0a2a3a;
+    font-size:.86rem;
+}
+.payment-steps{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:0;
+    padding:18px 22px;
+    background:linear-gradient(135deg,#07384a,#0c5867);
+}
+.payment-steps div{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:10px;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.14);
+}
+.payment-steps div:last-child{border-bottom:0;}
+.payment-steps span{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e8a72f;
+    color:#07384a;
+    font-weight:900;
+}
+.payment-steps p{
+    margin:0;
+    color:#fff;
+    font-size:.88rem;
+    line-height:1.35;
+}
+.formulario-google{
+    margin-top:0 !important;
+    border-radius:16px !important;
+    padding:18px !important;
+}
+.formulario-google .btn-abrir-form{
+    width:100%;
+    max-width:460px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    background:#e8a72f !important;
+    color:#07384a !important;
+    font-weight:900 !important;
+}
+
+/* Responsive */
+@media(max-width:850px){
+    .payment-unified{
+        grid-template-columns:1fr;
+    }
+    .payment-account{
+        grid-template-columns:1fr;
+    }
+    .hero-logos img{height:52px;}
+}
+
+@media(max-width:768px){
+    .portada{
+        background-image:
+          linear-gradient(90deg,
+            rgba(2,34,48,.68) 0%,
+            rgba(2,34,48,.46) 48%,
+            rgba(2,34,48,.16) 78%,
+            rgba(2,34,48,0) 100%),
+          url('fondo.png') !important;
+    }
+    .hero-experience{
+        right:18px !important;
+        bottom:18px !important;
+    }
+}
+
+@media(max-width:520px){
+    .hero-experience{
+        position:static !important;
+        display:inline-flex !important;
+        margin-top:18px !important;
+    }
+    .hero-logos{
+        gap:10px;
+        margin-bottom:16px;
+    }
+    .hero-logos img{height:44px;}
+    .hero-logo-divider{height:38px;}
+}
 </style>
 </head>
 <body><header class="site-nav">
@@ -3079,7 +3290,11 @@ h2::after{
            📌 1. PORTADA
            ================================================================ -->
 <div class="portada" id="inicio">
-<div class="hero-content hero-ref">
+<div class="hero-content hero-ref"><div class="hero-logos">
+<img alt="Club Etocane K-9" src="logo-etokane.png"/>
+<span class="hero-logo-divider"></span>
+<img alt="Cinología México Internacional" src="logo-cinologia-mexico.png"/>
+</div>
 <div class="hero-first"><span class="hero-number">1</span><span class="hero-er">ER</span></div>
 <div class="hero-kicker-ref">COMPETENCIA DE</div>
 <h1 class="hero-title-ref">OBEDIENCIA</h1>
@@ -3103,10 +3318,10 @@ h2::after{
 <div><span class="event-icon">⏰</span><span><small>HORARIO</small><strong>07:00 AM</strong></span></div>
 <div><span class="event-icon">📍</span><span><small>LUGAR</small><strong>DEPORTIVO EL PIOJILLO</strong></span></div>
 </div>
-<a class="hero-experience" href="#inscripcion">🏆 SÉ PARTE DE LA EXPERIENCIA</a>
+
 <p class="hero-quote-ref">“Entrenamos hoy, para ser mejores compañeros mañana.”</p>
 </div>
-</div>
+<a class="hero-experience" href="#inscripcion">🏆 SÉ PARTE DE LA EXPERIENCIA</a></div>
 <!-- ================================================================
            📌 2. BIENVENIDA
            ================================================================ -->
@@ -3408,31 +3623,29 @@ h2::after{
 </div>
 </div>
 <div class="pago-box">
-<div class="pago-titulo">💳 Pago e inscripción</div>
-<p class="pago-intro">
-        Para inscribirte, realiza primero el pago correspondiente a tu categoría.
-        Después completa el formulario de inscripción y adjunta ahí tu comprobante de pago.
-      </p>
-<div class="pago-datos">
-<div><strong>Beneficiario:</strong> Arturo Vergara</div>
-<div><strong>Institución:</strong> Spin by OXXO</div>
-<div><strong>CLABE:</strong> <span class="clabe-numero">728969000121483945</span></div>
+<div class="payment-unified">
+<div class="payment-main">
+<span class="payment-eyebrow">PAGO E INSCRIPCIÓN</span>
+<h3>Completa tu registro en tres pasos</h3>
+<p>
+              Realiza el pago correspondiente a tu categoría y después completa el formulario
+              de inscripción adjuntando tu comprobante.
+            </p>
+<div class="payment-account">
+<div><small>BENEFICIARIO</small><strong>Arturo Vergara</strong></div>
+<div><small>INSTITUCIÓN</small><strong>Spin by OXXO</strong></div>
+<div><small>CLABE</small><strong class="clabe-numero">728969000121483945</strong></div>
 </div>
-<div class="pago-pasos">
-<div class="pago-paso"><span>1</span><p>Realiza el pago de tu categoría.</p></div>
-<div class="pago-paso"><span>2</span><p>Abre y completa el formulario de inscripción.</p></div>
-<div class="pago-paso"><span>3</span><p>Adjunta tu comprobante de pago en el formulario.</p></div>
 </div>
-<p class="pago-nota">
-        La inscripción quedará completa cuando envíes el formulario con el comprobante de pago.
-      </p>
+<div class="payment-steps">
+<div><span>1</span><p>Realiza el pago de tu categoría.</p></div>
+<div><span>2</span><p>Completa el formulario de inscripción.</p></div>
+<div><span>3</span><p>Adjunta tu comprobante de pago.</p></div>
+</div>
+</div>
 </div><div class="formulario-google">
-<a class="btn-abrir-form" href="https://forms.gle/q926AqAwTcrvV2Yu9">
-<span aria-hidden="true">🐾</span> INSCRÍBETE
-                </a>
-<p style="color:#4a5f6e;margin:10px 0;font-size:0.9rem;">
-                    ⬆️ Haz clic en el botón para abrir el formulario en Google Forms
-                </p>
+<a class="btn-abrir-form" href="https://forms.gle/q926AqAwTcrvV2Yu9">ABRIR FORMULARIO DE INSCRIPCIÓN</a>
+
 <div class="aviso" style="margin-top:15px;">
 <strong>📌 IMPORTANTE:</strong> Al enviar el formulario, aceptas que tu información sea utilizada
                     para el registro del evento y te comprometes a cumplir con el <strong>Reglamento Oficial</strong>.
@@ -3442,20 +3655,17 @@ h2::after{
 <!-- ================================================================
            📌 9. MAYORES INFORMES
            ================================================================ -->
-
 <div class="card-informes" id="informes">
 <h2 style="border-left:none;padding-left:0;">📞 MAYORES INFORMES</h2>
 <p style="font-size:1.2rem;color:#0a2a3a;">
 <strong>📱 Teléfono:</strong> <span style="font-size:1.5rem;color:#2a9dab;">612 23 2 7421</span>
 </p>
 <p style="color:#4a5f6e;margin-top:5px;">📧 <strong>Correo:</strong> <a href="mailto:etocanek9.lpz@gmail.com" style="color:#2a9dab;text-decoration:none;font-weight:600;">etocanek9.lpz@gmail.com</a></p>
-
 <div style="margin-top:15px;font-size:1.2rem;">🐾 Disciplina, conexión y lealtad 🏠</div>
 </div>
 <!-- ================================================================
            📌 10. PATROCINADORES
            ================================================================ -->
-
 <!-- ================================================================
            📌 PIE DE PÁGINA
            ================================================================ -->
