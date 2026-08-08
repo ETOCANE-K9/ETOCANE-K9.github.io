@@ -4591,6 +4591,69 @@ h2::after{
     white-space:nowrap !important;
   }
 }
+
+/* ================================================================
+   CORRECCIÓN MÓVIL DEFINITIVA
+   - Oculta los DOS logos que están dentro de la portada.
+   - Conserva únicamente el logo de la barra superior.
+   - Baja Seguridad/Lealtad/Protección + Fecha/Horario/Lugar
+     hasta la zona de las patas.
+   - No modifica escritorio.
+   ================================================================ */
+@media (max-width:768px){
+
+  /* Los logos internos de la portada desaparecen.
+     Se cubren las variantes de clases usadas en versiones anteriores. */
+  .portada .hero-logos,
+  .portada .hero-logos-ref,
+  .portada .logos-hero,
+  .portada .hero-logo-group,
+  .portada .brand-logos,
+  .portada .hero-brands,
+  .portada > .logos,
+  .portada .hero-content > .logos,
+  .portada .hero-content > .hero-logos,
+  .portada .hero-content > .hero-logos-ref{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+
+  /* Todo el bloque que empieza debajo de CANINA baja como unidad.
+     No se alteran título, manejadora ni fotografía. */
+  .portada .hero-values-ref{
+    position:absolute !important;
+    top:58.5% !important;
+    left:5% !important;
+    width:90% !important;
+    margin:0 !important;
+    z-index:20 !important;
+  }
+
+  .portada .hero-event-ref{
+    position:absolute !important;
+    top:66.5% !important;
+    left:5% !important;
+    width:90% !important;
+    margin:0 !important;
+    z-index:20 !important;
+  }
+
+  /* La frase acompaña el bloque inferior sin interferir con la ficha */
+  .portada .quote-mobile,
+  .portada .hero-quote-ref.quote-mobile,
+  .portada .hero-quote.quote-mobile{
+    position:absolute !important;
+    top:75.5% !important;
+    left:5% !important;
+    bottom:auto !important;
+    width:90% !important;
+    margin:0 !important;
+    transform:none !important;
+    z-index:20 !important;
+  }
+}
 </style>
 </head>
 <body><header class="site-nav">
