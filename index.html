@@ -3636,6 +3636,277 @@ h2::after{
   .premios-cards-nuevo{grid-template-columns:1fr;}
   #premiacion{padding:22px 16px !important;}
 }
+
+/* ================================================================
+   PORTADA — AJUSTE DE POSICIÓN DESKTOP + MÓVIL
+   Mantiene fondo.png SIN modificar la imagen.
+   ================================================================ */
+
+/* Mantener el fondo real sin velo adicional */
+.portada{
+    background-image:url('fondo.png') !important;
+    background-size:cover !important;
+    background-repeat:no-repeat !important;
+    background-position:center center !important;
+}
+
+/* El contenido superior queda más compacto para liberar la galería inferior */
+.hero-ref,
+.hero-content{
+    width:min(720px,61%) !important;
+}
+
+/* SEGURIDAD / LEALTAD / PROTECCIÓN */
+.hero-values-ref{
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:0 !important;
+    margin-top:5px !important;
+    position:relative !important;
+    top:-18px !important;
+}
+.hero-values-ref > div{
+    display:grid !important;
+    grid-template-columns:42px 1fr !important;
+    align-items:center !important;
+    gap:8px !important;
+    padding:5px 16px !important;
+    border-right:1px solid rgba(255,255,255,.24) !important;
+}
+.hero-values-ref > div:first-child{
+    padding-left:0 !important;
+}
+.hero-values-ref > div:last-child{
+    border-right:0 !important;
+}
+.hero-value-icon{
+    font-size:1.75rem !important;
+    line-height:1 !important;
+    color:#f0ae32 !important;
+    filter:none !important;
+}
+.hero-values-ref strong{
+    display:block !important;
+    color:#fff !important;
+    font-size:.84rem !important;
+    font-weight:900 !important;
+    letter-spacing:.02em !important;
+}
+.hero-values-ref small{
+    display:block !important;
+    margin-top:2px !important;
+    color:rgba(255,255,255,.92) !important;
+    font-size:.67rem !important;
+}
+
+/* FECHA / HORARIO / LUGAR: subir y adelgazar el bloque */
+.hero-event-ref{
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:0 !important;
+    position:relative !important;
+    top:-22px !important;
+    margin:8px 0 0 !important;
+    padding:10px 14px !important;
+    min-height:74px !important;
+    border-radius:20px !important;
+    background:rgba(4,45,58,.82) !important;
+    border:1px solid rgba(214,229,231,.38) !important;
+    backdrop-filter:blur(7px) !important;
+}
+.hero-event-ref > div{
+    display:grid !important;
+    grid-template-columns:34px 1fr !important;
+    align-items:center !important;
+    gap:8px !important;
+    padding:2px 14px !important;
+    border-right:1px solid rgba(255,255,255,.25) !important;
+}
+.hero-event-ref > div:first-child{
+    padding-left:0 !important;
+}
+.hero-event-ref > div:last-child{
+    border-right:0 !important;
+    padding-right:0 !important;
+}
+.event-icon{
+    font-size:1.35rem !important;
+}
+.hero-event-ref small{
+    display:block !important;
+    color:#dbe9ec !important;
+    font-size:.62rem !important;
+    letter-spacing:.06em !important;
+}
+.hero-event-ref strong{
+    display:block !important;
+    color:#fff !important;
+    margin-top:2px !important;
+    font-size:.78rem !important;
+    line-height:1.15 !important;
+}
+
+/* Frase queda por encima de la franja de perros */
+.hero-quote-ref,
+.hero-quote{
+    position:relative !important;
+    top:-22px !important;
+    margin:5px 0 0 !important;
+    color:#fff !important;
+}
+
+/* CTA aprovecha la esquina azul inferior derecha */
+.hero-experience{
+    right:30px !important;
+    bottom:24px !important;
+}
+
+/* ================================================================
+   TABLET
+   ================================================================ */
+@media (max-width:900px){
+    .hero-ref,
+    .hero-content{
+        width:66% !important;
+    }
+    .hero-values-ref > div{
+        padding-left:8px !important;
+        padding-right:8px !important;
+    }
+    .hero-event-ref > div{
+        padding-left:8px !important;
+        padding-right:8px !important;
+    }
+}
+
+/* ================================================================
+   CELULAR
+   Mantener la MISMA imagen pero mover el encuadre hacia la derecha
+   para mostrar manejadora + perro en vez de solo la mano.
+   ================================================================ */
+@media (max-width:768px){
+    .portada{
+        min-height:760px !important;
+        padding:82px 18px 24px !important;
+
+        /* No se cambia la imagen; solo el encuadre */
+        background-image:url('fondo.png') !important;
+        background-size:auto 100% !important;
+        background-position:88% center !important;
+        background-repeat:no-repeat !important;
+        background-color:#063546 !important;
+    }
+
+    .hero-ref,
+    .hero-content{
+        width:100% !important;
+        max-width:100% !important;
+    }
+
+    /* Dejar más espacio visual al lado derecho donde está la manejadora */
+    .hero-kicker-ref{
+        max-width:65% !important;
+    }
+    .hero-title-ref{
+        max-width:72% !important;
+        font-size:3.2rem !important;
+        white-space:nowrap !important;
+    }
+    .hero-canina-ref{
+        max-width:72% !important;
+    }
+
+    /* Las tres ideas siguen EN UNA FILA, no apiladas */
+    .hero-values-ref{
+        grid-template-columns:repeat(3,1fr) !important;
+        top:-8px !important;
+        margin-top:4px !important;
+    }
+    .hero-values-ref > div{
+        grid-template-columns:28px 1fr !important;
+        padding:5px 6px !important;
+        gap:5px !important;
+        border-bottom:0 !important;
+    }
+    .hero-value-icon{
+        font-size:1.2rem !important;
+    }
+    .hero-values-ref strong{
+        font-size:.63rem !important;
+    }
+    .hero-values-ref small{
+        font-size:.50rem !important;
+        line-height:1.15 !important;
+    }
+
+    /* Fecha/hora/lugar también EN UNA FILA para no bajar sobre los perros */
+    .hero-event-ref{
+        grid-template-columns:repeat(3,1fr) !important;
+        top:-10px !important;
+        margin-top:2px !important;
+        min-height:62px !important;
+        padding:8px 8px !important;
+        border-radius:16px !important;
+    }
+    .hero-event-ref > div{
+        grid-template-columns:23px 1fr !important;
+        gap:4px !important;
+        padding:2px 6px !important;
+        border-bottom:0 !important;
+        border-right:1px solid rgba(255,255,255,.22) !important;
+    }
+    .hero-event-ref > div:last-child{
+        border-right:0 !important;
+    }
+    .event-icon{
+        font-size:.95rem !important;
+    }
+    .hero-event-ref small{
+        font-size:.46rem !important;
+    }
+    .hero-event-ref strong{
+        font-size:.56rem !important;
+        line-height:1.1 !important;
+    }
+
+    .hero-quote-ref,
+    .hero-quote{
+        top:-8px !important;
+        max-width:72% !important;
+        font-size:.68rem !important;
+    }
+
+    /* En móvil el botón queda en el área azul inferior, sin tapar perros */
+    .hero-experience{
+        position:absolute !important;
+        right:16px !important;
+        bottom:18px !important;
+        left:auto !important;
+        width:auto !important;
+        padding:9px 13px !important;
+        font-size:.61rem !important;
+    }
+}
+
+/* iPhone angosto */
+@media (max-width:430px){
+    .portada{
+        min-height:720px !important;
+        background-position:90% center !important;
+    }
+    .hero-title-ref{
+        font-size:2.85rem !important;
+    }
+    .hero-values-ref strong{
+        font-size:.57rem !important;
+    }
+    .hero-values-ref small{
+        font-size:.45rem !important;
+    }
+    .hero-event-ref strong{
+        font-size:.51rem !important;
+    }
+}
 </style>
 </head>
 <body><header class="site-nav">
@@ -3666,15 +3937,15 @@ h2::after{
 <div class="hero-canina-ref"><span></span>CANINA<span></span></div>
 <div class="hero-values-ref">
 <div>
-<span class="hero-value-icon">◈</span>
+<span aria-label="Seguridad" class="hero-value-icon">🛡️</span>
 <span><strong>SEGURIDAD</strong><small>Bienestar ante todo</small></span>
 </div>
 <div>
-<span class="hero-value-icon">◇</span>
+<span aria-label="Lealtad" class="hero-value-icon">🤝</span>
 <span><strong>LEALTAD</strong><small>Vínculo que se construye</small></span>
 </div>
 <div>
-<span class="hero-value-icon">◉</span>
+<span aria-label="Protección" class="hero-value-icon">🐕</span>
 <span><strong>PROTECCIÓN</strong><small>Confianza mutua</small></span>
 </div>
 </div>
