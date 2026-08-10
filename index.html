@@ -5003,6 +5003,141 @@ h2::after{
         min-height:90px !important;
     }
 }
+
+/* ================================================================
+   ETOCANE — AJUSTES FINALES DE NAVEGACIÓN
+   INICIO + REDES VISIBLES EN CINTA MÓVIL
+   ================================================================ */
+
+/* Scroll suave para Inicio y resto del menú */
+html{
+  scroll-behavior:smooth;
+}
+
+/* Escritorio: conservar distribución existente */
+@media (min-width:769px){
+  .nav-links a[href="#inicio"]{
+    display:inline-flex !important;
+  }
+}
+
+/* CELULAR */
+@media (max-width:768px){
+
+  .site-nav{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    min-height:84px !important;
+    padding:8px 10px !important;
+    gap:7px !important;
+  }
+
+  /* Logos institucionales hacia la izquierda */
+  .nav-brand{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:5px !important;
+    flex:0 1 auto !important;
+    width:auto !important;
+    min-width:0 !important;
+    margin:0 !important;
+  }
+
+  .nav-brand img{
+    display:block !important;
+    width:auto !important;
+    height:48px !important;
+    max-width:68px !important;
+    object-fit:contain !important;
+    margin:0 !important;
+  }
+
+  .nav-brand-divider{
+    display:block !important;
+    width:1px !important;
+    height:34px !important;
+    margin:0 2px !important;
+    background:rgba(255,255,255,.38) !important;
+  }
+
+  /* Redes visibles en la cinta, entre logos y hamburguesa */
+  .nav-social{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:5px !important;
+    margin-left:auto !important;
+    flex:0 0 auto !important;
+  }
+
+  .nav-social a{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:27px !important;
+    height:27px !important;
+    min-width:27px !important;
+    border-radius:50% !important;
+    background:rgba(255,255,255,.14) !important;
+    border:1px solid rgba(255,255,255,.32) !important;
+    color:#fff !important;
+    text-decoration:none !important;
+    font-size:.67rem !important;
+    font-weight:800 !important;
+    line-height:1 !important;
+    padding:0 !important;
+  }
+
+  .nav-toggle{
+    flex:0 0 auto !important;
+    width:42px !important;
+    height:42px !important;
+    margin:0 0 0 3px !important;
+  }
+
+  /* Menú desplegable: Inicio aparece primero */
+  .nav-links a[href="#inicio"]{
+    display:flex !important;
+  }
+
+  /* Los logos internos de la FOTO siguen ocultos */
+  .portada .hero-logos,
+  .portada .hero-logos-ref,
+  .portada .logos-hero,
+  .portada .hero-logo-group,
+  .portada .brand-logos,
+  .portada .hero-brands{
+    display:none !important;
+    visibility:hidden !important;
+  }
+}
+
+@media (max-width:390px){
+  .site-nav{
+    gap:4px !important;
+    padding-left:7px !important;
+    padding-right:7px !important;
+  }
+  .nav-brand img{
+    height:43px !important;
+    max-width:58px !important;
+  }
+  .nav-social{
+    gap:3px !important;
+  }
+  .nav-social a{
+    width:24px !important;
+    height:24px !important;
+    min-width:24px !important;
+    font-size:.60rem !important;
+  }
+  .nav-toggle{
+    width:38px !important;
+    height:38px !important;
+  }
+}
 </style>
 </head>
 <body><header class="site-nav">
@@ -5012,7 +5147,7 @@ h2::after{
 <span class="nav-divider"></span>
 <img alt="Cinología México Internacional" class="nav-cmi" src="logo-cinologia-mexico.png"/>
 </a>
-<nav aria-label="Navegación principal" class="nav-links"><a href="#categorias">Categorías</a><a href="#reglamento">Reglamento</a><a href="#premiacion">Premiación</a><a class="nav-inscripcion" href="#inscripcion">Inscripción</a><a href="#informes">Informes</a></nav>
+<nav aria-label="Navegación principal" class="nav-links"><a href="#inicio">INICIO</a><a href="#categorias">Categorías</a><a href="#reglamento">Reglamento</a><a href="#premiacion">Premiación</a><a class="nav-inscripcion" href="#inscripcion">Inscripción</a><a href="#informes">Informes</a></nav>
 <div aria-label="Redes sociales" class="nav-social"><a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=100089148847165" rel="noopener noreferrer" target="_blank" title="Facebook">f</a><a aria-label="Instagram" href="https://www.instagram.com/etocanek9.bcs/" rel="noopener noreferrer" target="_blank" title="Instagram">◎</a><a aria-label="WhatsApp" href="https://wa.me/526122327421?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20competencia%20de%20obediencia%20canina%20Etocane%20K-9." rel="noopener noreferrer" target="_blank" title="WhatsApp">WA</a><a aria-label="Correo" href="mailto:etocanek9.lpz@gmail.com" title="Correo">✉</a></div>
 <button aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" type="button">☰</button>
 </div>
