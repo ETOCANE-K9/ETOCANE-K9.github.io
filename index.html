@@ -4696,6 +4696,91 @@ h2::after{
     display:none !important;
   }
 }
+
+/* ================================================================
+   FIX MÓVIL — EVITAR QUE FECHA/HORA/LUGAR SE ENCIME CON BOTONES
+   Solo móvil. Escritorio no cambia.
+   ================================================================ */
+@media (max-width:768px){
+
+  /* La información del evento conserva su sitio y queda completa */
+  .hero-event-ref{
+    position:relative !important;
+    top:auto !important;
+    bottom:auto !important;
+    margin:10px 0 0 !important;
+    z-index:20 !important;
+  }
+
+  /* La frase queda después de la ficha, en flujo normal */
+  .quote-mobile{
+    position:relative !important;
+    top:auto !important;
+    bottom:auto !important;
+    margin:12px 0 14px !important;
+    z-index:20 !important;
+  }
+
+  /* Los botones dejan de estar anclados al fondo de la portada.
+     Ahora aparecen DESPUÉS de toda la información, por lo que nunca
+     pueden tapar Fecha / Horario / Lugar. */
+  .hero-cta-group{
+    position:relative !important;
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+    width:100% !important;
+    margin:14px 0 0 !important;
+    padding:0 18px 22px !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    z-index:25 !important;
+  }
+
+  .hero-cta-group .hero-experience,
+  .hero-cta-group .hero-register{
+    position:static !important;
+    width:100% !important;
+    min-height:52px !important;
+    margin:0 !important;
+    transform:none !important;
+  }
+
+  /* La portada crece con su contenido, en lugar de recortarlo */
+  .portada{
+    height:auto !important;
+    min-height:0 !important;
+    padding-bottom:18px !important;
+  }
+}
+
+/* ===== PATROCINADORES P-1, P-2 Y P-3 ===== */
+.sponsor-logo{
+  width:100% !important;
+  height:100% !important;
+  max-height:145px !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+.sponsor-card{
+  background:#fff !important;
+  border:1px solid #dbe4e8 !important;
+  border-radius:18px !important;
+  min-height:150px !important;
+  padding:18px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+@media(max-width:768px){
+  .sponsor-card{
+    min-height:125px !important;
+    padding:14px !important;
+  }
+  .sponsor-logo{max-height:115px !important;}
+}
 </style>
 </head>
 <body><header class="site-nav">
@@ -5136,19 +5221,15 @@ h2::after{
 <div class="sponsor-card sponsor-active">
 <img alt="Patrocinador 1" loading="lazy" src="P-1.png"/>
 </div>
-<div aria-label="Espacio disponible para patrocinador 2" class="sponsor-card sponsor-placeholder">
+<div aria-label="Espacio disponible para patrocinador 2" class="sponsor-card sponsor-placeholder"><img alt="Patrocinador 2" class="sponsor-logo" src="P-2.png"/></div>
+<div aria-label="Espacio disponible para patrocinador 3" class="sponsor-card sponsor-placeholder"><img alt="Patrocinador 3" class="sponsor-logo" src="P-3.png"/></div>
+<div aria-label="Espacio disponible para patrocinador 4" class="sponsor-card sponsor-placeholder" data-sponsor-placeholder="1">
 <span>PRÓXIMAMENTE</span>
 </div>
-<div aria-label="Espacio disponible para patrocinador 3" class="sponsor-card sponsor-placeholder">
+<div aria-label="Espacio disponible para patrocinador 5" class="sponsor-card sponsor-placeholder" data-sponsor-placeholder="1">
 <span>PRÓXIMAMENTE</span>
 </div>
-<div aria-label="Espacio disponible para patrocinador 4" class="sponsor-card sponsor-placeholder">
-<span>PRÓXIMAMENTE</span>
-</div>
-<div aria-label="Espacio disponible para patrocinador 5" class="sponsor-card sponsor-placeholder">
-<span>PRÓXIMAMENTE</span>
-</div>
-<div aria-label="Espacio disponible para patrocinador 6" class="sponsor-card sponsor-placeholder">
+<div aria-label="Espacio disponible para patrocinador 6" class="sponsor-card sponsor-placeholder" data-sponsor-placeholder="1">
 <span>PRÓXIMAMENTE</span>
 </div>
 </div>
