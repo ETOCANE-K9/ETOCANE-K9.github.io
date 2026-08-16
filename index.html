@@ -1,3 +1,5 @@
+
+&lt;!-- ETOCANE FINAL: P-1 a P-15 + LOGOS UNIFORMES --&gt;
 <!-- FIX: QUOTE REMOVED FROM EVENT CARD OVERLAP --><!-- ETOCANE RESET DESKTOP: BASE MOVIL ESTABLE + AJUSTE SUAVE --><!-- VERSION ETOCANE 2026-08-07 17:40 - colores reforzados --><!DOCTYPE html>
 
 <html lang="es-MX">
@@ -5198,6 +5200,55 @@ html{
   #patrocinadores .sponsor-logo{
     height:100px !important;
   }
+}
+
+/* ================================================================
+   AJUSTE FINAL — PATROCINADORES
+   Uniforma el peso visual de logos sin deformarlos.
+   Mantiene P-1 a P-15.
+   ================================================================ */
+
+#patrocinadores .sponsor-slot,
+#patrocinadores .sponsor-card{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:24px !important;
+    box-sizing:border-box !important;
+}
+
+#patrocinadores .sponsor-logo{
+    width:auto !important;
+    height:auto !important;
+    max-width:78% !important;
+    max-height:125px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    margin:auto !important;
+}
+
+#patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
+    max-width:88% !important;
+}
+
+@media (max-width:768px){
+
+    #patrocinadores .sponsor-slot,
+    #patrocinadores .sponsor-card{
+        min-height:150px !important;
+        padding:22px !important;
+    }
+
+    #patrocinadores .sponsor-logo{
+        width:auto !important;
+        height:auto !important;
+        max-width:76% !important;
+        max-height:110px !important;
+    }
+
+    #patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
+        max-width:88% !important;
+    }
 }
 </style>
 </head>
