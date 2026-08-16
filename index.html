@@ -5348,7 +5348,114 @@ html{
     }
 }
 </style>
-</head>
+<style id="sponsor-final-override">
+/* ============================================================
+   OVERRIDE FINAL PATROCINADORES — DEBE SER EL ÚLTIMO CSS
+   ============================================================ */
+
+#patrocinadores .sponsor-slot,
+#patrocinadores .sponsor-card{
+  min-height:150px !important;
+  padding:18px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+}
+
+#patrocinadores .sponsor-logo{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  margin:auto !important;
+}
+
+/* P-1 a P-3 */
+#patrocinadores .sponsor-slot[data-sponsor="1"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="2"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="3"] .sponsor-logo{
+  max-width:62% !important;
+  max-height:95px !important;
+}
+
+/* P-4 Pet Vibes */
+#patrocinadores .sponsor-slot[data-sponsor="4"] .sponsor-logo{
+  max-width:48% !important;
+  max-height:88px !important;
+}
+
+/* P-5 Aura */
+#patrocinadores .sponsor-slot[data-sponsor="5"] .sponsor-logo{
+  max-width:46% !important;
+  max-height:90px !important;
+}
+
+/* P-6 Desierto */
+#patrocinadores .sponsor-slot[data-sponsor="6"] .sponsor-logo{
+  max-width:52% !important;
+  max-height:82px !important;
+}
+
+/* P-7 Humano: mucho más horizontal */
+#patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
+  max-width:66% !important;
+  max-height:54px !important;
+}
+
+/* P-8 Herrera */
+#patrocinadores .sponsor-slot[data-sponsor="8"] .sponsor-logo{
+  max-width:44% !important;
+  max-height:88px !important;
+}
+
+/* Resto futuro */
+#patrocinadores .sponsor-slot[data-sponsor="9"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="10"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="11"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="12"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="13"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="14"] .sponsor-logo,
+#patrocinadores .sponsor-slot[data-sponsor="15"] .sponsor-logo{
+  max-width:58% !important;
+  max-height:92px !important;
+}
+
+@media (max-width:768px){
+
+  #patrocinadores .sponsor-slot,
+  #patrocinadores .sponsor-card{
+    min-height:145px !important;
+    padding:20px !important;
+  }
+
+  #patrocinadores .sponsor-slot[data-sponsor="4"] .sponsor-logo{
+    max-width:44% !important;
+    max-height:82px !important;
+  }
+
+  #patrocinadores .sponsor-slot[data-sponsor="5"] .sponsor-logo{
+    max-width:44% !important;
+    max-height:86px !important;
+  }
+
+  #patrocinadores .sponsor-slot[data-sponsor="6"] .sponsor-logo{
+    max-width:50% !important;
+    max-height:78px !important;
+  }
+
+  #patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
+    max-width:64% !important;
+    max-height:50px !important;
+  }
+
+  #patrocinadores .sponsor-slot[data-sponsor="8"] .sponsor-logo{
+    max-width:42% !important;
+    max-height:84px !important;
+  }
+}
+</style></head>
 <body><header class="site-nav">
 <div class="site-nav-inner">
 <a aria-label="Inicio" class="nav-brand" href="#inicio">
