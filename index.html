@@ -1,6 +1,5 @@
-
-&lt;!-- ETOCANE FINAL: P-1 a P-15 + LOGOS UNIFORMES --&gt;
-<!-- FIX: QUOTE REMOVED FROM EVENT CARD OVERLAP --><!-- ETOCANE RESET DESKTOP: BASE MOVIL ESTABLE + AJUSTE SUAVE --><!-- VERSION ETOCANE 2026-08-07 17:40 - colores reforzados --><!DOCTYPE html>
+<!DOCTYPE html>
+<!-- ETOCANE RESET DESKTOP: BASE MOVIL ESTABLE + AJUSTE SUAVE --><!-- VERSION ETOCANE 2026-08-07 17:40 - colores reforzados --><!DOCTYPE html>
 
 <html lang="es-MX">
 <head>
@@ -5201,169 +5200,32 @@ html{
     height:100px !important;
   }
 }
-
-/* ================================================================
-   AJUSTE FINAL — PATROCINADORES
-   Uniforma el peso visual de logos sin deformarlos.
-   Mantiene P-1 a P-15.
-   ================================================================ */
-
-#patrocinadores .sponsor-slot,
-#patrocinadores .sponsor-card{
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    padding:24px !important;
-    box-sizing:border-box !important;
-}
-
-#patrocinadores .sponsor-logo{
-    width:auto !important;
-    height:auto !important;
-    max-width:78% !important;
-    max-height:125px !important;
-    object-fit:contain !important;
-    object-position:center !important;
-    margin:auto !important;
-}
-
-#patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
-    max-width:88% !important;
-}
-
-@media (max-width:768px){
-
-    #patrocinadores .sponsor-slot,
-    #patrocinadores .sponsor-card{
-        min-height:150px !important;
-        padding:22px !important;
-    }
-
-    #patrocinadores .sponsor-logo{
-        width:auto !important;
-        height:auto !important;
-        max-width:76% !important;
-        max-height:110px !important;
-    }
-
-    #patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
-        max-width:88% !important;
-    }
-}
-
-/* ================================================================
-   PATROCINADORES — AJUSTE VISUAL REAL
-   Corrige tamaños por proporción del logo, no solo por tarjeta.
-   ================================================================ */
-
-#patrocinadores .sponsor-slot,
-#patrocinadores .sponsor-card{
-    min-height:165px !important;
-    padding:18px !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-}
-
-#patrocinadores .sponsor-logo{
-    width:auto !important;
-    height:auto !important;
-    object-fit:contain !important;
-    object-position:center !important;
-    margin:auto !important;
-    display:block !important;
-}
-
-/* Base: logos cuadrados/circulares */
-#patrocinadores .sponsor-slot .sponsor-logo{
-    max-width:62% !important;
-    max-height:105px !important;
-}
-
-/* Ajustes individuales por proporción visual */
-#patrocinadores .sponsor-slot[data-sponsor="4"] .sponsor-logo{
-    max-width:58% !important;
-    max-height:100px !important;
-}
-
-#patrocinadores .sponsor-slot[data-sponsor="5"] .sponsor-logo{
-    max-width:56% !important;
-    max-height:102px !important;
-}
-
-#patrocinadores .sponsor-slot[data-sponsor="6"] .sponsor-logo{
-    max-width:60% !important;
-    max-height:92px !important;
-}
-
-/* P-7 es muy horizontal */
-#patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
-    max-width:76% !important;
-    max-height:72px !important;
-}
-
-/* P-8 es cuadrado oscuro */
-#patrocinadores .sponsor-slot[data-sponsor="8"] .sponsor-logo{
-    max-width:54% !important;
-    max-height:100px !important;
-}
-
-/* Celular */
-@media (max-width:768px){
-
-    #patrocinadores .sponsor-slot,
-    #patrocinadores .sponsor-card{
-        min-height:145px !important;
-        padding:18px !important;
-    }
-
-    #patrocinadores .sponsor-slot .sponsor-logo{
-        max-width:58% !important;
-        max-height:96px !important;
-    }
-
-    #patrocinadores .sponsor-slot[data-sponsor="4"] .sponsor-logo{
-        max-width:54% !important;
-        max-height:92px !important;
-    }
-
-    #patrocinadores .sponsor-slot[data-sponsor="5"] .sponsor-logo{
-        max-width:52% !important;
-        max-height:94px !important;
-    }
-
-    #patrocinadores .sponsor-slot[data-sponsor="6"] .sponsor-logo{
-        max-width:56% !important;
-        max-height:86px !important;
-    }
-
-    #patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
-        max-width:74% !important;
-        max-height:66px !important;
-    }
-
-    #patrocinadores .sponsor-slot[data-sponsor="8"] .sponsor-logo{
-        max-width:50% !important;
-        max-height:92px !important;
-    }
-}
 </style>
-<style id="sponsor-final-override">
+<style id="sponsor-visual-fix">
 /* ============================================================
-   OVERRIDE FINAL PATROCINADORES — DEBE SER EL ÚLTIMO CSS
+   AJUSTE VISUAL REAL DE PATROCINADORES
    ============================================================ */
 
-#patrocinadores .sponsor-slot,
-#patrocinadores .sponsor-card{
+#patrocinadores .sponsors-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+
+#patrocinadores .sponsor-slot{
   min-height:150px !important;
-  padding:18px !important;
+  height:150px !important;
+  padding:16px !important;
   display:flex !important;
   align-items:center !important;
   justify-content:center !important;
   overflow:hidden !important;
+  background:#fff !important;
+  border:1px solid #dfe8ea !important;
+  border-radius:18px !important;
 }
 
-#patrocinadores .sponsor-logo{
+#patrocinadores .sponsor-slot img.sponsor-logo{
   display:block !important;
   width:auto !important;
   height:auto !important;
@@ -5372,88 +5234,53 @@ html{
   margin:auto !important;
 }
 
-/* P-1 a P-3 */
-#patrocinadores .sponsor-slot[data-sponsor="1"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="2"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="3"] .sponsor-logo{
-  max-width:62% !important;
-  max-height:95px !important;
-}
+/* Tamaños por patrocinador */
+#patrocinadores .sponsor-slot[data-sponsor="1"] img{max-width:58% !important;max-height:92px !important;}
+#patrocinadores .sponsor-slot[data-sponsor="2"] img{max-width:58% !important;max-height:92px !important;}
+#patrocinadores .sponsor-slot[data-sponsor="3"] img{max-width:58% !important;max-height:92px !important;}
 
-/* P-4 Pet Vibes */
-#patrocinadores .sponsor-slot[data-sponsor="4"] .sponsor-logo{
-  max-width:48% !important;
+#patrocinadores .sponsor-slot[data-sponsor="4"] img{max-width:42% !important;max-height:78px !important;}
+#patrocinadores .sponsor-slot[data-sponsor="5"] img{max-width:42% !important;max-height:80px !important;}
+#patrocinadores .sponsor-slot[data-sponsor="6"] img{max-width:48% !important;max-height:72px !important;}
+#patrocinadores .sponsor-slot[data-sponsor="7"] img{max-width:68% !important;max-height:48px !important;}
+#patrocinadores .sponsor-slot[data-sponsor="8"] img{max-width:40% !important;max-height:78px !important;}
+
+#patrocinadores .sponsor-slot[data-sponsor="9"] img,
+#patrocinadores .sponsor-slot[data-sponsor="10"] img,
+#patrocinadores .sponsor-slot[data-sponsor="11"] img,
+#patrocinadores .sponsor-slot[data-sponsor="12"] img,
+#patrocinadores .sponsor-slot[data-sponsor="13"] img,
+#patrocinadores .sponsor-slot[data-sponsor="14"] img,
+#patrocinadores .sponsor-slot[data-sponsor="15"] img{
+  max-width:56% !important;
   max-height:88px !important;
 }
 
-/* P-5 Aura */
-#patrocinadores .sponsor-slot[data-sponsor="5"] .sponsor-logo{
-  max-width:46% !important;
-  max-height:90px !important;
-}
-
-/* P-6 Desierto */
-#patrocinadores .sponsor-slot[data-sponsor="6"] .sponsor-logo{
-  max-width:52% !important;
-  max-height:82px !important;
-}
-
-/* P-7 Humano: mucho más horizontal */
-#patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
-  max-width:66% !important;
-  max-height:54px !important;
-}
-
-/* P-8 Herrera */
-#patrocinadores .sponsor-slot[data-sponsor="8"] .sponsor-logo{
-  max-width:44% !important;
-  max-height:88px !important;
-}
-
-/* Resto futuro */
-#patrocinadores .sponsor-slot[data-sponsor="9"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="10"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="11"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="12"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="13"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="14"] .sponsor-logo,
-#patrocinadores .sponsor-slot[data-sponsor="15"] .sponsor-logo{
-  max-width:58% !important;
-  max-height:92px !important;
-}
-
+/* Móvil */
 @media (max-width:768px){
-
-  #patrocinadores .sponsor-slot,
-  #patrocinadores .sponsor-card{
-    min-height:145px !important;
-    padding:20px !important;
+  #patrocinadores .sponsors-grid{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
   }
 
-  #patrocinadores .sponsor-slot[data-sponsor="4"] .sponsor-logo{
-    max-width:44% !important;
+  #patrocinadores .sponsor-slot{
+    min-height:132px !important;
+    height:132px !important;
+    padding:16px !important;
+  }
+
+  #patrocinadores .sponsor-slot[data-sponsor="1"] img,
+  #patrocinadores .sponsor-slot[data-sponsor="2"] img,
+  #patrocinadores .sponsor-slot[data-sponsor="3"] img{
+    max-width:52% !important;
     max-height:82px !important;
   }
 
-  #patrocinadores .sponsor-slot[data-sponsor="5"] .sponsor-logo{
-    max-width:44% !important;
-    max-height:86px !important;
-  }
-
-  #patrocinadores .sponsor-slot[data-sponsor="6"] .sponsor-logo{
-    max-width:50% !important;
-    max-height:78px !important;
-  }
-
-  #patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
-    max-width:64% !important;
-    max-height:50px !important;
-  }
-
-  #patrocinadores .sponsor-slot[data-sponsor="8"] .sponsor-logo{
-    max-width:42% !important;
-    max-height:84px !important;
-  }
+  #patrocinadores .sponsor-slot[data-sponsor="4"] img{max-width:38% !important;max-height:70px !important;}
+  #patrocinadores .sponsor-slot[data-sponsor="5"] img{max-width:38% !important;max-height:72px !important;}
+  #patrocinadores .sponsor-slot[data-sponsor="6"] img{max-width:44% !important;max-height:66px !important;}
+  #patrocinadores .sponsor-slot[data-sponsor="7"] img{max-width:62% !important;max-height:44px !important;}
+  #patrocinadores .sponsor-slot[data-sponsor="8"] img{max-width:36% !important;max-height:70px !important;}
 }
 </style></head>
 <body><header class="site-nav">
