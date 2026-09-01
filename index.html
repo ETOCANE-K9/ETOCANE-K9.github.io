@@ -1,4 +1,4 @@
-<!-- FIX: QUOTE REMOVED FROM EVENT CARD OVERLAP --><!-- ETOCANE RESET DESKTOP: BASE MOVIL ESTABLE + AJUSTE SUAVE --><!-- VERSION ETOCANE 2026-08-07 17:40 - colores reforzados --><!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="es-MX">
 <head>
@@ -5138,8 +5138,178 @@ html{
     height:38px !important;
   }
 }
+
+/* ================================================================
+   PATROCINADORES AUTOMÁTICOS P-1 a P-15
+   ================================================================ */
+#patrocinadores .sponsors-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+
+#patrocinadores .sponsor-slot{
+  background:#fff !important;
+  border:1px solid #dfe8ea !important;
+  border-radius:18px !important;
+  min-height:150px !important;
+  padding:16px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+#patrocinadores .sponsor-logo{
+  display:block;
+  width:100% !important;
+  height:115px !important;
+  object-fit:contain !important;
+}
+
+#patrocinadores .sponsor-fallback{
+  display:none;
+  color:#91a2ab !important;
+  font-weight:800 !important;
+  letter-spacing:.16em !important;
+  font-size:.78rem !important;
+}
+
+#patrocinadores .sponsor-slot.sin-logo .sponsor-logo{
+  display:none !important;
+}
+
+#patrocinadores .sponsor-slot.sin-logo .sponsor-fallback{
+  display:block !important;
+}
+
+@media(max-width:768px){
+  #patrocinadores .sponsors-grid{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+
+  #patrocinadores .sponsor-slot{
+    min-height:120px !important;
+    padding:14px !important;
+  }
+
+  #patrocinadores .sponsor-logo{
+    height:100px !important;
+  }
+}
 </style>
-</head>
+<style id="sponsor-two-column-final">
+/* ============================================================
+   PATROCINADORES FINAL
+   Escritorio: 3 por fila
+   Celular: 2 por fila
+   ============================================================ */
+
+#patrocinadores .sponsors-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:16px !important;
+}
+
+#patrocinadores .sponsor-slot,
+#patrocinadores .sponsor-card{
+    min-width:0 !important;
+    height:150px !important;
+    min-height:150px !important;
+    padding:16px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:#ffffff !important;
+    border:1px solid #dce7ea !important;
+    border-radius:18px !important;
+    overflow:hidden !important;
+    box-sizing:border-box !important;
+}
+
+#patrocinadores .sponsor-logo{
+    display:block !important;
+    width:auto !important;
+    height:auto !important;
+    max-width:82% !important;
+    max-height:105px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    margin:auto !important;
+}
+
+/* Logos horizontales pueden aprovechar más ancho */
+#patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
+    max-width:92% !important;
+    max-height:72px !important;
+}
+
+/* Espacios todavía disponibles */
+#patrocinadores .sponsor-fallback{
+    text-align:center !important;
+    font-size:.72rem !important;
+    letter-spacing:.13em !important;
+}
+
+/* ================= CELULAR ================= */
+@media (max-width:768px){
+
+    #patrocinadores{
+        padding-left:14px !important;
+        padding-right:14px !important;
+    }
+
+    #patrocinadores .sponsors-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+        gap:10px !important;
+    }
+
+    #patrocinadores .sponsor-slot,
+    #patrocinadores .sponsor-card{
+        height:122px !important;
+        min-height:122px !important;
+        padding:10px !important;
+        border-radius:14px !important;
+    }
+
+    #patrocinadores .sponsor-logo{
+        max-width:84% !important;
+        max-height:88px !important;
+    }
+
+    #patrocinadores .sponsor-slot[data-sponsor="7"] .sponsor-logo{
+        max-width:94% !important;
+        max-height:58px !important;
+    }
+
+    #patrocinadores .sponsor-fallback{
+        font-size:.60rem !important;
+        letter-spacing:.10em !important;
+    }
+}
+
+/* Teléfonos muy angostos: conservar dos columnas,
+   pero hacer tarjetas ligeramente más compactas */
+@media (max-width:390px){
+
+    #patrocinadores .sponsors-grid{
+        gap:8px !important;
+    }
+
+    #patrocinadores .sponsor-slot,
+    #patrocinadores .sponsor-card{
+        height:112px !important;
+        min-height:112px !important;
+        padding:8px !important;
+    }
+
+    #patrocinadores .sponsor-logo{
+        max-height:80px !important;
+    }
+}
+</style></head>
 <body><header class="site-nav">
 <div class="site-nav-inner">
 <a aria-label="Inicio" class="nav-brand" href="#inicio">
@@ -5153,9 +5323,6 @@ html{
 </div>
 </header>
 <div class="container">
-<!-- ================================================================
-           📌 1. PORTADA
-           ================================================================ -->
 <div class="portada" id="inicio">
 <div class="hero-content hero-ref"><div class="hero-logos">
 <img alt="Club Etocane K-9" src="logo-etokane.png"/>
@@ -5182,15 +5349,12 @@ html{
 </div>
 <div class="hero-event-ref">
 <div><span class="event-icon">📅</span><span><small>FECHA</small><strong>29 DE NOVIEMBRE</strong></span></div>
-<div><span class="event-icon">⏰</span><span><small>HORARIO</small><strong>04:00 PM</strong></span></div>
+<div><span class="event-icon">⏰</span><span><small>HORARIO</small><strong>07:00 AM</strong></span></div>
 <div><span class="event-icon">📍</span><span><small>LUGAR</small><strong>DEPORTIVO EL PIOJILLO</strong></span></div>
 </div>
 <p class="hero-quote-ref quote-mobile">“Entrenamos hoy, para ser mejores compañeros mañana.”</p>
 </div>
 <div class="hero-cta-group"><a class="hero-experience" href="#inscripcion">🏆 SÉ PARTE DE LA EXPERIENCIA</a><a class="hero-register" href="#inscripcion">🐾 INSCRIPCIONES</a></div><p class="quote-desktop">“Entrenamos hoy, para ser mejores compañeros mañana.”</p></div>
-<!-- ================================================================
-           📌 2. BIENVENIDA
-           ================================================================ -->
 <div class="card-bienvenida" id="bienvenida">
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:8px;">
 <span style="font-size:2.5rem;">🐾</span>
@@ -5212,7 +5376,6 @@ html{
                     </p>
 </div>
 </div>
-<!-- ===== PILARES ===== -->
 <h3 style="margin-top:25px;text-align:center;">Nuestros Pilares</h3>
 <div class="bienvenida-pilares">
 <div class="pilar">
@@ -5232,7 +5395,6 @@ html{
 </div>
 </div>
 <div style="height:40px;"></div>
-<!-- ===== OBJETIVO ===== -->
 <div class="card-objetivo" id="objetivo">
 <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:25px;">
 <div style="font-size:1.8rem;">🎯</div>
@@ -5248,12 +5410,6 @@ html{
 </div>
 </div>
 </div>
-<!-- ================================================================
-           📌 4. CONTENIDO (ÍNDICE)
-           ================================================================ -->
-<!-- ================================================================
-           📌 5. CATEGORÍAS DE PARTICIPACIÓN
-           ================================================================ -->
 <div class="card" id="categorias">
 <h2>🏅 CATEGORÍAS DE PARTICIPACIÓN</h2>
 <p style="font-size:1.05rem;color:#1e2b3a;margin-bottom:15px;">
@@ -5261,25 +5417,23 @@ html{
                 la que mejor se adapte al nivel de entrenamiento de tu binomio.
             </p>
 <div class="categoria-grid">
-<!-- CATEGORÍA 1: PRE-BÁSICO -->
 <div class="categoria-card" id="cat-prebásico">
 <span class="nivel-badge">NIVEL 1</span>
 <h3>🐾🦮 PRE-BÁSICO</h3>
 <p class="descripcion">Ideal para equipos que se inician en el deporte de la obediencia. Perros a partir de 6 meses.</p>
-<ul class="lista-ejercicios"><li><a class="lightbox-link" href="#lb-pre-1" title="Ver imagen del ejercicio 1">Caminado junto con correa en “U” y figura de ocho</a></li><li><a class="lightbox-link" href="#lb-pre-2" title="Ver imagen del ejercicio 2">Sentado para examen</a></li><li><a class="lightbox-link" href="#lb-pre-3" title="Ver imagen del ejercicio 3">Sentarse o echarse y quedarse quieto 2 minutos con correa</a></li><li><a class="lightbox-link" href="#lb-pre-4" title="Ver imagen del ejercicio 4">Acudir al llamado a 5 m (sin correa)</a></li><li><a class="lightbox-link" href="#lb-pre-5" title="Ver imagen del ejercicio 5">Prueba de habilidades sociales</a></li><li><a class="lightbox-link" href="#lb-pre-6" title="Ver imagen del ejercicio 6">Impresión General</a></li><li><a class="lightbox-link" href="#lb-pre-7" title="Ver imagen del ejercicio 7">Manejo</a></li></ul>
+<ul class="lista-ejercicios"><li><a class="lightbox-link" href="#lb-pre-1" title="Ver imagen del ejercicio 1">Caminado junto con correa en “U” y figura de ocho</a></li><li><a class="lightbox-link" href="#lb-pre-2" title="Ver imagen del ejercicio 2">Parado para examen</a></li><li><a class="lightbox-link" href="#lb-pre-3" title="Ver imagen del ejercicio 3">Sentarse o echarse y quedarse quieto 2 minutos con correa</a></li><li><a class="lightbox-link" href="#lb-pre-4" title="Ver imagen del ejercicio 4">Acudir al llamado a 5 m (sin correa)</a></li><li><a class="lightbox-link" href="#lb-pre-5" title="Ver imagen del ejercicio 5">Prueba de habilidades sociales</a></li><li><a class="lightbox-link" href="#lb-pre-6" title="Ver imagen del ejercicio 6">Impresión General</a></li><li><a class="lightbox-link" href="#lb-pre-7" title="Ver imagen del ejercicio 7">Manejo</a></li></ul>
 <span class="puntos-max">🏆 Puntuación máxima: 100 puntos</span>
 <details class="ejercicios-details reglas-details"><summary class="summary-reglas">📖 Ver ejercicios completos</summary><div class="reglamento-contenido-nativo">
 <div class="regla-item"><strong>📌 Edad mínima:</strong> 6 meses.</div>
 <div class="regla-item"><strong>🦮 Correa:</strong> 1.80 m de tela plana o cuero. Collar fijo. Prohibido: arnés, collares de picos, eslingas o electrónicos.</div>
 <div class="regla-item"><strong>🚶‍♂️ Caminado con correa y figura de ocho:</strong> El perro camina a la izquierda con correa floja. El juez indica "Adelante", "Derecha", "Izquierda", "Media vuelta", "Paso lento/rápido". En cada "Alto" el perro se sienta automáticamente. La figura de ocho requiere mínimo 2 altos.</div>
-<div class="regla-item"><strong>🐩 Sentado para examen:</strong> El manejador coloca al perro sentado, da la orden de quieto y después se aleja 1.80 m. El juez examina. El manejador regresa rodeando por detrás.</div>
+<div class="regla-item"><strong>🐩 Parado para examen:</strong> El manejador coloca al perro, da orden de parado y quieto, después se aleja 1.80 m. El juez examina. El manejador regresa rodeando por detrás.</div>
 <div class="regla-item"><strong>⏱️ Permanencia 2 min:</strong> Sentado o echado. El manejador se aleja 1.80 m. Máximo 10 perros en ring.</div>
 <div class="regla-item"><strong>🏃 Acudir al llamado 5 m:</strong> El perro se queda quieto, el manejador camina 5 m y lo llama. El perro debe sentarse frente al manejador. Pausa de 2 segundos entre nombre y orden.</div>
 <div class="regla-item"><strong>🐕🤝 Habilidades sociales:</strong> Dos binomios caminan uno hacia el otro, se saludan y dialogan 10-15 segundos. Se evalúa que no haya miedo o agresión.</div>
 <div class="regla-item"><strong>⭐ Impresión General y Manejo:</strong> 5 puntos cada uno. Se evalúa limpieza, coordinación, lenguaje natural del perro y manejo claro del manejador.</div>
 </div></details>
 </div>
-<!-- CATEGORÍA 2: BÁSICO -->
 <div class="categoria-card nivel-2" id="cat-básico">
 <span class="nivel-badge naranja">NIVEL 2</span>
 <h3>🐕 BÁSICO</h3>
@@ -5296,7 +5450,6 @@ html{
 <div class="regla-item"><strong>⏱️ Permanencia sentado y echado 10 m:</strong> Sentado 2 min, echado 3 min. Máximo 10 perros en ring.</div>
 </div></details>
 </div>
-<!-- CATEGORÍA 3: PRE-AVANZADO -->
 <div class="categoria-card nivel-3" id="cat-preavanzado">
 <span class="nivel-badge dorado">NIVEL 3</span>
 <h3>⭐ PRE-AVANZADO</h3>
@@ -5320,7 +5473,6 @@ html{
                 nivel de entrenamiento de tu perro. ¡Lo importante es participar y disfrutar
                 el trabajo en equipo!
             </div>
-<!-- ===== PUNTUACIÓN Y CALIFICACIÓN ===== -->
 <div style="margin-top:35px;padding-top:25px;border-top:2px solid #e0f4f7;">
 <h3 style="margin-top:0;">📊 Puntuación y Calificación</h3>
 <p style="color:#4a5f6e;margin-bottom:15px;">
@@ -5367,15 +5519,6 @@ html{
 </div>
 </div>
 </div>
-<!-- ================================================================
-           📌 MODALES - DETALLE DE EJERCICIOS
-           ================================================================ -->
-<!-- MODAL PRE-BÁSICO -->
-<!-- MODAL BÁSICO -->
-<!-- MODAL PRE-AVANZADO -->
-<!-- ================================================================
-           📌 6. REGLAMENTO
-           ================================================================ -->
 <div class="card" id="reglamento">
 <h2>📋 REGLAMENTO</h2>
 <div style="background:#e0f4f7;border-radius:12px;padding:18px 20px;margin-bottom:20px;border-left:6px solid #2a9dab;">
@@ -5390,7 +5533,6 @@ html{
 <strong>Cinología México Internacional</strong> promueve que esta disciplina se practique cuidando en todo momento el <strong>bienestar físico y conductual del perro</strong>, privilegiando el buen trato, el manejo responsable y el respeto durante su participación.
                 </p>
 </div>
-<!-- SUB SECCIÓN 1: REGLAS -->
 <h3 style="margin-top:25px;color:#2a9dab;">📌 1. Reglas que debes conocer y respetar durante tu participación</h3>
 <div class="reglas-grid">
 <div class="regla-card"><div class="icono-regla">🧹</div><p><strong>Responsabilidad:</strong> Recoge las heces de tu perro y deposítalas en bolsas cerradas.</p></div>
@@ -5406,7 +5548,6 @@ html{
 <div class="regla-card"><div class="icono-regla">🔕</div><p><strong>Silbato:</strong> Queda <strong>prohibido</strong> silbar o usar silbato.</p></div>
 <div class="regla-card"><div class="icono-regla">📋</div><p><strong>Responsabilidad del propietario:</strong> El propietario inscribe a su perro <strong>bajo su propio riesgo</strong> y se compromete a cumplir el reglamento.</p></div>
 </div>
-<!-- SUB SECCIÓN 2: CONSEJOS -->
 <h3 style="margin-top:25px;color:#f18f01;">💡 2. Consejos para competir</h3>
 <div class="consejos-grid">
 <div class="regla-card success"><div class="icono-regla">🐶</div><p><strong>Edad mínima:</strong> Perros a partir de <strong>6 meses</strong> pueden participar.</p></div>
@@ -5419,7 +5560,6 @@ html{
 <div class="regla-card success"><div class="icono-regla">🔊</div><p><strong>Orden clara:</strong> Da la orden en <strong>voz clara</strong> y tono normal. No es necesario gritar.</p></div>
 <div class="regla-card success"><div class="icono-regla">📋</div><p><strong>Conoce el reglamento:</strong> Familiarízate con las reglas. ¡Esto te dará confianza!</p></div>
 </div>
-<!-- SUB SECCIÓN 3: ADVERTENCIAS Y DESCALIFICACIONES -->
 <h3 style="margin-top:25px;color:#d32f2f;">🚫 3. Advertencias y descalificaciones</h3>
 <p style="color:#4a5f6e;margin-bottom:15px;">
                 Estas son las causales por las que un binomio puede ser descalificado o recibir una penalización grave:
@@ -5443,9 +5583,6 @@ html{
 <strong>⚠️ IMPORTANTE:</strong> La decisión del juez es <strong>inapelable</strong>. Respeta su autoridad y su criterio.
             </div>
 </div>
-<!-- ================================================================
-           📌 7. PREMIACIÓN
-           ================================================================ -->
 <div class="card-premiacion" id="premiacion">
 <div class="premios-nuevo">
 <div class="premios-head">
@@ -5479,9 +5616,6 @@ html{
 <div class="premios-footer">🏅 Disciplina, conexión y lealtad.</div>
 </div>
 </div>
-<!-- ================================================================
-           📌 8. INSCRIPCIONES
-           ================================================================ -->
 <div class="card" id="inscripcion">
 <h2>📝 INSCRIPCIONES</h2>
 <p style="color:#4a5f6e;margin-bottom:15px;font-size:1.05rem;">
@@ -5536,9 +5670,6 @@ html{
                 </div>
 </div>
 </div>
-<!-- ================================================================
-           📌 9. MAYORES INFORMES
-           ================================================================ -->
 <div class="card-informes" id="informes">
 <h2 style="border-left:none;padding-left:0;">📞 MAYORES INFORMES</h2>
 <p style="font-size:1.2rem;color:#0a2a3a;">
@@ -5547,12 +5678,6 @@ html{
 <p style="color:#4a5f6e;margin-top:5px;">📧 <strong>Correo:</strong> <a href="mailto:etocanek9.lpz@gmail.com" style="color:#2a9dab;text-decoration:none;font-weight:600;">etocanek9.lpz@gmail.com</a></p>
 <div style="margin-top:15px;font-size:1.2rem;">🐾 Disciplina, conexión y lealtad 🏠</div>
 </div>
-<!-- ================================================================
-           📌 10. PATROCINADORES
-           ================================================================ -->
-<!-- ================================================================
-           📌 PIE DE PÁGINA
-           ================================================================ -->
 <section class="feedback-section" id="opinion">
 <div class="feedback-inner">
 <div class="feedback-icon">💬</div>
@@ -5574,7 +5699,7 @@ html{
 <h2 style="color:#07384a;font-size:2.6rem;margin:0 0 10px;text-align:center;">Patrocinadores</h2>
 <p style="color:#526a75;font-size:1.12rem;line-height:1.55;margin:0;text-align:center;">Gracias a las marcas y organizaciones que hacen posible esta experiencia.</p>
 </div>
-<div class="sponsors-grid"><div class="sponsor-card sponsor-active"><img alt="Patrocinador 1" class="sponsor-logo" loading="lazy" src="P-1.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 2" class="sponsor-logo" loading="lazy" src="P-2.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 3" class="sponsor-logo" loading="lazy" src="P-3.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 4" class="sponsor-logo" loading="lazy" src="P-4.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 5" class="sponsor-logo" loading="lazy" src="P-5.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 6" class="sponsor-logo" loading="lazy" src="P-6.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 7" class="sponsor-logo" loading="lazy" src="P-7.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 8" class="sponsor-logo" loading="lazy" src="P-8.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 9" class="sponsor-logo" loading="lazy" src="P-9.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 10" class="sponsor-logo" loading="lazy" src="P-10.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 11" class="sponsor-logo" loading="lazy" src="P-11.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 12" class="sponsor-logo" loading="lazy" src="P-12.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 13" class="sponsor-logo" loading="lazy" src="P-13.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 14" class="sponsor-logo" loading="lazy" src="P-14.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-active"><img alt="Patrocinador 15" class="sponsor-logo" loading="lazy" src="P-15.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span class="sponsor-fallback" style="display:none;color:#92a2aa;font-size:.73rem;font-weight:800;letter-spacing:.16em;">PRÓXIMAMENTE</span></div></div>
+<div class="sponsors-grid"><div class="sponsor-card sponsor-slot" data-sponsor="1"><img alt="Patrocinador 1" class="sponsor-logo" data-index="1" loading="lazy" src="P-1.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="2"><img alt="Patrocinador 2" class="sponsor-logo" data-index="2" loading="lazy" src="P-2.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="3"><img alt="Patrocinador 3" class="sponsor-logo" data-index="3" loading="lazy" src="P-3.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="4"><img alt="Patrocinador 4" class="sponsor-logo" data-index="4" loading="lazy" src="P-4.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="5"><img alt="Patrocinador 5" class="sponsor-logo" data-index="5" loading="lazy" src="P-5.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="6"><img alt="Patrocinador 6" class="sponsor-logo" data-index="6" loading="lazy" src="P-6.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="7"><img alt="Patrocinador 7" class="sponsor-logo" data-index="7" loading="lazy" src="P-7.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="8"><img alt="Patrocinador 8" class="sponsor-logo" data-index="8" loading="lazy" src="P-8.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="9"><img alt="Patrocinador 9" class="sponsor-logo" data-index="9" loading="lazy" src="P-9.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="10"><img alt="Patrocinador 10" class="sponsor-logo" data-index="10" loading="lazy" src="P-10.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="11"><img alt="Patrocinador 11" class="sponsor-logo" data-index="11" loading="lazy" src="P-11.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="12"><img alt="Patrocinador 12" class="sponsor-logo" data-index="12" loading="lazy" src="P-12.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="13"><img alt="Patrocinador 13" class="sponsor-logo" data-index="13" loading="lazy" src="P-13.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="14"><img alt="Patrocinador 14" class="sponsor-logo" data-index="14" loading="lazy" src="P-14.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div><div class="sponsor-card sponsor-slot" data-sponsor="15"><img alt="Patrocinador 15" class="sponsor-logo" data-index="15" loading="lazy" src="P-15.png"/><span class="sponsor-fallback">PRÓXIMAMENTE</span></div></div>
 <div class="sponsor-contact-cta" style="margin:28px auto 0;padding-top:22px;border-top:1px solid #dfe8ea;text-align:center;color:#35515d;font-size:1.08rem;">
   🐾 <strong>¿Quieres patrocinar este evento?</strong>
   Contáctanos en <strong>612 23 2 7421</strong>
@@ -5590,9 +5715,6 @@ html{
             </p>
 </div>
 </div>
-<!-- ================================================================
-       📌 JAVASCRIPT
-       ================================================================ -->
 <script>
         function abrirModal(tipo) {
             var modalId = 'modal-' + tipo;
@@ -5691,5 +5813,80 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 </script>
-<div class="css-lightbox" id="lb-pilar-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div></body>
+<div class="css-lightbox" id="lb-pilar-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pilar-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="pilar-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-pre-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./pre-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-nov-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./nov-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-1"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-1.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-2"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-2.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-3"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-3.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-4"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-4.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-5"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-5.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-6"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-6.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-7"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-7.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><div class="css-lightbox" id="lb-avan-8"><a aria-label="Cerrar imagen" class="css-lightbox-fondo" href="#cerrar"></a><div class="css-lightbox-panel"><a aria-label="Cerrar imagen" class="css-lightbox-x" href="#cerrar">×</a><img alt="Imagen del ejercicio" src="./avan-8.png"/><a class="css-lightbox-btn" href="#cerrar">Cerrar</a></div></div><script>
+(function(){
+  const extensiones = ['png','jpg','jpeg','webp','PNG','JPG','JPEG','WEBP'];
+
+  document.querySelectorAll('#patrocinadores .sponsor-logo').forEach(function(img){
+    const n = img.dataset.index;
+    let intento = 0;
+
+    function probar(){
+      if(intento >= extensiones.length){
+        img.closest('.sponsor-slot').classList.add('sin-logo');
+        return;
+      }
+      img.src = 'P-' + n + '.' + extensiones[intento];
+      intento++;
+    }
+
+    img.addEventListener('error', probar);
+    img.addEventListener('load', function(){
+      img.closest('.sponsor-slot').classList.remove('sin-logo');
+    });
+
+    probar();
+  });
+})();
+</script><script id="force-sponsor-grid">
+(function () {
+  function ajustarPatrocinadores() {
+    var grid = document.querySelector('#patrocinadores .sponsors-grid');
+    if (!grid) return;
+
+    var movil = window.innerWidth <= 768;
+
+    grid.style.setProperty('display', 'grid', 'important');
+    grid.style.setProperty(
+      'grid-template-columns',
+      movil ? 'repeat(2, minmax(0, 1fr))' : 'repeat(3, minmax(0, 1fr))',
+      'important'
+    );
+    grid.style.setProperty('gap', movil ? '10px' : '16px', 'important');
+    grid.style.setProperty('width', '100%', 'important');
+
+    var cards = grid.querySelectorAll('.sponsor-slot, .sponsor-card');
+    cards.forEach(function(card) {
+      card.style.setProperty('width', 'auto', 'important');
+      card.style.setProperty('min-width', '0', 'important');
+      card.style.setProperty('height', movil ? '120px' : '150px', 'important');
+      card.style.setProperty('min-height', movil ? '120px' : '150px', 'important');
+      card.style.setProperty('padding', movil ? '9px' : '16px', 'important');
+      card.style.setProperty('box-sizing', 'border-box', 'important');
+      card.style.setProperty('display', 'flex', 'important');
+      card.style.setProperty('align-items', 'center', 'important');
+      card.style.setProperty('justify-content', 'center', 'important');
+    });
+
+    var logos = grid.querySelectorAll('.sponsor-logo');
+    logos.forEach(function(img) {
+      img.style.setProperty('width', 'auto', 'important');
+      img.style.setProperty('height', 'auto', 'important');
+      img.style.setProperty('max-width', movil ? '88%' : '82%', 'important');
+      img.style.setProperty('max-height', movil ? '84px' : '105px', 'important');
+      img.style.setProperty('object-fit', 'contain', 'important');
+      img.style.setProperty('margin', 'auto', 'important');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ajustarPatrocinadores);
+  } else {
+    ajustarPatrocinadores();
+  }
+
+  window.addEventListener('resize', ajustarPatrocinadores);
+  window.addEventListener('orientationchange', ajustarPatrocinadores);
+})();
+</script></body>
 </html>
